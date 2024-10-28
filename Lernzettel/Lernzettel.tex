@@ -126,6 +126,31 @@ Zudem müssen die vier \textbf{Huntingtonischen Axiome} gelten:
         \[a \otimes a^{-1} = n\]
         \[a \oplus a^{-1} = e\]
 \end{itemize}
+\subsection{Schaltalgebra}
+Die Schaltalgebra $(\{0,1\}, \land, \lor)$ ist eine spezielle boolische Algebra. 0 und 1 können als die logischen Werte wahr und falsch interpretieren. \\
+Es gelten die vier Huntingtonischen Axiome: \\
+\newline
+\begin{tabular}{l l l}
+    (H1) & Kommutativgesetz & $a \lor b = b \lor a$ \\
+    & & $a \land b = b \land a$ \\
+    (H2) & Distributivgesetz & $a \land (b \lor c) = (a \land b) \lor (a \land c)$ \\
+    & & $a \lor (b \land c) = (a \lor b) \land (a \lor c)$ \\
+    (H3) & Neutrale Elemente & $a \land 1 = a$ \\
+    & & $a \lor 0 = a$ \\
+    (H4) & Invere Elemente & $a \land \neg a = 0$ \\
+    & & $a \lor \neg a = 1$ \\
+\end{tabular}
+\subsection{Boolische Funktionen}
+Eine Funktion $f: \{0,1\}^n \rightarrow \{0,1\}$ wird als boolische Funktion bezeichnet.
+\subsection{Boolischer Ausdruck}
+Sei $V = \{x_1, x_2, \dots, x_n\}$ eine Menge boolischer Variablen. Dann ist die Menge der boolischen Ausdrücke wie folgt definiert: \\
+\begin{itemize}
+    \item $0,1,x_i$ sind boolische Ausdrücke.
+    \item Ist $\Phi$ ein boolischer Ausdruck, dann ist auch $\neg \Phi$ ein boolischer Ausdruck.
+    \item Wenn $\Phi$ und $\Psi$ boolische Ausdrücke sind, dann sind auch $\Phi \land \Psi$ und $\Phi \lor \Psi$ boolische Ausdrücke.
+    \item Ist $\Phi$ ein boolischer Ausdruck, dann ist auch $(\Phi)$ ein boolischer Ausdruck.
+\end{itemize}
+
 \section{Relationen}
 Eine \textbf{(binäre) Relation} zwischen zwei Mengen $X$ und $Y$ ist eine Teilmenge
 \[\text{R} \subset X \times Y\]
