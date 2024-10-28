@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.29)  28 OCT 2024 09:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.29)  28 OCT 2024 13:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -602,44 +602,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 184--189
 
 
 [10]
-Overfull \hbox (18.7514pt too wide) in paragraph at lines 209--210
+Overfull \hbox (18.7514pt too wide) in paragraph at lines 211--212
 []\OT1/cmr/m/n/12 Um \OT1/cmr/bx/n/12 neg-a-tive Zahlen \OT1/cmr/m/n/12 darzustellen wird der entsprechende Wert des \OT1/cmr/bx/n/12 h^^?ochsten
  []
 
 
-Overfull \hbox (11.21385pt too wide) in paragraph at lines 216--217
+Overfull \hbox (11.21385pt too wide) in paragraph at lines 218--219
 \OMS/cmsy/m/n/12 f\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 3\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 4\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 5\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 6\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 7\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 8\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 9\OML/cmm/m/it/12 ; A\OT1/cmr/m/n/12 ([]10)\OML/cmm/m/it/12 ; B\OT1/cmr/m/n/12 ([]11)\OML/cmm/m/it/12 ; C\OT1/cmr/m/n/12 ([]12)\OML/cmm/m/it/12 ; D\OT1/cmr/m/n/12 ([]13)\OML/cmm/m/it/12 ; E\OT1/cmr/m/n/12 ([]14)\OML/cmm/m/it/12 ; F\OT1/cmr/m/n/12 ([]15)\OMS/cmsy/m/n/12 g$\OT1/cmr/m/n/12 . 
  []
 
 
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 229--234
+Underfull \hbox (badness 10000) in paragraph at lines 231--236
 
  []
 
 
-Overfull \hbox (77.41241pt too wide) in paragraph at lines 243--263
+Overfull \hbox (77.41241pt too wide) in paragraph at lines 245--265
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 243--263
+Underfull \hbox (badness 10000) in paragraph at lines 245--265
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 243--263
+Underfull \hbox (badness 10000) in paragraph at lines 245--265
 
  []
 
 
-Overfull \hbox (8.1473pt too wide) in paragraph at lines 243--263
+Overfull \hbox (8.1473pt too wide) in paragraph at lines 245--265
 \OT1/cmr/m/n/12 Exponent: wird gespe-ichert, in-dem man den fes-ten Bi-aswert (127:SP, 1023:DP)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 243--263
+Underfull \hbox (badness 10000) in paragraph at lines 245--265
 
  []
 
@@ -648,17 +648,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 243--263
 [12]
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 305--311
+Underfull \hbox (badness 10000) in paragraph at lines 307--313
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 305--311
+Underfull \hbox (badness 10000) in paragraph at lines 307--313
 
  []
 
 
-Overfull \hbox (0.50565pt too wide) in paragraph at lines 305--311
+Overfull \hbox (0.50565pt too wide) in paragraph at lines 307--313
 \OML/cmm/m/it/12 c$\OT1/cmr/m/n/12 -Bit Fehler k^^?onnen erkannt wer-den, wenn die Hamming-Distanz $\OML/cmm/m/it/12 c \OT1/cmr/m/n/12 + 1$ betr^^?agt.
  []
 
@@ -666,34 +666,34 @@ Overfull \hbox (0.50565pt too wide) in paragraph at lines 305--311
 
 [14]
 
-Package array Warning: Redefining primitive column b on input line 327.
+Package array Warning: Redefining primitive column b on input line 329.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 321--345
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 321--345
+Underfull \hbox (badness 10000) in paragraph at lines 323--347
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--359
+Underfull \hbox (badness 10000) in paragraph at lines 323--347
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 348--361
 
  []
 
 
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 360--363
+Underfull \hbox (badness 10000) in paragraph at lines 362--365
 
  []
 
 
 
 [16]
-Overfull \hbox (39.14465pt too wide) in paragraph at lines 368--371
+Overfull \hbox (39.14465pt too wide) in paragraph at lines 370--373
 \OT1/cmr/m/n/12 Dabei gilt: $\OML/cmm/m/it/12 i [][]\OT1/cmr/m/n/12 ;  \OML/cmm/m/it/12 m=n [][]$\OT1/cmr/m/n/12 .
  []
 
@@ -720,7 +720,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  84i,15n,93p,607b,574s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Pascals PC\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\Users\Pascals PC\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Pascals PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Pascals PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Pascals PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Pascals PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Pascals PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Pascals PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Pascals PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Pascals PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Pascals PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Pascals PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Pascals PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Pascals PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/Pascals PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Users/Pascals PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/Users/Pascals PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Lernzettel.pdf (19 pages, 234918 bytes).
+Output written on Lernzettel.pdf (19 pages, 234978 bytes).
 PDF statistics:
  383 PDF objects out of 1000 (max. 8388607)
  68 named destinations out of 1000 (max. 500000)
