@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1730117164.98343 "c:/Users/Pascals PC/Desktop/Informatik-Studium/Lernzettel/Lernzettel.tex" "Lernzettel.pdf" "Lernzettel" 1730117166.13949 0
+["pdflatex"] 1730121234.06809 "c:/Users/Pascals PC/Desktop/Informatik-Studium/Lernzettel/Lernzettel.tex" "Lernzettel.pdf" "Lernzettel" 1730121235.17646 0
   "C:/Users/Pascals" 1718573311 18943 1fc4cf5e7688ed956abaaac4b33624c6 ""
   "C:/Users/Pascals PC/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1729955834 82535 0266753fb37a3d673c1d739765ad059f ""
   "C:/Users/Pascals PC/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm0800.pk" 1727648505 9292 1818d7d80dec23517a7920b265d33de9 ""
@@ -172,12 +172,12 @@
   "C:/Users/Pascals PC/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Pascals PC/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/x11nam.def" 1700127522 9125 e0e22f8bd8f488926acdd4e96dcc4d1e ""
   "C:/Users/Pascals PC/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "Lernzettel.aux" 1730117165 3821 c0e790247e33288d1fc98ba9961a9656 "pdflatex"
-  "Lernzettel.out" 1730117165 4535 7770548d9f8df9b7b255a849ea73c937 "pdflatex"
-  "Lernzettel.tex" 1730117164 23016 561fd10d74f46db3ff12a6461072c9e8 ""
-  "Lernzettel.toc" 1730117165 2182 5a6d2186b4e750c8f68a4db3bd6ca6ed "pdflatex"
+  "Lernzettel.aux" 1730121234 3821 c0e790247e33288d1fc98ba9961a9656 "pdflatex"
+  "Lernzettel.out" 1730121234 4535 7770548d9f8df9b7b255a849ea73c937 "pdflatex"
+  "Lernzettel.tex" 1730121233 23019 07c97a8da7c6943a457b92396fd3696e ""
+  "Lernzettel.toc" 1730121234 2182 5a6d2186b4e750c8f68a4db3bd6ca6ed "pdflatex"
   "c:/Users/Pascals" 1718573311 18943 1fc4cf5e7688ed956abaaac4b33624c6 ""
-  "c:/Users/Pascals PC/Desktop/Informatik-Studium/Lernzettel/Lernzettel.tex" 1730117164 23016 561fd10d74f46db3ff12a6461072c9e8 ""
+  "c:/Users/Pascals PC/Desktop/Informatik-Studium/Lernzettel/Lernzettel.tex" 1730121233 23019 07c97a8da7c6943a457b92396fd3696e ""
   (generated)
   "Lernzettel.aux"
   "Lernzettel.log"
