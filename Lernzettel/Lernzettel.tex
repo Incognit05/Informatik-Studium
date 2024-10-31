@@ -139,6 +139,15 @@ Es gelten die vier Huntingtonischen Axiome: \\
     & & $a \lor 0 = a$ \\
     (H4) & Invere Elemente & $a \land \neg a = 0$ \\
     & & $a \lor \neg a = 1$ \\
+    \multicolumn{3}{l}{Es lassen sich folgende Sätze ableiten:} \\ \\
+    (R1) & Assoziativgesetz & $(a \land b) \land c = a \land (b \land c)$ \\
+    & & $(a \lor b) \lor c = a \lor (b \lor c)$ \\
+    (R2) & Idempotenzgesetz & $a \land a = a$ \\
+    & & $a \lor a = a$ \\
+    (R3) & Absorptionsgesetz & $a \land (a \lor b) = a$ \\
+    & & $a \lor (a \land b) = a$ \\
+    (R4) & DeMorgan-Gesetz & $\neg(a \land b) = \neg a \lor \neg b$ \\
+    & & $\neg(a \lor b) = \neg a \land \neg b$ \\
 \end{tabular}
 \subsection{Boolische Funktionen}
 Eine Funktion $f: \{0,1\}^n \rightarrow \{0,1\}$ wird als boolische Funktion bezeichnet.
@@ -150,6 +159,15 @@ Sei $V = \{x_1, x_2, \dots, x_n\}$ eine Menge boolischer Variablen. Dann ist die
     \item Wenn $\Phi$ und $\Psi$ boolische Ausdrücke sind, dann sind auch $\Phi \land \Psi$ und $\Phi \lor \Psi$ boolische Ausdrücke.
     \item Ist $\Phi$ ein boolischer Ausdruck, dann ist auch $(\Phi)$ ein boolischer Ausdruck.
 \end{itemize}
+\subsection{Äquivalenz boolischer Ausdrücke}
+Zwei boolische Ausdrücke $\Phi$ und $\Psi$ sind äquivalent, falls sie dieselbe Funktion repräsentieren. \\ 
+Sie sind genau dann äquivalent, wenn für alle Variablenbelgungen $x_1, \cdots, x_n$ die folgende Beziehung gilt:
+\[\Phi(x_1,\cdots,x_n) = \Psi(x_1,\cdots,x_n)\]
+\subsubsection{Tautologie}
+Ein boolischer Ausdruck, der immer wahr ist, wird als \textbf{Tautologie} bezeichnet.\\
+Das heißt zwei boolische Ausdrücke $A$ und $B$ sind äquivalen, wenn $A \leftrightarrow B$ eine Tautologie ist.
+\subsubsection{Vollständiges Operatorensystem}
+$M$ sei eine beliebige Menge von Operatoren. $M$ ist ein \textbf{vollständiges Operatorensystem}, wenn sich jede boolische Funktion auch durch einen Ausdruck bescreiben lässt, in dem neben den Variablen $x_1, \cdots, x_n$ ausschließlich Operatoren aus $M$ vorkommen.
 
 \section{Relationen}
 Eine \textbf{(binäre) Relation} zwischen zwei Mengen $X$ und $Y$ ist eine Teilmenge

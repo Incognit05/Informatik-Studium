@@ -4,36 +4,39 @@
 \contentsline {subsection}{Schaltalgebra}{7}{section*.5}%
 \contentsline {subsection}{Boolische Funktionen}{8}{section*.6}%
 \contentsline {subsection}{Boolischer Ausdruck}{8}{section*.7}%
-\contentsline {section}{Relationen}{8}{section*.8}%
-\contentsline {subsection}{Äquivalenzrelationen}{9}{section*.9}%
-\contentsline {subsection}{Ordnungsrelationen}{9}{section*.10}%
-\contentsline {subsection}{Hüllen}{10}{section*.11}%
-\contentsline {section}{Abbildungen}{11}{section*.12}%
-\contentsline {section}{Zahlensysteme}{12}{section*.13}%
-\contentsline {subsection}{Binärsystem}{12}{section*.14}%
-\contentsline {subsubsection}{Carry-Flag}{12}{section*.15}%
-\contentsline {subsubsection}{Zweierkomplement}{12}{section*.16}%
-\contentsline {subsection}{Hexadezimalsystem}{12}{section*.17}%
-\contentsline {subsection}{Oktalsystem}{13}{section*.18}%
-\contentsline {subsection}{Festkommazahlen}{13}{section*.19}%
-\contentsline {subsection}{Gleitkommazahlen: IEEE 754}{13}{section*.20}%
-\contentsline {subsubsection}{Aufbau}{13}{section*.21}%
-\contentsline {subsubsection}{Dezimal zu IEEE 754}{14}{section*.22}%
-\contentsline {subsubsection}{IEEE 754 zu Dezimal}{14}{section*.23}%
-\contentsline {section}{Fehlererkennung}{15}{section*.24}%
-\contentsline {subsection}{Redundanzen}{15}{section*.25}%
-\contentsline {subsection}{Hamming-Distanz}{15}{section*.26}%
-\contentsline {subsection}{Parität}{15}{section*.27}%
-\contentsline {subsection}{Zweidimensionale Parität}{16}{section*.28}%
-\contentsline {subsection}{Hamming-Code}{16}{section*.29}%
-\contentsline {subsubsection}{Berechnung der Prüfbits}{17}{section*.30}%
-\contentsline {section}{Summenzeichen und Produktzeichen}{18}{section*.31}%
-\contentsline {subsection}{Summenzeichen}{18}{section*.32}%
-\contentsline {subsection}{Produktzeichen}{18}{section*.33}%
-\contentsline {section}{Rechenregeln}{19}{section*.34}%
-\contentsline {subsection}{Bruchregeln}{19}{section*.35}%
-\contentsline {subsection}{Potenzgesetze}{19}{section*.36}%
-\contentsline {subsection}{Wurzelgesetze}{19}{section*.37}%
-\contentsline {subsection}{Logarithmengesetze}{19}{section*.38}%
-\contentsline {section}{Trigonometrie}{20}{section*.39}%
-\contentsline {subsection}{Bogenmaß}{20}{section*.40}%
+\contentsline {subsection}{Äquivalenz boolischer Ausdrücke}{9}{section*.8}%
+\contentsline {subsubsection}{Tautologie}{9}{section*.9}%
+\contentsline {subsubsection}{Vollständiges Operatorensystem}{9}{section*.10}%
+\contentsline {section}{Relationen}{9}{section*.11}%
+\contentsline {subsection}{Äquivalenzrelationen}{10}{section*.12}%
+\contentsline {subsection}{Ordnungsrelationen}{10}{section*.13}%
+\contentsline {subsection}{Hüllen}{11}{section*.14}%
+\contentsline {section}{Abbildungen}{12}{section*.15}%
+\contentsline {section}{Zahlensysteme}{13}{section*.16}%
+\contentsline {subsection}{Binärsystem}{13}{section*.17}%
+\contentsline {subsubsection}{Carry-Flag}{13}{section*.18}%
+\contentsline {subsubsection}{Zweierkomplement}{13}{section*.19}%
+\contentsline {subsection}{Hexadezimalsystem}{13}{section*.20}%
+\contentsline {subsection}{Oktalsystem}{14}{section*.21}%
+\contentsline {subsection}{Festkommazahlen}{14}{section*.22}%
+\contentsline {subsection}{Gleitkommazahlen: IEEE 754}{14}{section*.23}%
+\contentsline {subsubsection}{Aufbau}{14}{section*.24}%
+\contentsline {subsubsection}{Dezimal zu IEEE 754}{15}{section*.25}%
+\contentsline {subsubsection}{IEEE 754 zu Dezimal}{15}{section*.26}%
+\contentsline {section}{Fehlererkennung}{16}{section*.27}%
+\contentsline {subsection}{Redundanzen}{16}{section*.28}%
+\contentsline {subsection}{Hamming-Distanz}{16}{section*.29}%
+\contentsline {subsection}{Parität}{16}{section*.30}%
+\contentsline {subsection}{Zweidimensionale Parität}{17}{section*.31}%
+\contentsline {subsection}{Hamming-Code}{17}{section*.32}%
+\contentsline {subsubsection}{Berechnung der Prüfbits}{18}{section*.33}%
+\contentsline {section}{Summenzeichen und Produktzeichen}{19}{section*.34}%
+\contentsline {subsection}{Summenzeichen}{19}{section*.35}%
+\contentsline {subsection}{Produktzeichen}{19}{section*.36}%
+\contentsline {section}{Rechenregeln}{20}{section*.37}%
+\contentsline {subsection}{Bruchregeln}{20}{section*.38}%
+\contentsline {subsection}{Potenzgesetze}{20}{section*.39}%
+\contentsline {subsection}{Wurzelgesetze}{20}{section*.40}%
+\contentsline {subsection}{Logarithmengesetze}{20}{section*.41}%
+\contentsline {section}{Trigonometrie}{21}{section*.42}%
+\contentsline {subsection}{Bogenmaß}{21}{section*.43}%
