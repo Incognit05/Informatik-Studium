@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm}
+
+\title{Übung 3}
+\author{Pascal Diller, Timo Rieke}
+
+\setcounter{secnumdepth}{0}
+
+\begin{document}
+
+\maketitle
+
+\section{1}
+\subsection{(i)}
+Für $m$ gerade: \\
+\[m = 2k \text{ für } k \in \mathbb{N}\]
+\[f(m) = \frac{2k}{2} = k\]
+$\implies$ $k$ kann alle natürlichen Zahlen annehmen. Somit sind die Werte bei $f(m)$ für $m$ gerade alle in $\mathbb{N}$. \\
+\newline
+Für $m$ gerade: \\
+\[m = 2k + 1 \text{ für } k \in \mathbb{N}\]
+\[f(m) = \frac{(2k + 1) - 1}{2} = \frac{2k}{2} = k\]
+$\implies k$ kann wieder $\mathbb{N}$ annehmen. \\
+\newline
+$\implies$ Da $f(m)$ alle natürlichen Zahlen abbildet ist $f$ surjektiv auf $\mathbb{N}$, jedoch nicht auf $\mathbb{Z}$, da keine negativen Zahlen erreicht werden.
+\subsection{(ii)}
+
+
+\section{2}
+\subsection{(i)}
+\[A: \forall x \in \mathbb{N}, x > 1 \land (d|x \to d = 1 \lor d = x)\]
+\subsection{(ii)}
+$\neg A$: Es gibt mindestens eine Natürliche Zahl, die keine Primzahl ist.
+\[\neg A: \exists x \in \mathbb{N}, d|x \to d \neq 1 \land d \neq x\]
+Die Aussage $A$ ist falsch, da es auch Natürliche Zahlen gibt, die nicht nur 1 und sich selber als Teiler haben.
+
+\section{3}
+\subsection{(ii)}
+\[\left( ((P \to R) \to (R \to Q)) \to (P \to Q) \right) \mapsto 0\]
+
+\end{document}
