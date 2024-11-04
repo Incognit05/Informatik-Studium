@@ -13,6 +13,7 @@
 
 \section{1}
 \subsection{(i)}
+\subsubsection{(a)}
 Für $m$ gerade: \\
 \[m = 2k \text{ für } k \in \mathbb{N}\]
 \[f(m) = \frac{2k}{2} = k\]
@@ -24,8 +25,47 @@ Für $m$ gerade: \\
 $\implies k$ kann wieder $\mathbb{N}$ annehmen. \\
 \newline
 $\implies$ Da $f(m)$ alle natürlichen Zahlen abbildet ist $f$ surjektiv auf $\mathbb{N}$, jedoch nicht auf $\mathbb{Z}$, da keine negativen Zahlen erreicht werden.
+\subsubsection{(b)}
+Für $z \in \mathbb{N}$: \\
+gerade: $m = 2z$ \\
+ungerade: $m = 2z+1$ \\
+jedes $z \in \mathbb{N}$ hat 2 Werte von $m$(gerade, ungerade), die auf $z$ abgebildet werden. \\
+Kardinalität $|f^{-1}(\{z\})| = 2$ für $z \in \mathbb{N}$ \\
+\newline
+Für $z < 0$ \\
+Da $f(m)$ nur Werte aus $\mathbb{N}$ annimmt, gibt es kein $m$, das auf ein negatives $z$ abgebildet wird. \\
+Daher: $|f^{-1}(\{z\})| = 0$ für $z < 0$ \\
+\newline
+Für $z=0$ \\
+Da $f(m)$ immer einen positiven Wert ergibt, kann 0 von $f(m)$ ebenfalls nicht erreicht werden. \\
+Somit: $|f^{-1}(\{z\})| = 0$\\
+\newline
+Für $z \in \mathbb{N}: |f^{-1}(\{z\})| = 2$ \\
+Für $z \leq 0: |f^{-1}(\{z\})| = 0$ \\
+\newline
+Injektivität; Da jedes $z \in \mathbb{N}$ zwei Urbilder hat, ist $f$ nicht injektiv.
+\subsubsection{(c)}
+$M = \{2n | n \in \mathbb{N}\}$ (Menge der geraden Zahlen) \\
+$m$ ist eine gerade Zahl ($m \in M$) \\
+$m = 2k, k \in \mathbb{N}$ \\
+$\implies f(m) = \frac{m}{2} = k$ \\
+Jeder Wert von $k$ wird auf genau einen Wert $m = 2k$ abgebildet, sodass für jedes Bild $f(m)$ genau ein Urbild existiert. \\
+Da $f|_M$ alle natürlichen Zahlen erreicht, ist $f$ surjektiv auf $\mathbb{N}$. \\
+Somit ist $M(2n | n \in \mathbb{N})$ eine Teilmenge, bei der $f|_M: M \to f(\mathbb{N})$ bijektiv ist.
 \subsection{(ii)}
-
+\subsubsection{(a)}
+$g: \mathbb{N} \times \mathbb{N} \to \mathbb{N}, (n,m) \mapsto nm$ \\
+Bild von $(3, 11)$: $g(3,11) = 3 \cdot 11 = 33$ \\
+\newline
+Urbild von $\{10\}$: $g(n,m)=10 \implies n \cdot m = 10$ \\
+mögliche Paare für $(n,m): (1,10),(2,5),(10,1),(5,2)$ \\
+Urbild: $\{(1,10), (2,5), (5,2), (10,1)\}$
+\subsubsection{(b)}
+Injektivität: \\
+$g(n_1, m_2) = g(n_2, m_2)$ für $(n_1,m_1) \neq (n_2, m_2)$ \\
+Bsp: $g(1,10) = 10 = g(2,5)$, somit ist $g$ nicht injektiv. \\
+Surjektiv: \\
+Für jedes $k \in \mathbb{N}$ kann $g(1,k) = k$ verwendet werden um alle Werte in $\mathbb{N}$ zu erreichen. Somit ist $g$ surjektiv.
 
 \section{2}
 \subsection{(i)}
@@ -36,6 +76,17 @@ $\neg A$: Es gibt mindestens eine Natürliche Zahl, die keine Primzahl ist.
 Die Aussage $A$ ist falsch, da es auch Natürliche Zahlen gibt, die nicht nur 1 und sich selber als Teiler haben.
 
 \section{3}
+\subsection{(i)}
+\[\neg((Q \lor R) \to P) \sim ((Q \land \neg P) \lor (R \land \neg P))\]
+Implikation:
+\[(Q \lor R) \to P \sim \neg(Q \lor R) \lor P\]
+\[\neg((Q \lor R) \to P) \sim \neg(\neg(Q \lor R) \lor P)\]
+De Morgan Gesetz:
+\[\neg(\neg(Q \lor R) \lor P) \sim (Q \lor R) \lor \neg P\]
+Distributivgesetz:
+\[(Q \lor R) \land \neg P \sim (Q \land \neg P) \lor (R \land \neg P)\]
+Somit ist bewiesen, dass die Formeln logisch äquivalent sind.
+
 \subsection{(ii)}
 \[\left( ((P \to R) \to (R \to Q)) \to (P \to Q) \right) \mapsto 0\]
 
