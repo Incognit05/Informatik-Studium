@@ -104,8 +104,8 @@ Definierte Mengen:
 \end{itemize}
 Es gilt: $\mathbb{N} \in \mathbb{Z} \in \mathbb{Q} \in \mathbb{R}$
 
-\section{Boolische Algebra}
-Als eine \textbf{Boolische Algebra} bezeichnet man eine Menge $V = \{a,b,c,\dots\}$, auf der zwei zweistellige Operationen $\oplus$ und $\otimes$ derart definiert sind, dass durch ihre Anwendung auf Elemente aus $V$ wieder Elemente aus V enstehen (Abgeschlossenheit).\\
+\section{boolesche Algebra}
+Als eine \textbf{boolesche Algebra} bezeichnet man eine Menge $V = \{a,b,c,\dots\}$, auf der zwei zweistellige Operationen $\oplus$ und $\otimes$ derart definiert sind, dass durch ihre Anwendung auf Elemente aus $V$ wieder Elemente aus V enstehen (Abgeschlossenheit).\\
 \newline
 \textbf{Abgeschlossenheit:} für alle $a,b \in V$ gilt: \[a \otimes b \in V \]\[ a \oplus b \in V\]
 \newpage
@@ -127,7 +127,7 @@ Zudem müssen die vier \textbf{Huntingtonischen Axiome} gelten:
         \[a \oplus a^{-1} = e\]
 \end{itemize}
 \subsection{Schaltalgebra}
-Die Schaltalgebra $(\{0,1\}, \land, \lor)$ ist eine spezielle boolische Algebra. 0 und 1 können als die logischen Werte wahr und falsch interpretieren. \\
+Die Schaltalgebra $(\{0,1\}, \land, \lor)$ ist eine spezielle boolesche Algebra. 0 und 1 können als die logischen Werte wahr und falsch interpretieren. \\
 Es gelten die vier Huntingtonischen Axiome: \\
 \newline
 \begin{tabular}{l l l}
@@ -149,25 +149,46 @@ Es gelten die vier Huntingtonischen Axiome: \\
     (R4) & DeMorgan-Gesetz & $\neg(a \land b) = \neg a \lor \neg b$ \\
     & & $\neg(a \lor b) = \neg a \land \neg b$ \\
 \end{tabular}
-\subsection{Boolische Funktionen}
-Eine Funktion $f: \{0,1\}^n \rightarrow \{0,1\}$ wird als boolische Funktion bezeichnet.
-\subsection{Boolischer Ausdruck}
-Sei $V = \{x_1, x_2, \dots, x_n\}$ eine Menge boolischer Variablen. Dann ist die Menge der boolischen Ausdrücke wie folgt definiert: \\
+\subsection{boolesche Funktionen}
+Eine Funktion $f: \{0,1\}^n \rightarrow \{0,1\}$ wird als boolesche Funktion bezeichnet.
+\subsection{boolescher Ausdruck}
+Sei $V = \{x_1, x_2, \dots, x_n\}$ eine Menge boolescher Variablen. Dann ist die Menge der booleschen Ausdrücke wie folgt definiert: \\
 \begin{itemize}
-    \item $0,1,x_i$ sind boolische Ausdrücke.
-    \item Ist $\Phi$ ein boolischer Ausdruck, dann ist auch $\neg \Phi$ ein boolischer Ausdruck.
-    \item Wenn $\Phi$ und $\Psi$ boolische Ausdrücke sind, dann sind auch $\Phi \land \Psi$ und $\Phi \lor \Psi$ boolische Ausdrücke.
-    \item Ist $\Phi$ ein boolischer Ausdruck, dann ist auch $(\Phi)$ ein boolischer Ausdruck.
+    \item $0,1,x_i$ sind boolesche Ausdrücke.
+    \item Ist $\Phi$ ein boolescher Ausdruck, dann ist auch $\neg \Phi$ ein boolescher Ausdruck.
+    \item Wenn $\Phi$ und $\Psi$ boolesche Ausdrücke sind, dann sind auch $\Phi \land \Psi$ und $\Phi \lor \Psi$ boolesche Ausdrücke.
+    \item Ist $\Phi$ ein boolescher Ausdruck, dann ist auch $(\Phi)$ ein boolescher Ausdruck.
 \end{itemize}
-\subsection{Äquivalenz boolischer Ausdrücke}
-Zwei boolische Ausdrücke $\Phi$ und $\Psi$ sind äquivalent, falls sie dieselbe Funktion repräsentieren. \\ 
+\subsection{Äquivalenz boolescher Ausdrücke}
+Zwei boolesche Ausdrücke $\Phi$ und $\Psi$ sind äquivalent, falls sie dieselbe Funktion repräsentieren. \\ 
 Sie sind genau dann äquivalent, wenn für alle Variablenbelgungen $x_1, \cdots, x_n$ die folgende Beziehung gilt:
 \[\Phi(x_1,\cdots,x_n) = \Psi(x_1,\cdots,x_n)\]
 \subsubsection{Tautologie}
-Ein boolischer Ausdruck, der immer wahr ist, wird als \textbf{Tautologie} bezeichnet.\\
-Das heißt zwei boolische Ausdrücke $A$ und $B$ sind äquivalen, wenn $A \leftrightarrow B$ eine Tautologie ist.
+Ein boolescher Ausdruck, der immer wahr ist, wird als \textbf{Tautologie} bezeichnet.\\
+Das heißt zwei boolesche Ausdrücke $A$ und $B$ sind äquivalen, wenn $A \leftrightarrow B$ eine Tautologie ist.
 \subsubsection{Vollständiges Operatorensystem}
-$M$ sei eine beliebige Menge von Operatoren. $M$ ist ein \textbf{vollständiges Operatorensystem}, wenn sich jede boolische Funktion auch durch einen Ausdruck bescreiben lässt, in dem neben den Variablen $x_1, \cdots, x_n$ ausschließlich Operatoren aus $M$ vorkommen.
+$M$ sei eine beliebige Menge von Operatoren. $M$ ist ein \textbf{vollständiges Operatorensystem}, wenn sich jede boolesche Funktion auch durch einen Ausdruck bescreiben lässt, in dem neben den Variablen $x_1, \cdots, x_n$ ausschließlich Operatoren aus $M$ vorkommen.
+\subsection{Normalformen}
+\subsubsection{Kanonische Normalformen}
+Eine kanonische Normalform ist eine \textbf{eindeutige Darstellung} mit UND, ODER und NICHT. \\
+\begin{itemize}
+    \item kanonische \textbf{disjunktive Normalform (DNF)}
+        \subitem \hbox{Die Disjunktion (Verbinden mit ODER) von Mintermen der Funktion}
+        \subitem \vbox{Die \textbf{nicht kanonische} Form ist eine Disjunktion beliebiger konjunktiv \\ verknüpfter boolescher Ausdrücke.}
+        \subitem \vbox{Konstruktion einer DNF: Für jede \textbf{Einszeile} der Wahrheitstabelle wird ein \textbf{Minterm} konstruiert, welcher für genau diese Variablenbelgungen 1 wird. Alle so erstellten Minterme werden \textbf{disjunktiv verknüpft}.}
+    \item kanonische \textbf{konjuntive Normalform (KNF)}
+        \subitem \hbox{Die Konjunktion (Verbinden mit UND) von Maxtermen der Funktion}
+        \subitem \vbox{Die \textbf{nicht kanonische} Form ist eine Konjunktion beliebiger disjuntiv verknüpfter boolescher Ausdrücke.}
+        \subitem \vbox{Konstruktion einer KNF: Für jede \textbf{Nullzeile} der Wahrheitstabelle wird ein \textbf{Maxterm} konstruiert, welcher für genau diese Variablenbelgungen 0 wird. Alle so erstellten Maxterme werden \textbf{konjunktiv verknüpft}.}
+\end{itemize}
+Es wird \textbf{ausschließlich} die \textbf{kanonische Form} behandelt und deswegen das Wort kanonisch häufig wegelassen.
+\subsubsection{Minterm, Maxterm}
+Sei $f(x_1, \dots, x_n)$ eine beliebige $n$-stellige boolesche Funktion. \\
+Ein \textbf{Minterm} ist jeder Ausdruck der Form
+\[\hat{x}_1 \land \dots \land \hat{x}_n \text{ mit } \hat{x}_i \in \{\overline{x}_i, x_i\}\]
+Ein \textbf{Maxterm} ist jeder Ausdruck der Form
+\[\hat{x}_1 \lor \dots \lor \hat{x}_n \text{ mit } \hat{x}_i \in \{\overline{x}_i, x_i\}\]
+Ein \textbf{Literal} ist der Teilausdruck $\hat{x}_i$, der entweder aus einer negierten oder einer unnegierten Variablen besteht.
 
 \section{Relationen}
 Eine \textbf{(binäre) Relation} zwischen zwei Mengen $X$ und $Y$ ist eine Teilmenge
@@ -209,6 +230,21 @@ Sei R eine Relation auf der Menge $X$. Wir definieren:
     \item Die \textbf{reflexive Hülle} von R ist \[\text{R}_{\text{refl}} = \text{R} \cup \text{I}_X\]
     \item Die \textbf{symmetrische Hülle} von R ist \[\text{R}_{\text{sym}} = \text{R} \cup \text{R}^{-1}\]
 \end{itemize}
+
+\newpage
+\section{Vollständige Induktion}
+Das \textbf{Prinzip der vollständigen Induktion} ist ein Beweisverfahren, mit dem man Aussagen $A(n)$ beweisen kann, die von $n \in \mathbb{N}_0$ abhängen.
+\subsection{Idee der vollständigen Induktion}
+Zu zeigen sei die Aussage $A(n)$ für alle $n \in \mathbb{N}_0$ mit $n \geq n_0$ für ein $n_0 \in \mathbb{N}$. \\
+Angenommen, man kann zeigen, dass $A(n_0)$ gilt, und weiter kann man beweisen, dass $A(n+1)$ gilt, wenn man voraussetzt, dass $A(n)$ gilt, d.h. die Implikation $A(n) \implies A(n + 1)$ ist für alle $n \in \mathbb{N}, n \geq n_0$ gültig. \\
+Dann gilt $A(n)$ für alle $n \in \mathbb{N}$ mit $n \geq n_0$.\\
+\subsection{Beweis durch vollständige Induktion}
+\begin{enumerate}
+    \item \textbf{Induktionsanfang (I.A.)}: Es gibt ein $n_0 \in \mathbb{N}_0$, sodass $A(n_0)$ wahr ist.
+    \item \textbf{Induktionsvoraussetzung (I.V.)}: Annahme: $A(n)$ ist wahr (für ein $n \geq n_0$).
+    \item \textbf{Induktionsschluss (I.S.)}: Zeige: $A(n) \implies A(n+1)$.
+\end{enumerate}
+
 \newpage
 \section{Abbildungen}
 Eine \textbf{Abbildung} $f: X \to Y$ besteht aus:
