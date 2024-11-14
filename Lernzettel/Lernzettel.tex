@@ -275,6 +275,31 @@ Seien $X, Y, Z$ Mengen und $f: X \to Y$ und $g: Y \to Z$ Abbildungen.\\
 Die \textbf{Komposition} oder \textbf{Verknüpfung} von $f$ und $g$ ist die\\
 Abbildung $g \circ f: X \to Z$, definiert durch $(g \circ f)(x)=g(f(x))$.
 
+\section{Reelle Funktionen}
+Sei $M$ eine Menge. Eine Abbildung $f: M \to \mathbb{R}$ heißt Funktion. \\
+\subsection{Monotone Funktionen}
+Sei $M \subset \mathbb{R}$ und $f: M \to \mathbb{R}$. Dann heißt $f$
+\begin{itemize}
+    \item \textbf{monoton wachsend}, falls $\forall x,y : x \leq y \to f(x) \leq f(y)$
+    \item \textbf{streng monoton wachsend}, falls $\forall x,y : x < y \to f(x) < f(y)$
+    \item \textbf{monoton fallend}, falls $\forall x,y : x \leq y \to f(x) \geq f(y)$
+    \item \textbf{streng monoton fallend}, falls $\forall x,y : x < y \to f(x) > f(y)$
+\end{itemize}
+\subsection{Trigonometrische Funktionen}
+Betrachte einen Winkel $\alpha$ mit Schenkeln der Länge 1 und Spitze im Ursprung $(0,0) \in \mathbb{R}^2$ \\
+Wenn $\alpha > 0$, dann ist der Winkel orientiert, d.h. Die Strecke des Winkels wird \textbf{gegen den Uhrzeigersinn} gedreht.\\
+Wenn $\alpha < 0$, dann ist die Strecke des Winkels \textbf{im Uhrzeigersinn} gedreht. \\
+\subsection{Eigenschaften der Sinus- und Cosinusfunkton}
+\begin{itemize}
+    \item $cos$ und $sin$ sind $2\pi$-periodisch. Für alle $x \in \mathbb{R}$ und $k \in \mathbb{Z}$ gilt $cos(x+2k\pi) = cos(x)$ und $sin(x+2k\pi) = sin(x)$
+    \item $cos(-x) = cos(x) \implies cos$ ist eine \textbf{gerade} Funktion.
+    \item $sin(-x) = -sin(x) \implies sin$ ist eine \textbf{ungerade} Funktion.
+    \item $cos^2(x) + sin^2(x) = 1$
+    \item $|cos(x)| \leq 1, \: |sin(x)| \leq 1, \: |sin(x)| \leq |x|$
+\end{itemize}
+\subsection{Tangens-Funktion}
+\[tan(x) := \frac{sin(x)}{cos(x)} \text{ für } x \in D := \mathbb{R} \backslash \{(k+\frac{1}{2})\pi : k \in \mathbb{Z}\}\]
+
 \section{Zahlensysteme}
 \subsection{Binärsystem}
 \begin{itemize}[leftmargin=*]
