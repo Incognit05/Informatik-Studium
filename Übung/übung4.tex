@@ -1,0 +1,76 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Mathe Übung 4}
+\author{Pascal Diller, Timo Rieke}
+\date{11 November 2024}
+
+\begin{document}
+
+\maketitle
+\section{Aufgabe 1}
+\begin{center}
+  (i) \\
+$\sum_{k = 1}^{n}k^2 = \frac{n(n+1)(2n+1)}{6}$ \\ 
+"\\
+\textbf{Induktionsanfang:} für n=1 \\
+$\sum_{k = 1}^{1}k^2 = 1^2 = 1 = \frac{1*2*3}{6} =\frac{1(1+1)(2*1+1)}{6}$\\
+$\Longrightarrow{}$ Die Gleichung stimmt für n = 1 \\
+.\\
+\textbf{Induktionsvorraussetzung:} \\
+Angenommen, die Formel gilt für ein beliebiges $n \in \mathbb{N}$ \\
+$\sum_{k = 1}^{n}k^2 = \frac{n(n+1)(2n+1)}{6}$ \\ 
+.\\
+\textbf{Induktionsschritt:} Formel für n+1 \\
+$\sum_{k = 1}^{n+1}k^2 = \frac{(n+1)(n+2)(2n+3)}{6}$ \\ 
+Es gilt: 
+$\sum_{k = 1}^{n+1} k^2 = \sum_{k = 1}^{n}k^2 + (n+1)^2$ \\
+Einsetzen: 
+$\sum_{k = 1}^{n+1}k^2 = \frac{n(n+1)(2n+1)}{6} + (n+1)^2$  \\ 
+$ = \frac{n(n+1)(2n+1)+6(n+1)^2}{6}$  \\ 
+$ = \frac{(n+1)(n(2n+1))+6(n+1))}{6}$  \\ 
+$ = \frac{(n+1)(2n^2+n+6n+6)}{6} = \frac{(n+1)(2n^2+7n+6)}{6}$  \\ 
+$ = \frac{(n+1)(n+2)(2n+3)}{6}$  \\ 
+$\Longrightarrow{}$ Dies zeigt, dass die Induktionsannahme ebenfalls für n+1 gilt, somit ist die Formel bewiesen \\
+. \\
+(ii) \\ 
+(a) \\
+Berechne :$\sum_{k=1}^{n}(2k-1)^2$ \\
+$= \sum_{k=1}^{n}(4k^2 - 4k +1)$ \\
+$= 4\sum_{k=1}^{n}k^2 - 4\sum_{k=1}^{n}k + \sum_{k=1}^{n}1$\\
+Berechnen der Teilsummen:\\
+\textbf{1.} $\sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}$ \\
+    $\Longrightarrow{}$$4*\sum_{k=1}^{n} k^2 = 4*\frac{n(n+1)(2n+1)}{6} = \frac{2n(n+1)(2n+1}{3}$ \\
+\textbf{2.} $\sum_{k=1}^{n} k = \frac{n(n+1)}{2}$ \\
+    $\Longrightarrow{} -4*\sum_{k=1}^{n}k = -4\frac{n(n+1)}{2} = -2n(n+1)$ \\
+\textbf{3.} $\sum_{k=1}^{n} 1 = n$ \\
+Zusammensetzen der Teilsummen:
+$\sum_{k=1}^{n}(2k-1)^2 = \frac{2n(n+1)(2n+1}{3} -2n(n+1) + n$ \\
+.\\
+(b) \\
+Berechne :$\sum_{k=2}^{n+2}2^{k-2}$ \\
+Setze \( j = k - 2 \), dann wird die Summe:
+$\sum_{k=2}^{n+2} 2^{k-2} = \sum_{j=0}^{n} 2^j$ \\
+$\sum_{j=0}^{n} 2^j = 2^{n+1} - 1$ \\
+Also ergibt sich: \\
+$\sum_{k=2}^{n+2} 2^{k-2} = 2^{n+1} - 1 $\\
+
+.\\
+(c) \\
+Berechne :$\sum_{k=1}^{n}\frac{1}{k(k+1)}$ \\
+Zerlege den Bruch als Differenz: \\
+$\frac{1}{k(k+1)} = \frac{1}{k} - \frac{1}{k+1}$ \\
+Einsetzen in die Summe: \\
+$\sum_{k=1}^n \left( \frac{1}{k} - \frac{1}{k+1} \right) = 1 - \frac{1}{n+1}$ \\
+Somit erhalten wir: \\
+$\sum_{k=1}^n \frac{1}{k(k+1)} = 1 - \frac{1}{n+1}$ \\
+
+
+\end{center}
+
+\section{Aufgabe 2}
+
+
+\section{Aufgabe 3}
+
+\end{document}
