@@ -277,6 +277,60 @@ Abbildung $g \circ f: X \to Z$, definiert durch $(g \circ f)(x)=g(f(x))$.
 
 \section{Reelle Funktionen}
 Sei $M$ eine Menge. Eine Abbildung $f: M \to \mathbb{R}$ heißt Funktion. \\
+\newline
+Für Funktionen $f,g: M \to \mathbb{R}$ sind $f+g, f \cdot g, \frac{f}{g}$ defintiert durch
+\begin{itemize}
+    \item $(f+g)(x) := f(x) + g(x)$ für $x \in M$
+    \item $(f \cdot g)(x) := f(x) \cdot g(x)$ für $x \in M$
+    \item $\frac{f}{g}(x) := \frac{f(x)}{g(x)}$ für $x \in M \setminus \{x \in M : g(x) = 0\}$ 
+    \item[] \textbf{''punktweise''} Entsprechend 
+    \item $|f|(x) := |f(x)|$, max$\{f,g\}(x) :=$ max$\{f(x), g(x)\}$, \\min$\{f,g\}(x) :=$ min$\{f(x),g(x)\}$ für $x \in M$
+    \item $f \leq g$ genau dann wenn $f(x) \leq g(x)$ für alle $x \in M$.
+\end{itemize}
+Für eine Abbildung $f : N \to M$ mit $N,M \subset \mathbb{R}$ wird $f^{-1}:M \to N$ als \textbf{Umkehrfunktion} von $f$ bezeichnet. \\
+(!!! $f^{-1} \neq x \mapsto \frac{1}{f(x)}$ für $x \in M$)
+\subsection{Funktionsgraphen}
+Seien $M$ eine Menge und $f: M \to \mathbb{R}$ eine Funktion. Dann ist der \textbf{Graph} von $f$
+\[\Gamma(f) := \{(x,f(x)): x \in M\} \subset M \times \mathbb{R}\]
+\subsubsection{Intervalle}
+Definitionsbereiche von reellen Funktionen sind oft Intervalle. 
+\begin{itemize}
+    \item beschränkte Intervalle für $a, b \in \mathbb{R}, a \leq b$
+    \begin{align*}
+        [a,b] &:= \{x \in \mathbb{R} : a \leq x \leq b\} \text{ ''abgeschlossen'', ''kompakt''} \\
+        (a,b) &:= \{x \in \mathbb{R} : a < x < b\} \text{ ''offen''} \\
+        [a,b) &:= \{x \in \mathbb{R} : a \leq x < b\} \text{ ''halboffen''} \\
+        (a,b] &:= \{x \in \mathbb{R} : a < x \leq b\} \text{ ''halboffen''} 
+    \end{align*}
+    \item[] mit $[a,b] = [a, a] = {a}$ für $a = b$ und $(a,b) = [a,b) = (a,b] = \emptyset$ für $a = b$.
+    \item unbeschränkte Intervalle für $a \in \mathbb{R}$
+    \begin{align*}
+        [a,\infty) &:= \{x \in \mathbb{R}: a \leq x\} \text{ ''abgeschlossen''} \\
+        (-\infty, a] &:= \{x \in \mathbb{R}: x \leq a\} \text{ ''abgeschlossen''} \\
+        (a,\infty) &:= \{x \in \mathbb{R}: a < x\} \text{ ''offen''} \\
+        (-\infty, a) &:= \{x \in \mathbb{R}: x < a\} \text{ ''offen''} 
+    \end{align*}
+\end{itemize}
+\subsection{Beschränkte Mengen und Funktionen}
+Eine Menge $M \subset \mathbb{R}$ heißt
+\begin{itemize}
+    \item \textbf{nach oben beschränkt} genau dann wenn $\exists C \in \mathbb{R} \forall x \in M : x \leq C$
+        \subitem $C$ heißt \textbf{obere Schranke}
+        \subitem Falls $M \subset \mathbb{R}$ ein Maximum besitzt ist $M$ nach oben beschränkt.
+    \item \textbf{nach unten beschränkt} genau dann wenn $\exists c \in \mathbb{R} \forall x \in M : x \leq c$
+        \subitem $c$ heißt \textbf{untere Schranke}
+        \subitem Falls $M \subset \mathbb{R}$ ein Minimum besitzt ist $M$ nach unten beschränkt.
+    \item \textbf{beschränkt} genau dann wenn $M$ nach oben und nach unten beschränkt
+\end{itemize}
+Betrachte die Funktion $f: M \to \mathbb{R}$
+\begin{itemize}
+    \item $f$ heißt nach \textbf{oben/unten beschränkt} genau dann wenn $f(M)$ nach oben/unten beschränkt ist.
+    \item $f$ besitzt ein \textbf{Maximum/Minimum} auf $M$ genau dann wenn $f(M)$ ein Maximum/Minimum besitzt.
+    \item Ein Punkt $x_0 \in M$ mit 
+        \subitem $f(x_0) =$ max$f(M) =: \underset{x \in M}{\text{max}} f(x)$ heißt \textbf{Maximalstelle} von $f$,
+        \subitem $f(x_0) =$ min$f(M) =: \underset{x \in M}{\text{min}} f(x)$ heißt \textbf{Minimalstelle} von $f$.
+    \item Ein Punkt $x_0 \in M$ heißt \textbf{Extremstelle} von $f$, wenn $x_0$ eine Maximal- oder Minimalstelle ist.
+\end{itemize}
 \subsection{Monotone Funktionen}
 Sei $M \subset \mathbb{R}$ und $f: M \to \mathbb{R}$. Dann heißt $f$
 \begin{itemize}
@@ -289,16 +343,59 @@ Sei $M \subset \mathbb{R}$ und $f: M \to \mathbb{R}$. Dann heißt $f$
 Betrachte einen Winkel $\alpha$ mit Schenkeln der Länge 1 und Spitze im Ursprung $(0,0) \in \mathbb{R}^2$ \\
 Wenn $\alpha > 0$, dann ist der Winkel orientiert, d.h. Die Strecke des Winkels wird \textbf{gegen den Uhrzeigersinn} gedreht.\\
 Wenn $\alpha < 0$, dann ist die Strecke des Winkels \textbf{im Uhrzeigersinn} gedreht. \\
-\subsection{Eigenschaften der Sinus- und Cosinusfunkton}
+Für die Länge $x = x(\alpha)$ des Kreisbogens die Verhältnisgleichung
+\[\frac{x}{2\pi} = \frac{\alpha}{360^{\circ}} \Longleftrightarrow x = x(\alpha) = \frac{\alpha \cdot 2\pi}{360^{\circ}}\]
+\subsection{Sinus- und Cosinus-Funkton}
+Betrachte den Vektor $(u(x),v(x))$ auf dem Einheitskreis um 0, der mit der positiven $x$-Achse den Winkel $x = x(\alpha)$ bildet. \\
+Dann ist die \textbf{Cosinus-Funktion} definiert als
+\[\cos(x) := u(x) \text{ für } x \in \mathbb{R}\]
+und die \textbf{Sinus-Funktion} definiert als
+\[\sin(x) := v(x) \text{ für } x \in \mathbb{R}\]
+Es folgen wesentliche Eigenschaften von Sinus und Cosinus:
 \begin{itemize}
-    \item $cos$ und $sin$ sind $2\pi$-periodisch. Für alle $x \in \mathbb{R}$ und $k \in \mathbb{Z}$ gilt $cos(x+2k\pi) = cos(x)$ und $sin(x+2k\pi) = sin(x)$
-    \item $cos(-x) = cos(x) \implies cos$ ist eine \textbf{gerade} Funktion.
-    \item $sin(-x) = -sin(x) \implies sin$ ist eine \textbf{ungerade} Funktion.
-    \item $cos^2(x) + sin^2(x) = 1$
-    \item $|cos(x)| \leq 1, \: |sin(x)| \leq 1, \: |sin(x)| \leq |x|$
+    \item $\cos$ und $\sin$ sind $2\pi$-periodisch. Für alle $x \in \mathbb{R}$ und $k \in \mathbb{Z}$ gilt $\cos(x+2k\pi) = \cos(x)$ und $\sin(x+2k\pi) = \sin(x)$
+    \item $\cos(-x) = \cos(x) \implies \cos$ ist eine \textbf{gerade} Funktion.
+    \item $\sin(-x) = -\sin(x) \implies \sin$ ist eine \textbf{ungerade} Funktion.
+    \item $\cos^2(x) + \sin^2(x) = 1$
+    \item $|\cos(x)| \leq 1, \: |\sin(x)| \leq 1, \: |\sin(x)| \leq |x|$
 \end{itemize}
+Für $x,y \in \mathbb{R}$ gelten die \textbf{Additionstheoreme} 
+\begin{align*}
+    \cos(x \pm y) &= \cos(x) \cos(y) \mp \sin(x) \sin(y) \\
+    \sin(x \pm y) &= \sin(x) \cos(y) \pm \cos(x) \sin(y) \\
+\end{align*}
+Spezialfälle:
+\begin{align*}
+    \sin \left( x + \frac{\pi}{2} \right) &= \sin(x) \underbrace{\cos\left(\frac{\pi}{2}\right)}_{=0} + \cos(x) \underbrace{\sin\left(\frac{\pi}{2}\right)}_{=1} = \cos(x) \\
+    \cos \left( x - \frac{\pi}{2} \right) &= \cos(x) \underbrace{\cos\left(\frac{\pi}{2}\right)}_{=0} + \sin(x) \underbrace{\sin\left(\frac{\pi}{2}\right)}_{=1} = \sin(x) 
+\end{align*}
 \subsection{Tangens-Funktion}
-\[tan(x) := \frac{sin(x)}{cos(x)} \text{ für } x \in D := \mathbb{R} \backslash \{(k+\frac{1}{2})\pi : k \in \mathbb{Z}\}\]
+\[\tan(x) := \frac{\sin(x)}{\cos(x)} \text{ für } x \in D := \mathbb{R} \setminus \{(k+\frac{1}{2})\pi : k \in \mathbb{Z}\}\]
+Eigenschaften des Tangens:
+\begin{itemize}
+    \item Die Tangens-Funktion ist $\pi$-periodisch, d.h. für $k \in \mathbb{Z}$ und $x \in D$ gilt
+    \[\tan(x + k\pi) = \frac{\sin(x + k\pi)}{\cos(x + k\pi)} = \frac{\sin(x) \cos(k\pi) + \cos(x) \sin(k\pi)}{\cos(x) \cos(k\pi) - \sin(x) \sin(k\pi)} = \frac{\mp \sin(x)}{\mp \cos(x)} = \tan(x).\]
+    \item Die Tangens-Funktion ist ungerade, es gilt für $x \in D$
+    \[\tan(-x) = \frac{\sin(-x)}{\cos(-x)} = \frac{-sin(x)}{cos(x)} = -\tan(x)\]
+\end{itemize}
+\subsection{Polynome}
+Sei $t$ eine \underline{Variable} oder \underline{Unbestimmte}. Ein \textbf{Polynom mit Koeffizienten in $\mathbb{R}$} oder ein \textbf{Polynom über $\mathbb{R}$} ist ein formaler Ausdruck der Gestalt
+\[P(t) := \sum_{k=0}^{m}a_k t^k = a_m t^m + a_{m-1} t^{m-1} + \ldots + a_1 t + a_0\]
+mit $a_0, \dots, a_m \in \mathbb{R}$. Die Menge aller Polynome über $\mathbb{R}$ wird mit $\mathbb{R}[t]$ bezeichnet. Falls $a_m \neq 0$ (\textbf{Leitkoeffizient}) gilt, dann heißt $m$ der \textbf{Grad} von $P$. \\
+\newline
+Notation:
+\begin{itemize}
+    \item Wir bezeichnen mit $\deg P$ den Grad von $P$.
+    \item Für das Nullpolynom $N$, bei dem alle $a_i$ Null sind, ist $\deg N := -\infty$.
+    \item $\mathbb{R}_m[t] := \{ P \in \mathbb{R}[t] : \deg P \leq m \}$.
+    \item Polynome von Grad 0 $(P(x) = a_0)$ sind die \textbf{konstanten Polynome}.
+    \item Polynome von Grad 1 $(P(x) = a_1 x + a_0)$ sind die \textbf{linearen Polynome}.
+    \item Polynome von Grad 2 $(P(x) = a_2 x^2 + a_1 x + a_0)$ sind die \textbf{quadratischen Polynome}.
+\end{itemize}
+Eine \textbf{Polynomfunktion} ist eine Funktion der Form $\mathbb{R} \to \mathbb{R}, x \mapsto P(x)$ für ein Polynom $P \in \mathbb{R}[t]$. \\
+\newline
+Seien $M \subset \mathbb{R}, x_0 \in M$ und $f: M \to \mathbb{R}$. Dann heißt $x_0$ \textbf{Nullstelle} von $f$, falls $f(x_0) = 0$ gilt. \\ 
+Ein Polynom $P \in \mathbb{R}_m[x]$ vom Grad $m \in \mathbb{N}$ hat \textbf{höchstens $m$} Nullstellen.
 
 \section{Zahlensysteme}
 \subsection{Binärsystem}
