@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm}
+
+\title{Übung 5}
+\author{Pascal Diller, Timo Rieke}
+
+\setcounter{secnumdepth}{0}
+
+\begin{document}
+
+\maketitle
+\section{Aufgabe 1}
+\subsection{(i)}
+\textbf{I.A.}
+\[\left|\sum_{k=1}^{1} a_k\right| \leq \sum_{k=1}^{1} |a_k| = 1 \leq 1\]
+\textbf{I.V.}
+\[\left|\sum_{k=1}^{n} a_k\right| \leq \sum_{k=1}^{n}|a_k|\]
+\textbf{I.S}
+\begin{align*}
+    |\sum_{k=1}^{n+1} a_k| &\leq \sum_{k=1}^{n+1} |a_k| \\
+    = \left|\left(\sum_{k=1}^{n}a_k\right) + a_{n+1}\right| &\leq \left(\sum_{k=1}^{n}|a_k|\right) + |a_{n+1}| \\
+    \overset{I.V.}{=} \left|\sum_{k=1}^{n+1} a_k\right| &\leq \sum_{k=1}^{n}|a_k| + |a_{n+1}| \\
+    = \left|\sum_{k=1}^{n+1}a_k\right| &\leq \sum_{k=1}^{n+1}|a_k| 
+\end{align*}
+Somit ist gezeigt, dass $A(n) \implies A(n+1)$.
+\newpage
+\subsection{(ii)}
+Zu zeigen: \[\sum_{k=0}^{n}(-1)^k \begin{pmatrix} n\\k \end{pmatrix} = 0\]
+Binomischer Lehrsatz: \[(x+y)^n = \sum_{k=0}^{n} \begin{pmatrix}n\\k \end{pmatrix} x^k y^{n-k}\]
+Seien $x = -1$ und $y = 1$:
+\begin{align*}
+    (-1 + 1)^n &= \sum_{k=0}^{n} \begin{pmatrix}n\\k\end{pmatrix}(-1)^k 1^{n-k} \\
+    = 0^n &= \sum_{k=0}^{n} \begin{pmatrix}n\\k\end{pmatrix} (-1)^k \\
+    = 0 &= \sum_{k=0}^{n}(-1)^k \begin{pmatrix}n\\k\end{pmatrix}
+\end{align*}
+\end{document}
