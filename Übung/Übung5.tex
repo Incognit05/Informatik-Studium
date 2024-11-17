@@ -34,4 +34,25 @@ Seien $x = -1$ und $y = 1$:
     = 0^n &= \sum_{k=0}^{n} \begin{pmatrix}n\\k\end{pmatrix} (-1)^k \\
     = 0 &= \sum_{k=0}^{n}(-1)^k \begin{pmatrix}n\\k\end{pmatrix}
 \end{align*}
+
+\section{Aufgabe 2}
+\subsection{(i) $f,g$ beschränkt $\Longrightarrow f*g$ beschränkt}
+\begin{center}
+    Wenn f ung g beschränkt sind, gib es Konstanten $M_f, M_g > 0$, sodass \\
+    $|f(x)| \leq M_f$ und $|g(x)| \leq M_g$ für alle $x \in \mathbb{R}$ \\
+    Für das Produkt $f*g$ gilt dann: \\
+    $|f(x)*g(x)| \leq |f(x)|*|g(x)| \leq M_f*M_g$ \\
+    $\Longrightarrow f*g$ ist ebenfalls beschränkt.
+\end{center}
+
+\subsection{(ii) $f,g$ monoton wachsend $\Longrightarrow f*g$ monoton wachsend}
+\begin{center}
+    \textbf{Gegenbeispiel:} \\
+    Seien $f(x)=x$ und $g(x)=x-1$ \\
+    Beide sind monoton wachsend, da $f'(x)=1 > 0$ und $g'(x)=1 > 0$. \\
+    \textbf{$f*g$:} $(f*g)(x)=x*(x-1)=x^2-x$ \\
+    Ableitung: $(f*g)'(x)=2x-1$\\
+    $\Longrightarrow$ Da für $x<\frac{1}{2}$ $(f*g)'(x)<0$ ist und für  $x>\frac{1}{2}$ $(f*g)'(x)>0$ ist, ist $f*g$ nicht monoton wachsend.
+\end{center}
+
 \end{document}
