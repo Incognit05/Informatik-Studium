@@ -109,11 +109,35 @@ Da $\frac{4}{3}>1$, folgt $f(k+1) \geq 1$ \\
 $\Longrightarrow$ Nach vollständiger Induktion ist $f(n) \geq 1$ für alle $n \in \mathbb{N}$
 
 
-\subsection{(ii) monoton fallend ist}
+\subsection{(ii)}
+$f(1) = 2$, $f(n+1) = 2 - \frac{2}{f(n)+2}$ \\
+\newline
+Zu zeigen: Es gibt $x \leq y$ so dass $f(x) \geq f(y)$
 \subsubsection{Induktionsanfang}
+Sei $n = 1$.
+\begin{align*}
+    f(2) &\geq f(3) \\
+    = 2 - \frac{2}{f(1) + 2} &\geq 2 - \frac{2}{f(2) + 2} \\
+    = 2 - \frac{2}{4} &\geq 2 - \frac{2}{2- \frac{2}{4} + 2} \\
+    = \frac{3}{2} &\geq 2 - \frac{2}{\frac{3}{2} + 2} \\
+    = \frac{3}{2} &\geq \frac{10}{7}
+\end{align*}
 
 \subsubsection{Induktionsvoraussetzung}
+$f(n + 1) \geq f(n + 2)$ für $n \in \mathbb{N}$ \\
+$\implies f(n) \geq f(n + 1)$ für $n \in \mathbb{N}$
 
 \subsubsection{Induktionsschluss}
+Man untersucht die Differenz $f(n + 1) - f(n + 2)$. Wenn $f(n + 1) - f(n + 2) \geq 0$, dann gilt $f(n + 1) \geq f(n + 2)$
+\begin{align*}
+    f(n + 1) &- f(n + 2) \\
+    = \left(2 - \frac{2}{f(n) + 2}\right) &- \left(2 - \frac{2}{f(n + 1) + 2}\right) \\
+    = 2 - \frac{2}{f(n)+2} &- 2 + \frac{2}{f(n+1) + 2} \\
+    = \frac{2}{f(n+1) + 2} &- \frac{2}{f(n) + 2}
+\end{align*}
+Aus der I.V. gilt: $f(n) \geq f(n + 1)$. Demnach ist $f(n) + 2 \geq f(n + 1) + 2$. \\
+Daraus folgt, dass $\frac{2}{f(n+1) + 2} \geq \frac{2}{f(n) + 2}$ \\
+Also ist $\frac{2}{f(n+1)+2} - \frac{2}{f(n)+2} = f(n + 1) - f(n + 2) \geq 0$ \\
+Damit ist gezeigt, dass $f(n + 1) \geq f(n + 2)$.
 
 \end{document}
