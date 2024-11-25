@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm}
+
+\title{Übung 6}
+\author{Pascal Diller, Timo Rieke}
+
+\setcounter{secnumdepth}{0}
+
+\begin{document}
+
+\maketitle
+
+\section{Aufgabe 2}
+\subsection{(i)}
+Seien $f$ und $g$ zwei ungerade Funktionen. Somit gilt: $f(-x) = -f(x)$ und $g(-x) = -g(x)$. Zu zeigen: $(f \cdot g)(-x) = (f \cdot g)(x)$
+\[(f \cdot g)(-x) = f(-x) \cdot g(-x) = -f(x) \cdot (-g(x)) = f(x) \cdot g(x) = (f \cdot g)(x)\]
+Somit ist gezeigt, dass das Produkt zweier ungeraden Funktionen gerade ist.
+
+\subsection{(ii)}
+Sei $f$ eine gerade Funktion ($f(-x)=f(x)$) und $g$ eine ungerade Funktion ($g(-x)=-g(x)$).
+Zu zeigen: $(f \cdot g)(-x) = -(f \cdot g)(x)$
+\[(f \cdot g)(-x) = f(-x) \cdot g(-x) = f(x) \cdot (-g(x)) = -(f(x) \cdot g(x)) = -(f \cdot g)(x)\]
+Somit ist gezeigt, dass das Produkt einer gerade und einer ungeraden Funktion ungerade ist.
+
+\subsection{(iii)}
+Seien $f$ und $g$ zwei gerade Funktionen. Zu zeigen: $(f + g)(-x) = (f + g)(x)$
+\[(f + g)(-x) = f(-x) + g(-x) = f(x) + g(x) = (f+g)(x)\]
+Somit ist gezeigt, dass die Summe zweier geraden Funktionen auch gerade ist.
+
+\subsection{(iv)}
+Sei $\lambda \in \mathbb{N}$ und $f$ eine gerade Funktion. Zu zeigen: $\lambda f(-x) = \lambda f(x)$
+\[(\lambda f)(-x) = \lambda f (-x) = \lambda f (x)\]
+Somit ist gezeigt, dass für $\lambda$ und die gerade Funktion $f$ das Produkt aus $\lambda f$ gerade ist.
+
+\subsection{(v)}
+Zu zeigen: \[f_n: \mathbb{R} \to \mathbb{R}, x \to x^n \begin{cases}
+    \text{gerade wenn } n \text{ gerade} \\
+    \text{ungerade wenn } n \text{ ungerade}
+\end{cases}\]
+I.A. \\
+Sei $n = 0$. Da $f_0(-x) = (-x)^0 = f_0(x) = x^0 = 1$ ist $f$ gerade. \\
+\newline
+Sei $n = 1$. Da $f_1(-x) = (-x)^1 = -f_1(x) = -x^1 = -x$ ist $f$ ungerade.
+
+\end{document}
