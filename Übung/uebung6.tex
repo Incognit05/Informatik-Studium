@@ -53,7 +53,29 @@ Zu zeigen: \[f_n: \mathbb{R} \to \mathbb{R}, x \to x^n \begin{cases}
 I.A. \\
 Sei $n = 0$. Da $f_0(-x) = (-x)^0 = f_0(x) = x^0 = 1$ ist $f$ gerade. \\
 \newline
-Sei $n = 1$. Da $f_1(-x) = (-x)^1 = -f_1(x) = -x^1 = -x$ ist $f$ ungerade.
+Sei $n = 1$. Da $f_1(-x) = (-x)^1 = -f_1(x) = -x^1 = -x$ ist $f$ ungerade. \\
+\newline
+I.V. \[f_n: \mathbb{R} \to \mathbb{R}, x \to x^n \begin{cases}
+    \text{gerade wenn } n \text{ gerade} \\
+    \text{ungerade wenn } n \text{ ungerade}
+\end{cases}\] \\
+\newline
+I.S. \\
+\[f_{n+1}(x) = x^{n+1} = x \cdot x^n\]
+Betrachte $x \cdot x^n$ als Produkt der Funktionen $f(x) = x$ und $g_n(x)=x^n$. \\
+$f$ ist ungerade, da gilt: $f(-x) = -f(x) = -x$. \\
+Wenn $n$ gerade ist, dann ist $g_n$ gerade. Wenn $n$ ungerade ist, dann ist $g_n$ ungerade. \\
+Aus vorherigen Aufgaben folgt: \\
+Wenn $n$ gerade: $f \cdot g_n$ ist ungerade, da das Produkt aus einer geraden und einer ungeraden Funktion ungerade ist. \\
+Wenn $n$ ungerade: $f \cdot g_n$ ist gerade, da das Produkt aus zwei ungerade Funktionen gerade ist. \\
+Somit ist gezeigt, dass wenn $n$ gerade ist, ist $n+1$ ungerade und die Funktion ist gerade (und anders herum). \\
+
+\subsection{(vi)}
+\subsubsection{(a)}
+Sei $R: \mathbb{R} \to \mathbb{R}$ mit $R(x) := x^{10} - 15x^8 + 85x^6 - 255x^4 + 274x^2-120$. \\
+$R$ ist eine Summe aus Thermen der Form $\lambda x^n$. Da $n$ immer gerade ist, ist $x^n$(v) auch immer gerade. Demnach ist $\lambda x^n$ ebenfalls immer gerade(iv). Da eine Summe aus geraden Funktionen gerade ist, ist $R$ gerade(iii).
+\subsubsection{(b)}
+Da $R$ gerade ist, gilt: $R(-x) = R(x)$. Also gibt es für jede angegebene Nullstelle eine weitere mit negiertem Vorzeichen. Somit sind die Nullstellen: $x_1 = \pm 1, x_2 = \pm \sqrt{2}, x_3 = \pm \sqrt{3}, x_4 = \pm 2, x_5 = \pm \sqrt{5}$
 
 \section{Aufgabe 3}
 \subsection{(i) Bestimmen der Nullstellen von $P(x)=x^4-8x^2-9$}
