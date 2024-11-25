@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Mathe Übungsblatt 6}
+\author{Pascal Diller, Timo Rieke}
+\date{October 2024}
+
+\begin{document}
+\maketitle
+
+\section{Aufgabe 1}
+Zu zeigen: $cos(2x) = 1 - 2 sin^2 x$ 
+\begin{center}
+    $cos(2x) = cos(x+x)$ \\
+    Additionstheorem: $cos(x+x) = cos x * cosx - sinx* sinx$ \\
+    $cosx*cosx-sinx*sinx = cos^2x - sin^2x$ \\
+    Pythagoras: $cos^2x+sin^2x=1 \Longleftrightarrow cos^2x = 1-sin^2x$ \\
+    Einsetzen von $cos^2x = 1-sin^2x$ in die Formel $cos^2x - sin^2x$:\\
+    $(1-sin^2x) - sin^2x = 1- 2sin^2x$\\
+    $\Longrightarrow cos(2x) = 1-2sin^2x$ 
+\end{center}
+
+\section{Aufgabe 3}
+\subsection{(i) Bestimmen der Nullstellen von $P(x)=x^4-8x^2-9$}
+Substitution: $z=x^2$ 
+\begin{center}
+    $x^4-8x^2-9=z^2-8z-9$
+\end{center}
+PQ-Formel: 
+\begin{center}
+    $z_{1,2}=\frac{8}{2} \pm \sqrt{(\frac{-8}{2})^2 + 9} = 4 \pm \sqrt{25} = 4 \pm 5$ \\
+    $z_1=4+5=9$ \\
+    $z_2=4-5=-1$
+\end{center}
+Rücksubstitution:
+\begin{center}
+    $z_1$: $\sqrt{9} = -3 \lor 3$ \\
+    $z_2$: $\sqrt{-1} \Longrightarrow$ keine Lösung \\
+    $\Longrightarrow$ Nullstellen bei $x_1 = -3$ und $x_2 = 3$
+\end{center}
+
+\subsection{(ii) Nullstellen und Grad der Funktion $Q(x)$}
+\begin{center}
+    $Q(x)=(x-5)^2(x+2)(x^2-4)(3x^2+2)$ 
+\end{center}
+Nullstellen:  \\
+    \begin{enumerate}
+        \item $(x-5)^2$: Nullstelle $x=5$ mit Ordnung 2 
+        \item $(x+2)$: Nullstelle $x=-2$ mit Ordnung 1 
+        \item $(x^2-4) = (x-2)(x+2)$: Nullstellen $x=2$ und $x=-2$, da $x=-2$ erneut vorkommt: \\
+         $x=2$ mit Ordnung 1 und $x=-2$ mit Ordnung 2 
+        \item $(3x^2+2)$:  $3x^2+2=0 \Longleftrightarrow x^2=-\frac{2}{3} \Longleftrightarrow$ Keine Nullstelle
+    \end{enumerate}
+    $\Longrightarrow$ Nullstellen: $x=-2$ mit Ordnung 2, $x=2$ mit Ordnung 1 und $x=5$ mit Ordnung 2 \\
+\newline 
+Grad von $Q(x)$: \\
+$2+1+2+2=7$
+$\Longrightarrow$ Der Grad von $Q(x)$ entspricht 7.
+\end{document}
