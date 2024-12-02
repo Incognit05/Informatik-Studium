@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm}
+
+\title{Übung 7}
+\author{Pascal Diller, Timo Rieke}
+
+\setcounter{secnumdepth}{0}
+
+\begin{document}
+
+\maketitle
+
+\section{Aufgabe 3}
+$f+g$ ist eine lineare Abbildung, wenn gilt:
+\begin{align*}
+    (f+g)(a+b) &= (f+g)(a)+(f+g)(b) & (1) \\
+    (f+g)(\lambda a) &= \lambda(f+g)(a) & (2)
+\end{align*}
+\newline
+\begin{align*}
+    (f+g)(a+b) &= f(a+b)+g(a+b) &\text{Definition von $f+g$}\\
+    &= f(a)+f(b) + g(a)+g(b) &\text{$f$ und $g$ sind linear}\\
+    &= f(a)+g(a) + f(b) + g(b) \\
+    &= (f+g)(a) + (f+g)(b) &\text{Definition von $f+g$}
+\end{align*}
+Somit ist $(1)$ gezeigt. \\
+\newline
+\begin{align*}
+    (f+g)(\lambda a) &= f(\lambda a) + g(\lambda a) &\text{Definition von $f+g$} \\
+    &= \lambda f(a) + \lambda g(a) & \text{$f$ und $g$ sind linear} \\
+    &= \lambda(f(a)+g(a)) \\
+    &= \lambda(f+g)(a) & \text{Definition von $f+g$}
+\end{align*}
+Somit ist $(2)$ gezeigt. \\
+
+\end{document}
