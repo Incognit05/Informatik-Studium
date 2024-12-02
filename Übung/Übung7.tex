@@ -11,6 +11,102 @@
 
 \maketitle
 
+\section{Aufgabe 1}
+\subsection{(i)}
+$G_1$:
+\[\left(\begin{matrix}
+    0 & 0 & 1 & 1 & 0 \\
+    0 & 1 & 1 & 0 & 0 \\
+    1 & 1 & 0 & 0 & 0 \\
+    1 & 0 & 0 & 1 & 0 \\
+\end{matrix}\right)\]
+$Z_1$ und $Z_3$ vertauschen
+\[\left(\begin{matrix}
+    1 & 1 & 0 & 0 & 0 \\
+    0 & 1 & 1 & 0 & 0 \\
+    0 & 0 & 1 & 1 & 0 \\
+    1 & 0 & 0 & 1 & 0 \\
+\end{matrix}\right)\]
+$Z_4 - Z_1 \to Z_4$
+\[\left(\begin{matrix}
+    1 & 1 & 0 & 0 & 0 \\
+    0 & 1 & 1 & 0 & 0 \\
+    0 & 0 & 1 & 1 & 0 \\
+    0 & -1 & 0 & 1 & 0 \\
+\end{matrix}\right)\]
+$Z_4 + Z_2 \to Z_4$
+\[\left(\begin{matrix}
+    1 & 1 & 0 & 0 & 0 \\
+    0 & 1 & 1 & 0 & 0 \\
+    0 & 0 & 1 & 1 & 0 \\
+    0 & 0 & 1 & 1 & 0 \\
+\end{matrix}\right)\]
+$Z_4 - Z_3 \to Z_4$
+\[\left(\begin{matrix}
+    1 & 1 & 0 & 0 & 0 \\
+    0 & 1 & 1 & 0 & 0 \\
+    0 & 0 & 1 & 1 & 0 \\
+    0 & 0 & 0 & 0 & 0 \\
+\end{matrix}\right)\]
+$G_1$ hat einen Rang von 3 und ist singulär, da $3 < 4$ (Anzahl Zeilen). \\
+\newline
+$G_2$:
+\[\left(\begin{matrix}
+    3 & 11 & 19 & -2 \\ 
+    7 & 23 & 39 & 10 \\
+    -4 & -3 & -2 & 6 \\
+\end{matrix}\right)\]
+$Z_2 - \frac{7}{3}\cdot Z_1 \to Z_2$
+\[\left(\begin{matrix}
+    3 & 11 & 19 & -2 \\ 
+    0 & -\frac{8}{3} & -\frac{16}{3} & \frac{44}{3} \\
+    -4 & -3 & -2 & 6 \\
+\end{matrix}\right)\]
+$Z_3 + \frac{4}{3} \cdot Z_1 \to Z_3$
+\[\left(\begin{matrix}
+    3 & 11 & 19 & -2 \\ 
+    0 & -\frac{8}{3} & -\frac{16}{3} & \frac{44}{3} \\
+    0 & \frac{35}{3} & \frac{70}{3} & \frac{10}{3} \\
+\end{matrix}\right)\]
+$Z_3 + \frac{35}{8} \cdot Z_2 \to Z_3$
+\[\left(\begin{matrix}
+    3 & 11 & 19 & -2 \\ 
+    0 & -\frac{8}{3} & -\frac{16}{3} & \frac{44}{3} \\
+    0 & 0 & 0 & \frac{135}{2} \\
+\end{matrix}\right)\]
+$G_2$ hat einen Grad von 3 und ist regulär, da $3 = 3$ (Anzahl Zeilen). \\
+\newline
+$G_3$:
+\[\left(\begin{matrix}
+    3 & 5 & 3 & 25 \\ 
+    7 & 9 & 19 & 65 \\
+    -4 & 5 & 11 & 5 \\
+\end{matrix}\right)\]
+$Z_2 - \frac{7}{3} \cdot Z_1 \to Z_2$
+\[\left(\begin{matrix}
+    3 & 5 & 3 & 25 \\ 
+    0 & -\frac{8}{3} & 12 & \frac{20}{3} \\
+    -4 & 5 & 11 & 5 \\
+\end{matrix}\right)\]
+$Z_3 + \frac{4}{3} \cdot Z_1 \to Z_3$
+\[\left(\begin{matrix}
+    3 & 5 & 3 & 25 \\ 
+    0 & -\frac{8}{3} & 12 & \frac{20}{3} \\
+    0 & \frac{35}{3} & 15 & \frac{115}{3} \\
+\end{matrix}\right)\]
+$Z_3 + \frac{35}{8} \cdot Z_2 \to Z_3$
+\[\left(\begin{matrix}
+    3 & 5 & 3 & 25 \\ 
+    0 & -\frac{8}{3} & 12 & \frac{20}{3} \\
+    0 & 0 & \frac{135}{2} & \frac{135}{2} \\
+\end{matrix}\right)\]
+$G_3$ hat einen Grad von 3 und ist regulär, da $3 = 3$(Anzahl Zeilen).
+\subsection{(ii)}
+$\mathbb{L}_{G_1} = \{t, -t, t, -t | t \in \mathbb{R}\}$ \\
+$\mathbb{L}_{G_2} = \emptyset$ (Es sind keine Lösungen vorhanden) \\
+$\mathbb{L}_{G_3} = \{4, 2, 1\}$
+\section{Aufgabe 2}
+
 \section{Aufgabe 3}
 $f+g$ ist eine lineare Abbildung, wenn gilt:
 \begin{align*}
