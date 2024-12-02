@@ -491,6 +491,56 @@ Eine \textbf{Polynomfunktion} ist eine Funktion der Form $\mathbb{R} \to \mathbb
 Seien $M \subset \mathbb{R}, x_0 \in M$ und $f: M \to \mathbb{R}$. Dann heißt $x_0$ \textbf{Nullstelle} von $f$, falls $f(x_0) = 0$ gilt. \\ 
 Ein Polynom $P \in \mathbb{R}_m[x]$ vom Grad $m \in \mathbb{N}$ hat \textbf{höchstens $m$} Nullstellen.
 
+\section{Der Euklidische Raum $\mathbb{R}^n$}
+Der $n$-\textbf{dimensionale euklidische Raum} ist
+\[\mathbb{R}^n = \mathbb{R} \times \dots \times \mathbb{R} = \{(\xi_1, \dots, \xi_n) | \xi_1, \dots \xi_n \in \mathbb{R}\}\]
+$\mathbb{R}^0$ ist der \textbf{Nullraum}. \\
+$\mathbb{R}^1$ sind die reellen Zahlen selbst. \\
+$\mathbb{R}^2$ ist die euklidische Ebene. \\
+Die Elemente in $\mathbb{R}^n$ heißen je nach Zusammenhang \textbf{Punkt} oder \textbf{Vektor}.
+\subsection{Skalarprodukt}
+Das \textbf{Skalarprodukt} zweier Vektoren $a = (\xi_i)$ und $b = (\eta_i)$ im $\mathbb{R}^n$ ist definiert als
+\[a \cdot b = \xi_1 \eta_1 + \dots + \xi_n \eta_n \in \mathbb{R}.\]
+Für $a,b,c \in \mathbb{R}^n$ und $t \in \mathbb{R}$ gilt: \\
+\newline
+\begin{tabular}{l l}
+    (bilinear) & $(a+b) \cdot c = a \cdot c + b \cdot c$ und $a \cdot (b+c) = a \cdot b + a \cdot c$ \\
+    & $(\lambda a) \cdot b = a \cdot (\lambda b) = \lambda(a \cdot b)$ \\
+    (symmetrisch) & $a \cdot b = b \cdot a$ \\
+    (positiv definiert) & $a \cdot a \geq 0$ und $a \cdot a = 0 \Leftrightarrow a = 0$
+\end{tabular} \\
+Das Skalarprodukt ist ebenfalls definiert als
+\[a \cdot b = \cos(\alpha)\cdot||a||\cdot||b||\]
+\[\Leftrightarrow \cos(\alpha) = \frac{a \cdot b}{||a|| \cdot ||b||}\]
+\subsection{Norm/Länge eines Vektors}
+Die \textbf{Norm} oder \textbf{Länge} von $a \in \mathbb{R}^n$ ist \[||a||= \sqrt{a \cdot a} = \sqrt{\sum {a_i}^2}\]
+Seien $\lambda \in \mathbb{R}$ und $a \in \mathbb{R}^n$. Es gilt:
+\[||\lambda \cdot a|| = |\lambda| \cdot ||a||\]
+\[||a|| = 0 \Longleftrightarrow a = 0\]
+\subsection{Lineare Gleichungssysteme}
+Eine \textbf{lineare Gleichung} (über $\mathbb{R}$) ist ein Ausdruck der Form
+\[\alpha_1x_1 + \dots + \alpha_nx_n = \beta\]
+für die Unbekannten $x_1, \dots, x_n$ und reelle Zahlen $\alpha_i$ (\textbf{Koeffizienten}) und $\beta$. Eine \textbf{Lösung} ist ein $n$-Tupel $(\xi_1, \dots, \xi_n) \in \mathbb{R}^n$ das die Gleichung erfüllt. \\
+\newline
+Ein \textbf{lineares Gleichungssystem} $G$ (in $n$ Variablen) ist ein System \\
+\begin{center}
+    \begin{tabular}{c c c c c c c c c}
+        $a_{11}x_1$ & + & $a_{12}x_2$ & + & $\dots$ & + & $a_{1n}x_n$ & = & $\beta_1$ \\ 
+        $a_{21}x_1$ & + & $a_{22}x_2$ & + & $\dots$ & + & $a_{2n}x_n$ & = & $\beta_2$ \\ 
+        & & $\vdots$ & & & & \\
+        $a_{m1}x_1$ & + & $a_{m2}x_2$ & + & $\dots$ & + & $a_{mn}x_n$ & = & $\beta_m$ \\ 
+    \end{tabular}
+\end{center}
+von $m$ linearen Gleichungen. Ein lineares Gleichungssystem heißt \textbf{homogen} wenn $\beta_i = 0$ für alle $i=1,\dots,m$. \\
+\newline
+Die eigentliche Information des linearen Gleichungssystems liegt in den Koeffizienten und den Konstanten auf der rechten Seite der Gleichung. Diese Information wird in einer $m \times n$-Matrix kodiert.
+\[A = (\alpha_{ij}) = \left(\begin{matrix}
+    \alpha_{11} & \alpha_{12} & \dots & \alpha_{1n} \\
+    \alpha_{21} & \alpha_{22} & \dots & \alpha_{2n} \\
+    \vdots & \vdots & & \vdots \\
+    \alpha_{m1} & \alpha_{m2} & \dots & \alpha_{mn}
+\end{matrix}\right)\]
+
 \section{Zahlensysteme}
 \subsection{Binärsystem}
 \begin{itemize}[leftmargin=*]
