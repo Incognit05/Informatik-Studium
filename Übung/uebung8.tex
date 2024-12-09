@@ -170,6 +170,62 @@ Da $T = T_A$:
 
 \section{Aufgabe 3}
 \subsection{(i)}
+\subsubsection{(a)}
+$\text{ref}_G^2$ ist eine lineare Abbildung, da $\text{ref}_G$ eine lineare Abbildung ist, und die Verkettung zweier linearer Abbildungen ebenfalls eine lineare Abbildung ist.
+\subsubsection{(b)}
+\[\text{ref}_G = \frac{1}{x^2 + y^2} \left(\begin{matrix}
+    x^2-y^2 & 2xy \\
+    2xy & y^2-x^2 \\
+\end{matrix}\right)\]
+\[\text{ref}_G^2 = \frac{1}{x^2 + y^2} \left(\begin{matrix}
+    x^2-y^2 & 2xy \\
+    2xy & y^2-x^2 \\
+\end{matrix}\right) \frac{1}{x^2+y^2} \left(\begin{matrix}
+    x^2-y^2 & 2xy \\
+    2xy & y^2-x^2 \\
+\end{matrix}\right)\]
+\[= \frac{1}{x^4 + 2x^2y^2+y^4}\left(\begin{matrix}
+    x^4-2x^2y^2+y^4+4x^2y^2 & 2x^3y-2xy^3+2xy^3-2x^3y \\
+    2x^3y-2xy^3+2xy^3-2x^3y & 4x^2y^2+y^4-2x^2y^2+x^4 \\
+\end{matrix}\right)\]
+\[= \frac{1}{x^4 + 2x^2y^2+y^4}\left(\begin{matrix}
+    x^4+2x^2y^2+y^4 & 0 \\
+    0 & x^4+2x^2y^2+y^4 \\
+\end{matrix}\right)\]
+\[= \left(\begin{matrix}
+    1 & 0 \\
+    0 & 1 \\
+\end{matrix}\right)\]
+Somit ist gezeigt, dass $\text{ref}_G^2 = \text{Id}_{\mathbb{R}^2}$
 \subsection{(ii)}
-
+\[R_\alpha \cdot R_\beta = \left(\begin{matrix}
+    \cos(\alpha) & -\sin(\alpha) \\
+    \sin(\alpha) & \cos(\alpha) \\
+\end{matrix}\right) \cdot \left(\begin{matrix}
+    \cos(\beta) & -\sin(\beta) \\
+    \sin(\beta) & \cos(\beta) \\
+\end{matrix}\right)\]
+\[= \left(\begin{matrix}
+    \cos(\alpha)\cos(\beta)-\sin(\alpha)\sin(\beta) & -\cos(\alpha)\sin(\beta)-\sin(\alpha)\cos(\beta) \\
+    \sin(\alpha)\cos(\beta)+\cos(\alpha)\sin(\beta) & -\sin(\alpha)\sin(\beta)+\cos(\alpha)\cos(\beta) \\
+\end{matrix}\right)\]
+\[= \left(\begin{matrix}
+    \cos(\beta)\cos(\alpha)-\sin(\beta)\sin(\alpha) & -\cos(\beta)\sin(\alpha)-\sin(\beta)\cos(\alpha) \\
+    \sin(\beta)\cos(\alpha)+\cos(\beta)\sin(\alpha) & -\sin(\beta)\sin(\alpha)+\cos(\beta)\cos(\alpha) \\
+\end{matrix}\right)\]
+\[=\left(\begin{matrix}
+    \cos(\beta) & -\sin(\beta) \\
+    \sin(\beta) & \cos(\beta) \\
+\end{matrix}\right) \cdot \left(\begin{matrix}
+    \cos(\alpha) & -\sin(\alpha) \\
+    \sin(\alpha) & \cos(\alpha) \\
+\end{matrix}\right) = R_\beta = R_\alpha\]
+\[= \left(\begin{matrix}
+    \cos(\alpha)\cos(\beta)-\sin(\alpha)\sin(\beta) & -(\sin(\alpha)\cos(\beta)+\cos(\alpha)\sin(\beta)) \\
+    \sin(\alpha)\cos(\beta)+\cos(\alpha)\sin(\beta) & \cos(\alpha)\cos(\beta)-\sin(\alpha)\sin(\beta) \\
+\end{matrix}\right)\]
+\[=\left(\begin{matrix}
+    \cos(\alpha + \beta) & -\sin(\alpha + \beta) \\
+    \sin(\alpha + \beta) & \cos(\alpha + \beta) \\
+\end{matrix}\right) = R_{\alpha + \beta}\]
 \end{document}
