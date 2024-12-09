@@ -1,15 +1,19 @@
 \documentclass{article}
-\usepackage{graphicx, amsmath} % Required for inserting images
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx} % Required for inserting images
 
 \title{Mathe Übungsblatt 8}
 \author{Pascal Diller, Timo Rieke}
 \date{October 2024}
 
+\setcounter{secnumdepth}{0}
+
 \begin{document}
 \maketitle
 
 \section{Aufgabe 1}
-\subsection{(a)}
+\subsection{(i)}
 Linke Seite:
 \[
 \begin{bmatrix}
@@ -112,6 +116,8 @@ a_{1,2}*\lambda& a_{2,2}*\lambda& a_{3,2}*\lambda\\
 \end{bmatrix}
 \]
 
+\subsection{(iii)}
+
 \section{Aufgabe 2}
 \subsection{(i)}
 \[T(1,2,3,4)=(2\cdot1+4\cdot3, -2\cdot2-4\cdot4) =(14,-20)\]
@@ -143,4 +149,27 @@ Sei \(a \in \mathbb{R}\) und \(u=(u_1,u_2,u_3,u_4)\)
 \[=a(2u_1+4u_3,-2u_2-4u_4) = aT(u)\]
 \newline
 Da $T(u+v)=T(u)+T(v)$ und $T(au)=aT(u)$ gilt, ist $T$ linear.
+
+\subsection{(iii)}
+Gegeben ist die Abbildung $T: \mathbb{R}^4 \to \mathbb{R}^2, (x_1, x_2, x_3, x_4) \mapsto (2x_1 + 4x_3, -2x_2 - 4x_4)$.
+Gesucht ist die $2 \times 4$-Matrix $A$ sodass $T_A = T$. \\
+Es gilt: \[A = \left(\begin{matrix}
+    T_A(e_1) & T_A(e_2) & T_A(e_3) & T_A(e_4)
+\end{matrix}\right)\]
+Da $T = T_A$:
+\begin{align*}
+    T_A(e_1) &= T(1, 0, 0 ,0) = (2, 0) \\
+    T_A(e_2) &= T(0, 1, 0 ,0) = (0, -2) \\
+    T_A(e_3) &= T(0, 0, 1 ,0) = (4, 0) \\
+    T_A(e_4) &= T(0, 0, 0 ,1) = (0, -4) \\
+\end{align*}
+\[A = \left(\begin{matrix}
+    2 & 0 & 4  & 0 \\
+    0 & -2 & 0 & -4 \\
+\end{matrix}\right)\]
+
+\section{Aufgabe 3}
+\subsection{(i)}
+\subsection{(ii)}
+
 \end{document}
