@@ -129,4 +129,18 @@ Das Gleichungssystem hat unendlich viele Lösungen, deswegen gibt es frei wählb
 \[x_2= -2-2x_4\]
 Somit ergibt sich:
 \[T^{-1}(\{(2,4)\})=\{(1-2x_3,-2-2x_4,x_3,x_3)|x_3,x_4\in \mathbb{R}\}\]
+
+\subsection{(ii)}
+\(T(u+v)=T(u)+T(v)\):\\
+Sei $u=(u_1,u_2,u_3,u_4)$ und $v=(v_1,v_2,v_3,v_4)$
+\[T(u+v)=(2(u_1+v_1)+4(u_3+v_3),-2(u_2+v_2)-4(u_4+v_4)) \]
+\[=((2u_1 + 2v_1) + (4u_3 + 4v_3), (-2u_2 - 2v_2) + (-4u_4 - 4v_4)).\]
+\[=( (2u_1 + 4u_3) + (2v_1 + 4v_3), (-2u_2 - 4u_4) + (-2v_2 - 4v_4)=T(u)+T(v)\]
+\newline
+\(T(au)=aT(u)\): \\
+Sei \(a \in \mathbb{R}\) und \(u=(u_1,u_2,u_3,u_4)\)
+\[T(au)=(2(au_1)+4(au_3),-2(au_2)-4(au_4))\]
+\[=a(2u_1+4u_3,-2u_2-4u_4) = aT(u)\]
+\newline
+Da $T(u+v)=T(u)+T(v)$ und $T(au)=aT(u)$ gilt, ist $T$ linear.
 \end{document}
