@@ -533,13 +533,50 @@ Ein \textbf{lineares Gleichungssystem} $G$ (in $n$ Variablen) ist ein System \\
 \end{center}
 von $m$ linearen Gleichungen. Ein lineares Gleichungssystem heißt \textbf{homogen} wenn $\beta_i = 0$ für alle $i=1,\dots,m$. \\
 \newline
-Die eigentliche Information des linearen Gleichungssystems liegt in den Koeffizienten und den Konstanten auf der rechten Seite der Gleichung. Diese Information wird in einer $m \times n$-Matrix kodiert.
-\[A = (\alpha_{ij}) = \left(\begin{matrix}
+Die eigentliche Information des linearen Gleichungssystems liegt in den \textbf{Koeffizienten} und den \textbf{Konstanten} auf der rechten Seite der Gleichung. \\
+Die \textbf{augmentierte Matrix} ($(m \times n+1)$-Matrix) kodiert diese Informationen.
+\[A = \begin{pmatrix}
+    
+    \alpha_{11} & \alpha_{12} & \dots & \alpha_{1n} & \beta_1 \\
+    \alpha_{21} & \alpha_{22} & \dots & \alpha_{2n} & \beta_2 \\
+    \vdots & \vdots & & \vdots & \vdots\\
+    \alpha_{m1} & \alpha_{m2} & \dots & \alpha_{mn} & \beta_m
+\end{pmatrix}\]
+Die Koeffizienten werden in einer \textbf{Koeffizientenmatrix} $A$ ($(m \times n)$-Matrix) kodiert.
+\[A = (\alpha_{ij}) = \begin{pmatrix}
     \alpha_{11} & \alpha_{12} & \dots & \alpha_{1n} \\
     \alpha_{21} & \alpha_{22} & \dots & \alpha_{2n} \\
     \vdots & \vdots & & \vdots \\
     \alpha_{m1} & \alpha_{m2} & \dots & \alpha_{mn}
-\end{matrix}\right)\]
+\end{pmatrix}\]
+\subsubsection{Lösungsmenge}
+Die Lösungsmenge
+\[L(G) = \left\{(\xi_1, \dots, \xi_n) \in \mathbb{R}^n: \sum_{j=1}^{n} \alpha_{ij}\xi_{j} = \beta_i \text{ für } i = 1, \dots, m\right\}\]
+von einem Gleichungssystem $G$ besteht aus den $n$-Tupeln, den \textbf{Lösungen}, die alle Gleichungen von $G$ erfüllen.
+
+\newpage
+\subsection{Matrizen}
+Ein Zahlenschema
+\[A = (\alpha_{ij}) = \begin{pmatrix}
+    \alpha_{11} & \alpha_{12} & \dots & \alpha_{1n} \\
+    \alpha_{21} & \alpha_{22} & \dots & \alpha_{2n} \\
+    \vdots & \vdots & & \vdots \\
+    \alpha_{m1} & \alpha_{m2} & \dots & \alpha_{mn}
+\end{pmatrix}\]
+wird $m \times n$-\textbf{Matrix} genannt, wobei $m$ die Anzahl der \textbf{Zeilen} und $n$ die Anzahl der \textbf{Spalten} von $A$ sind.
+Für eine Eintrag $\alpha_{ij}$ von $A$ ist $i$ der \textbf{Zeilenindex} und $j$ der \textbf{Spaltenindex} \\
+\newline
+Eine Matrix $A = (\alpha_{ij})$ heißt
+\begin{itemize}
+    \item \textbf{quadratisch} wenn $n = m$
+    \item \textbf{Nullmatrix} wenn $\alpha_{ij} = 0, \: \forall i,j \in \mathbb{N}$
+\end{itemize}
+Eine quadratische Matrix heißt
+\begin{itemize}
+    \item \textbf{diagonal} wenn $\alpha_{ij} = 0$ für $i \neq j$
+    \item \textbf{obere Dreiecksmatrix} wenn $\alpha_{ij}= 0$ für $i > j$.
+    \item \textbf{untere Dreiecksmatrix} wenn $\alpha_{ij} = 0$ f+r $i < j$.
+\end{itemize}
 
 \section{Zahlensysteme}
 \subsection{Binärsystem}
