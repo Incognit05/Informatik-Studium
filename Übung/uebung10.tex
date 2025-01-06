@@ -7,6 +7,7 @@
 
 \begin{document}
 
+\setcounter{secnumdepth}{0}
 \maketitle
 
 \section{Aufgabe 1}
@@ -42,6 +43,22 @@ Somit ist der minimale Wert für $m$ und $l$: $m=1$, $l=1$
 
 \section{Aufgabe 3}
 \[(c_n)_{n \in \mathbb{N}}=\frac{A}{2n^3-15n}+B\]
+Sei $a_n = \frac{A}{2n^3-15n}$. Da $A$ eine konstante reelle Zahl ist und $2n^3-15n$ mit steigendem $n$ ebenfalls steigt, gilt:
+\[\lim_{n \to \infty} a_n = 0\]
+\[\lim_{n \to \infty} c_n = 0 + B\]
+Da $B$ eine konstante reelle Zahl ist, konvergiert $c_n$ auf $B$.
 
+\section{Aufgabe 5}
+\subsection{(ii)}
+\[\lim_{n \to \infty} \frac{n-1}{n+1} = 1 - \frac{2}{n+1}\]
+Seien $a = 1, a_n = \frac{n-1}{n+1}, b_n = \frac{2}{n+1}$. \\
+Aus (i) gilt: $|a_n - a| \leq b_n$ und $b_n$ ist eine Nullfolge. \\
+Also gilt: $\lim_{n\to\infty}a_n = a = \lim_{n\to\infty}\frac{n-1}{n+1} = 1$
+\subsection{(iv)}
+
+\subsection{(v)}
+Es gilt: $|cos(n)| \leq 1$, also: $|a_n| = \left|\frac{cos(n)}{n^2}\right| \leq \frac{1}{n^2}$ \\
+\newline
+$\frac{1}{n^2}$ ist eine Nullfolge, dann ergibt sich aus dem Sandwichkriterium, dass $\frac{cos(n)}{n^2}$ auf 0 konvergiert.
 
 \end{document}
