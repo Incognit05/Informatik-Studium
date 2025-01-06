@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm, todonotes}
+
+\title{Übung 10}
+\author{Pascal Diller, Timo Rieke}
+
+\begin{document}
+
+\maketitle
+
+\section{Aufgabe 1}
+\[(a_n)_{n\in \mathbb{N}}=(\frac{1-n^2}{-1-n})_{n \in \mathbb{N}} = \frac{-(n^2-1)}{-(n+1)}= \frac{(n^2-1)}{(n+1)}\]
+\[= \frac{(n-1)(n+1)}{(n+1)} = n-1\]
+Die Folge ist nach unten beschränkt durch $-1$ aber nach oben unbeschränkt.
+Außerdem ist die Folge $a_n = n-1$ für $n \in \mathbb{N}$ streng monton wachsend.
+
+\section{Aufgabe 2}
+\[b_n = 6-(\frac{6+n^2}{n})\]
+Vereinfachen der Folge:
+\[b_n = 6-(\frac{6}{n}+\frac{n^2}{n}) = 6- (\frac{6}{n}+n) = 6-\frac{6}{n}-n\]
+
+\subsection{(i)}
+\begin{center}
+    $\frac{6}{n}$ geht gegen 0, wenn $n \xrightarrow{} \infty$ \\
+    $-n$ geht gegen $-\infty$, wenn $n \xrightarrow{} \infty$ 
+\end{center}
+Somit konvergiert $b_n$ gegen $-\infty$, was bedeuted das die Folge nach unten unbeschränkt ist und nach oben mit 6 beschränkt ist.
+
+\subsection{(ii)}
+\[B_n= b_{n+1}-b_n\]
+
+Berechnen von $B_n$:
+\[B_n = b_{n+1}-b_2 = (6-\frac{6}{n+1}-(n+1))-(6-\frac{6}{n}-n)\]
+\[= -\frac{6}{n+1}+\frac{6}{n}-1 = \frac{6n-6(n+1)}{n(n+1)}-1= \frac{6n-6n-6}{n(n+1)}-1\]
+\[=\frac{-6}{n(n+1)}-1\]
+Da $\frac{-6}{n(n+1)}-1$ für alle $n \in \mathbb{N}$ negativ ist, ist $B_n<0$.
+
+\subsection{(iii)}
+Da $B_n <0$ für alle $n \geq 1$ ist die Folge streng monton fallend ab $n=1$.
+Somit ist der minimale Wert für $m$ und $l$: $m=1$, $l=1$
+
+\section{Aufgabe 3}
+\[(c_n)_{n \in \mathbb{N}}=\frac{A}{2n^3-15n}+B\]
+
+
+\end{document}
