@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\title{Mathe Übung 11}
+\author{Pascal Diller, Timo Rieke}
+\begin{document}
+\maketitle
+\section*{Aufgabe 3}
+
+\subsection*{(i)}
+
+    \[a_n = \frac{n - (-1)^n}{4 + (-1)^n n}\]
+    Die Häufungspunkte der Folge \((a_n)_{n \in \mathbb{N}}\) sind: \(\frac{1}{4}\) und \(\frac{1}{5}\).
+
+    \[b_n = n^2\frac{ n!}{(n+1)!}\]
+    Die Häufungspunkte der Folge \((b_n)_{n \in \mathbb{N}}\) sind: \(1\).
+
+\subsection*{(ii)}
+
+Die Folge \((a_n)_{n \in \mathbb{N}}\) divergiert, da sie zwei unterschiedliche Häufungspunkte besitzt, nämlich \(\frac{1}{4}\) und \(\frac{1}{5}\). Da eine konvergente Folge nur einen einzigen Häufungspunkt haben kann, muss \((a_n)_{n \in \mathbb{N}}\) divergent sein.
+
+\subsection*{(iii)}
+
+
+    \[(w_n)_{n \in \mathbb{N}} = (0, 2, 4, 6, 8, \dots)\]  
+    \((w_n)_{n \in \mathbb{N}}\) ist eine Teilfolge von \((c_n)_{n \in \mathbb{N}}\).
+
+    \[(x_n)_{n \in \mathbb{N}} = (1, 3, 5, 7, 9, \dots)\]  
+    \((x_n)_{n \in \mathbb{N}}\) ist eine Teilfolge von \((c_n)_{n \in \mathbb{N}}\).
+
+    \[(y_n)_{n \in \mathbb{N}} = (n^2)_{n \in \mathbb{N}}\]  
+    \((y_n)_{n \in \mathbb{N}}\) ist keine Teilfolge von \((c_n)_{n \in \mathbb{N}}\).
+
+    \[(z_n)_{n \in \mathbb{N}} = (1, 3, 2, 5, 7, 6, 9, 11, 10, \dots)\]  
+    \((z_n)_{n \in \mathbb{N}}\) ist keine Teilfolge von \((c_n)_{n \in \mathbb{N}}\).
+
+
+\section*{Aufgabe 4}
+
+Sei \((a_n)_{n \in \mathbb{N}}\) eine monoton wachsende und nach oben beschränkte Folge. Das bedeutet:
+\begin{center}
+    \(a_n \leq a_{n+1}\) für alle \(n \in \mathbb{N}\). \\
+    es existiert ein \(M \in \mathbb{R}\) mit \(a_n \leq M\) für alle \(n \in \mathbb{N}\).
+\end{center}
+
+Nach dem Bolzano-Weierstraß-Satz besitzt jede beschränkte Folge eine konvergente Teilfolge. Da \((a_n)_{n \in \mathbb{N}}\) monoton wachsend ist, muss jede Teilfolge ebenfalls monoton wachsend sein und denselben Grenzwert haben.\\
+
+Sei \(b_n\) eine konvergente Teilfolge von \((a_n)\) mit Grenzwert \(L\). Da \((a_n)\) monoton wachsend ist und \(a_n \leq M\), folgt, dass \(a_n \to L\) für \(n \to \infty\). \\
+
+Daher konvergiert die gesamte Folge \((a_n)\) gegen \(L\).
+
+\end{document}
+
+
+\end{document}
