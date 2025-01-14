@@ -1,10 +1,51 @@
 \documentclass{article}
-\usepackage{amsmath}
-\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm, todonotes}
 \title{Mathe Übung 11}
 \author{Pascal Diller, Timo Rieke}
 \begin{document}
+\setcounter{secnumdepth}{0}
 \maketitle
+
+\section*{Aufgabe 1}
+\subsection*{(i)}
+\[|I_n| = \left(1 + \frac{1}{n^2}\right) - \left(1- \left(\frac{1}{2}\right)^n\right) = \frac{1}{n^2} + \left(\frac{1}{2}\right)^n\]
+\[\lim_{n\to\infty} \frac{1}{n^2} = 0, \lim_{n\to\infty} \left(\frac{1}{2}\right)^n = 0 \implies |I_n| \xrightarrow{n\to\infty} 0\]
+\[I_{n+1} = \left[ 1-\left(\frac{1}{2}\right)^{n+1}, 1 + \frac{1}{(n+1)^2} \right]\]
+Da $\left(\frac{1}{2}\right)^{n+1} < \left(\frac{1}{2}\right)^n$ und $\frac{1}{(n+1)^2} < \frac{1}{n^2}$, gilt: $I_{n+1} \subset I_n$ für jedes $n$. \\
+Somit ist gezeigt, dass $I_n$ eine Intervallverschachtelung ist.
+\subsection*{(ii)}
+\[|J_n| = \frac{3n + 5}{n} - \left(3 - \frac{1}{n}\right) = \frac{3n}{n} + \frac{5}{n} - 3 + \frac{1}{n} = \frac{6}{n}\]
+Da $\frac{6}{n} \to 0$ für $n \to \infty$, folgt $|J_n| \to 0$
+\[J_{n+1} = \left[ 3 - \frac{1}{n+1}, \frac{3(n+1) + 5}{n+1} \right]\]
+$3 - \frac{1}{n+1} < 3 - \frac{1}{n}$, da $\frac{1}{n+1} < \frac{1}{n}$ und $\frac{3(n+1) + 5}{n+1} < \frac{3n+5}{n}$ da der Bruch mit größerem $n$ kleiner wird. Somit folgt: $J_{n+1} \subset J_n$. \\
+\newline
+Somit ist gezeigt, dass $J_n$ eine Intervallverschachtelung ist.
+
+\section*{Aufgabe 2}
+\subsection*{(i)}
+Sei $a_n = \left( 1 - \frac{1}{n} \right)^n$
+\[\ln\left( a_n \right) = n \ln\left(1 - \frac{1}{n}\right)\]
+Aus der Taylor-Reihe für $\ln(1-x)$ gilt: $\ln(1-x) \approx -x$. Also: $\ln\left(1 - \frac{1}{n}\right) \approx - \frac{1}{n}$
+\[\ln(a_n) = n \ln\left(1-\frac{1}{n}\right) \approx n \left(-\frac{1}{n}\right) = -1\]
+\[a_n = e^{\ln(a_n)} \approx e^{-1} = \frac{1}{e}\]
+Also: $\lim_{n\to\infty} \left(1 - \frac{1}{n}\right)^n = \frac{1}{e}$
+\subsection*{(ii)}
+\subsubsection*{(a)}
+\[a_n = \left(1 + \frac{1}{n}\right)^{2n} = \left[ \left(1 + \frac{1}{n}\right)^n \right]^2\]
+Es gilt: $\lim_{n\to\infty} \left(1+ \frac{1}{n}\right)^n = e$
+\[\lim_{n\to\infty}a_n = e^2\]
+\subsubsection*{(b)}
+Sei $b_n = \left(1 + \frac{1}{n}\right)^{n^2}$
+\[\ln(b_n) = n^2 \ln \left(1+\frac{1}{n}\right)\]
+Es gilt: $\ln(1+x) \approx x$
+\[\ln(b_n) \approx n^2 \frac{1}{n} = n\]
+\[b_n = e^{\ln(b_n)} \approx e^n\]
+Also: $b_n \to \infty \implies$ die Folge divergiert.
+\subsubsection*{(c)}
+\[\frac{(n+1)!}{n!} \frac{1}{(n+2)^n} = (n+1) \frac{1}{(n+2)^n} = \frac{n+1}{(n+2)^n}\]
+Bei großem $n$ dominiert der Nenner über den Zähler, also strebt der Ausdruck gegen 0.
+
 \section*{Aufgabe 3}
 
 \subsection*{(i)}
