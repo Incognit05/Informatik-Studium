@@ -578,6 +578,42 @@ Eine quadratische Matrix heißt
     \item \textbf{untere Dreiecksmatrix} wenn $\alpha_{ij} = 0$ f+r $i < j$.
 \end{itemize}
 
+\section{Folgen}
+Eine Funktion $f: \mathbb{N} \to \mathbb{R}$ heißt \textbf{Folge}. Die Funktionswerte $a_n := f(n)$ heißen \textbf{Folgenglieder}. Wir schreiben $f = (a_n)_{n\in\mathbb{N}}$.
+\begin{itemize}
+    \item $(a_n)_{n\in\mathbb{N}}$ nach oben beschränkt $\Longleftrightarrow \exists C \in \mathbb{R} \forall n \in \mathbb{N}: a_n \leq C$
+    \item $(a_n)_{n\in\mathbb{N}}$ nach unten beschränkt $\Longleftrightarrow \exists c \in \mathbb{R} \forall n \in \mathbb{N}: c \leq a_n$
+    \item $(a_n)_{n\in\mathbb{N}}$ beschränkt $\Longleftrightarrow \exists C \geq 0 \forall n \in \mathbb{N}: |a_n| \leq C$
+\end{itemize}
+Eine Folge $(a_n)_{n\in\mathbb{N}}$ reeller Zahlen heißt \textbf{konvergent} mit \textbf{Grenzwert} $a \in \mathbb{R}$, falls gilt:
+\[\forall \epsilon > 0 \exists n_0 \in \mathbb{N} \forall n \geq n_0: |a_n - a| < \epsilon\]
+Notation: $a = \lim_{n \to \infty} a_n, a_n \xrightarrow{n \to \infty} a$ \\
+\newline
+Eine Folge heißt \textbf{divergent}, falls sie nicht konvergiert. \\
+Eine konvergente Folge mit Grenzwert $a = 0$ heißt \textbf{Nullfolge}. \\
+\newline
+Eine Folge $(a_n)_{n\in\mathbb{N}}$ \textbf{strebt gegen} $\infty$, falls gilt: 
+\[\forall K > 0 \exists N \in \mathbb{N} \forall n \geq N : K < a_n\]
+\subsection{Sandwitchkriterium}
+Seien die Folgen $(a_n)_{n\in\mathbb{N}}, (b_n)_{n\in\mathbb{N}}, (c_n)_{n\in\mathbb{N}}$ mit $\lim_{n\to\infty}a_n = \lim_{n\to\infty}b_n = c$. Weiter gilt:
+\[\exists N \in \mathbb{N} \forall n \geq N : a_n \leq c_n \leq b_n\]
+Dann gilt: $\lim_{n\to\infty}c_n = c$
+\subsection{Vollständigkeit von $\mathbb{R}$ und Folgen}
+Eine \textbf{Intervallschachtelung} ist eine Folge $(I_n)_{n\in\mathbb{N}}$ von abgeschlossenen $I_n = [a_n, b_n], a_n \leq b_n, n \in \mathbb{N}$ mit folgenden Eingenschaften:
+\begin{itemize}
+    \item $I_{n+1} \subset I_n$
+    \item $|I_n| \xrightarrow{n \to \infty} 0$
+\end{itemize}
+Sei $(a_n)_{n \in \mathbb{N}}$ eine Folge reeller Zahlen. Eine Zahl $a \in \mathbb{R}$ heißt \textbf{Häufungspunkt (HP)} von $(a_n)_{n \in \mathbb{N}}$ wenn es für jedes $\epsilon > 0$ unendlich viele Glieder $a_n$ gibt mit $|a - a_n| < \epsilon$. \\
+Jede beschränkte Folge reeller Zahlen besitzt (mindestens) einen HP. \\
+\newline
+Sei $(a_n)_{n \in \mathbb{N}}$ eine Folge in $\mathbb{R}$. Eine Folge $(a'_k)_{k \in \mathbb{N}}$ heißt \textbf{Teilfolge (TF)} von $(a_n)_{n \in \mathbb{N}}$, falls es eine Folge $(n_k)_{k \in \mathbb{N}}$ von natürlichen Zahlen mit $n_1 < n_2 < n_3 < \dots$ gibt, so dass
+\[a'_k = a_{n_k} \forall k \in \mathbb{N}\]
+Aus jeder beschränkten Folge von reellen Zahlen kann man eine konvergente Teilfolge auswählen. \\
+\newline
+Eine Folge $(a_n)_{n \in \mathbb{N}}$ von reellen Zahlen heißt \textbf{Cauchy-Folge (CF)}, falls gilt
+\[\forall \epsilon > 0 \exists n_0 \in \mathbb{N} \forall m,n \geq n_0: |a_n - a_m| < \epsilon\]
+
 \section{Zahlensysteme}
 \subsection{Binärsystem}
 \begin{itemize}[leftmargin=*]
