@@ -64,5 +64,30 @@ Umstellen ergibt:
 \[L = 1.\]
 Die Folge \(a_n\) konvergiert gegen den Grenzwert 1. 
 
+\section*{Aufgabe 3}
+\subsection*{(i)}
+Zu zeigen: $\forall a,b \in \mathbb{R} \exists q \in \mathbb{Q}: a < \sqrt{2}+q < b$ \\
+Da $\mathbb{Q}$ dicht in $\mathbb{R}$ ist, gilt: $a < q < b$ und da $\sqrt{2} \in \mathbb{R}$: $a + \sqrt{2} < q + \sqrt{2} < b + \sqrt{2}$. \\
+Da alle Summanden reelle Zahlen sind gilt die Aussage und somit auch $a < \sqrt{2} + q < b$
+\subsection*{(ii)}
+Angenommen, es gilt: $\exists q \in \mathbb{Q}: \sqrt{2}+q \in \mathbb{Q}$. \\ 
+Sei $r = \sqrt{2} + q$, dann würde gelten: $\sqrt{2} = r - q$, mit $r, q \in \mathbb{Q}$. \\
+Das widerspricht jedoch der Tatsache, dass $\sqrt{2}$ irrational ist. Da Summe aus einer irrationalen und einer rationalen Zahl irrational ist, muss auch $\sqrt{2}+q$ mit $q \in \mathbb{Q}$ irrational sein.
+\subsection*{(iii)}
 
+\section*{Aufgabe 4}
+Zu zeigen: $|a_m - a_n| < \epsilon$ mit $\epsilon > 0$.
+Für $m > n$:
+\[|a_m - a_n| = |(a_m - a_{m - 1}) + (a_{m-1} - a_{m-2}) + \dots + (a_{n+1} - a_n)|\]
+Mit der Dreiecksgleichung:
+\[|a_m - a_n| \leq |a_m - a_{m - 1}| + |a_{m-1} - a_{m-2}| + \dots + |a_{n+1} - a_n|\]
+Verwendung der Schranke: $|a_{k+1} - a_k| \leq 2^{-k}$:
+\[|a_m - a_n| \leq 2^{-n} + 2^{-(n+1)} + 2^{-(n+2)}+ \dots + 2^{-(m-1)}\]
+Diese Summe ist eine geometrische Reihe mit dem ersten Term $2^{-n}$ und dem Quotienten $\frac{1}{2}$.
+\[|a_m - a_n| \leq 2^{-n}(1 + \frac{1}{2} + \frac{1}{4} + \dots)\]
+$\sum_{k=0}^{\infty} (\frac{1}{2})^k$ konvergiert gegen $\frac{1}{1 - \frac{1}{2}} = 2$
+\[|a_m - a_n| \leq 2^{-n} \cdot 2 = 2^{-(n-1)}\]
+Für ein $\epsilon > 0$ wählen wir $n$ so, dass: $2^{-(n-1)} < \epsilon$. Für hinreichend großes $n$ ist dies erfüllt. \\
+Also:
+\[|a_m - a_n| < 2^{-(n-1)} < \epsilon \implies |a_m - a_n| < \epsilon\]
 \end{document}
