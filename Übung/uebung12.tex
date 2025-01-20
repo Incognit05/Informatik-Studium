@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\title{Mathe Übung 12}
+\author{Pascal Diller, Timo Rieke}
+\begin{document}
+\maketitle
+
+\section*{Aufgabe 1}
+
+\subsection*{(i)}
+\[\lim_{n \to \infty} \frac{7n^{3/2} - n^{-2} \sqrt{n}}{(\sqrt{n})^3 + n^{1/2} + n}.\]
+Im Zähler dominiert \(7n^{3/2}\), da \(n^{-2} \sqrt{n}\) für \(n \to \infty\) vernachlässigbar ist. \\
+Im Nenner dominiert \(n\), da \(n > n^{3/2} > n^{1/2}\) für große \(n\). \\
+Es ergibt sich:
+\[\lim_{n \to \infty} \frac{7n^{3/2}}{n} = 7\sqrt{n} \to \infty.\]
+
+\subsection*{(ii)}
+\[\lim_{n \to \infty} \sqrt{n^4 + n^2 + 1} - \sqrt{n^2 - 1}.\]
+\[\sqrt{n^4 + n^2 + 1} - \sqrt{n^2 - 1} = \frac{(n^4 + n^2 + 1) - (n^2 - 1)}{\sqrt{n^4 + n^2 + 1} + \sqrt{n^2 - 1}}.\]
+\[n^4 + n^2 + 1 - n^2 + 1 = n^4 + 2.\]
+Im Nenner dominiert \(\sqrt{n^4} = n^2\), daher:
+\[\frac{n^4 + 2}{\sqrt{n^4 + n^2 + 1} + \sqrt{n^2 - 1}} \sim \frac{n^4}{2n^2} =\frac{n^2}{2}.\]
+
+\subsection*{(iii)} 
+\[\lim_{n \to \infty} \frac{n}{\sqrt{n^5 + 4n}}.\]
+Im Nenner dominiert \(\sqrt{n^5} = n^{5/2}\). Somit:
+\[\frac{n}{\sqrt{n^5 + 4n}} \sim \frac{n}{n^{5/2}} = n^{-3/2}.\]
+Daraus folgt:
+\[\lim_{n \to \infty} \frac{n}{\sqrt{n^5 + 4n}} = 0.\]
+
+\subsection*{(iv)} 
+\[\lim_{n \to \infty} \left(\frac{\sqrt{n} - 1}{n}\right)^n.\]
+\(L = \left(\frac{\sqrt{n} - 1}{n}\right)^n\), Logarithmieren:
+\[\ln L = n \ln\left(\frac{\sqrt{n} - 1}{n}\right).\]
+Annäherung:
+\[\ln\left(\frac{\sqrt{n} - 1}{n}\right) = \ln(\sqrt{n} - 1) - \ln(n) \sim \ln(\sqrt{n}) - \ln(n) = -\frac{\ln(n)}{2}.\]
+Somit:
+\[\ln L = n \cdot \left(-\frac{\ln(n)}{2}\right) = -\frac{n \ln(n)}{2} \to -\infty.\]
+Daraus folgt:
+\[L \to 0.\]
+
+\section*{Aufgabe 2}
+\[a_1 = 0, \quad a_{n+1} = \frac{1}{2}a_n + \frac{1}{2}.\]
+
+\subsection*{(i)}  
+Zu zeigen: \(a_n \leq 1\) für alle \(n \in \mathbb{N}\).  \\
+Induktionsanfang: Für \(n = 1\) gilt \(a_1 = 0 \leq 1\). \\
+Induktionsschritt: Angenommen, \(a_n \leq 1\). Dann folgt:
+    \[a_{n+1} = \frac{1}{2}a_n + \frac{1}{2} \leq \frac{1}{2}(1) + \frac{1}{2} =1.\]
+Damit ist \(a_n \leq 1\) für alle \(n\).
+
+\subsection*{(ii)}  
+Zu zeigen: \(a_{n+1} \geq a_n\).  
+\[a_{n+1} - a_n = \frac{1}{2}a_n + \frac{1}{2} - a_n = \frac{1}{2}(1 - a_n).\]
+Da \(a_n \leq 1\), ist \(1 - a_n \geq 0\) und somit \(a_{n+1} \geq a_n\). Somit ist \((a_n)_{n\in \mathbb{N}}\) weiter monton wachsend.
+
+\subsection*{(iii)}  
+Da die Folge beschränkt und monoton wachsend ist folgt, dass \(a_n\) konvergiert. Sei:
+\[\lim_{n \to \infty} a_n = L.\]
+Im Limes gilt:
+\[L = \frac{1}{2}L + \frac{1}{2}.\]
+Umstellen ergibt:
+\[L = 1.\]
+Die Folge \(a_n\) konvergiert gegen den Grenzwert 1. 
+
+
+\end{document}
