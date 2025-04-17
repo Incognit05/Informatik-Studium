@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+\title{Übungsblatt 1}
+\author{Pascal Diller, Timo Rieke}
+
+\begin{document}
+\maketitle
+
+\section*{Aufgabe 1}
+Sei $z=1+i$.
+
+\subsection*{(i)}
+\[ z^5 = (1+i)^5 = \sum_{k=0}^{5} \binom{5}{k} 1^{5-k} i^k \]
+\[ = \binom{5}{0}i^0 + \binom{5}{1}i^1 + \binom{5}{2}i^2 + \binom{5}{3}i^3 + \binom{5}{4}i^4 + \binom{5}{5}i^5 \]
+\[ = 1 \cdot 1 + 5 \cdot i + 10 \cdot (-1) + 10 \cdot (-i) + 5 \cdot 1 + 1 \cdot i \]
+\[ = 1 + 5i - 10 - 10i + 5 + i = (1-10+5) + (5-10+1)i \]
+\[ = -4 - 4i \]
+
+\subsection*{(ii)}
+Für $z = 1+i$: Betrag $r = |z| = \sqrt{1^2+1^2} = \sqrt{2}$.
+Argument $\phi$: $\tan(\phi) = \frac{\text{Im}(z)}{\text{Re}(z)} = \frac{1}{1} = 1$. Da $z$ im 1. Quadrant liegt, ist $\phi = \frac{\pi}{4}$.
+Polarform $z$: $r=\sqrt{2}$, $\phi=\pi/4$. Also $z = \sqrt{2}e^{i\pi/4}$. \\ \newline  
+Für $z^5$:
+\[ z^5 = (re^{i\phi})^5 = r^5 e^{i5\phi} \]
+\[ r^5 = (\sqrt{2})^5 = 4\sqrt{2} \]
+\[ 5\phi = 5 \cdot \frac{\pi}{4} = \frac{5\pi}{4} \]
+Polarform $z^5$: $r_5=4\sqrt{2}$, $\phi_5=5\pi/4$. Also $z^5 = 4\sqrt{2}e^{i5\pi/4}$.
+
+\subsection*{(iii)}
+\[ z^5 = 4\sqrt{2} e^{i5\pi/4} = 4\sqrt{2} (\cos(5\pi/4) + i\sin(5\pi/4)) \]
+Mit $\cos(5\pi/4) = -\frac{1}{\sqrt{2}}$ und $\sin(5\pi/4) = -\frac{1}{\sqrt{2}}$:
+\[ z^5 = 4\sqrt{2} (-\frac{1}{\sqrt{2}} + i(-\frac{1}{\sqrt{2}})) \]
+\[ z^5 = 4\sqrt{2} \cdot (-\frac{1}{\sqrt{2}}) + i \cdot 4\sqrt{2} \cdot (-\frac{1}{\sqrt{2}}) \]
+\[ z^5 = -4 - 4i \]
+$\text{Re}(z^5) = -4$, $\text{Im}(z^5) = -4$.
+
+\subsection*{(iv)}
+\[ z^{17} = r^{17} e^{i17\phi} = (\sqrt{2})^{17} e^{i17\pi/4} \]
+\[ r^{17} = (\sqrt{2})^{17} = 2^{17/2} = 2^8 \sqrt{2} = 256\sqrt{2} \]
+Der Winkel ist $17\pi/4 = 4\pi + \pi/4$, äquivalent zu $\pi/4$.
+\[ z^{17} = 256\sqrt{2} e^{i\pi/4} = 256\sqrt{2} (\cos(\pi/4) + i\sin(\pi/4)) \]
+Mit $\cos(\pi/4) = \frac{1}{\sqrt{2}}$ und $\sin(\pi/4) = \frac{1}{\sqrt{2}}$:
+\[ z^{17} = 256\sqrt{2} (\frac{1}{\sqrt{2}} + i\frac{1}{\sqrt{2}}) \]
+\[ z^{17} = 256\sqrt{2} \cdot \frac{1}{\sqrt{2}} + i \cdot 256\sqrt{2} \cdot \frac{1}{\sqrt{2}} \]
+\[ z^{17} = 256 + 256i \]
+$\text{Re}(z^{17}) = 256$, $\text{Im}(z^{17}) = 256$.
+
+\section*{Aufgabe 2}
+
+\subsection*{(i)}
+\[ \sum_{n=0}^{\infty} \left| \frac{z^n}{n!} \right| = \sum_{n=0}^{\infty} \frac{|z^n|}{n!} = \sum_{n=0}^{\infty} \frac{|z|^n}{n!} \]
+Sei $r = |z| \in \mathbb{R}_{\ge 0}$. Die Reihe $\sum_{n=0}^{\infty} \frac{r^n}{n!} = e^r$ konvergiert für alle $r \in \mathbb{R}$.
+Daher konvergiert $\sum \frac{|z|^n}{n!}$ für alle $z \in \mathbb{C}$.
+Somit konvergiert $\exp(z) = \sum \frac{z^n}{n!}$ absolut $\forall z \in \mathbb{C}$.
+
+\subsection*{(ii)}
+Setze $z=i\varphi$:
+\[ \exp(i\varphi) = \sum_{n=0}^{\infty} \frac{(i\varphi)^n}{n!} \]
+Da die Reihe absolut konvergiert:
+\[ = \sum_{k=0}^{\infty} \frac{(i\varphi)^{2k}}{(2k)!} + \sum_{k=0}^{\infty} \frac{(i\varphi)^{2k+1}}{(2k+1)!} \]
+\[ = \sum_{k=0}^{\infty} \frac{i^{2k}\varphi^{2k}}{(2k)!} + \sum_{k=0}^{\infty} \frac{i^{2k+1}\varphi^{2k+1}}{(2k+1)!} \]
+Mit $i^{2k} = (-1)^k$ und $i^{2k+1} = i(-1)^k$:
+\[ = \sum_{k=0}^{\infty} \frac{(-1)^k \varphi^{2k}}{(2k)!} + i \sum_{k=0}^{\infty} \frac{(-1)^k \varphi^{2k+1}}{(2k+1)!} \]
+Reihendarstellungen:
+\[ = \cos(\varphi) + i \sin(\varphi) \]
+
+\end{document}
