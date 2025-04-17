@@ -5,7 +5,7 @@
 \usepackage[ngerman]{babel}
 
 \title{Übungsblatt 1}
-\author{Pascal Diller, Timo Rieke}
+\author{Pascal Diller (rip62jik), Timo Rieke (bop59buz)}
 
 \begin{document}
 \maketitle
@@ -67,5 +67,49 @@ Mit $i^{2k} = (-1)^k$ und $i^{2k+1} = i(-1)^k$:
 \[ = \sum_{k=0}^{\infty} \frac{(-1)^k \varphi^{2k}}{(2k)!} + i \sum_{k=0}^{\infty} \frac{(-1)^k \varphi^{2k+1}}{(2k+1)!} \]
 Reihendarstellungen:
 \[ = \cos(\varphi) + i \sin(\varphi) \]
+
+\section*{Aufgabe 3}
+\subsection*{(i)}
+Die Menge ist nicht leer (min. 3 Elemente) \\
+\newline
+Funktionenkombinationen sind assoziativ, also gilt $f \circ ( g \circ h) = (f \circ g) \circ h$. Somit ist die Operation assoziativ.\\
+\newline
+Die Identitätsabbildung $\text{Id}_X$ erfüllt $f \circ \text{Id}_X = \text{Id}_X \circ f = f$ für alle $f \in F$. Somit hat die Operation ein neutrales Element. \\
+\newline
+Zu jeder bijektiven Abbildung $f \in F$ gibt es eine bijektive Inverse $f^{-1}$. Somit ist jedes Element invertierbar. \\
+\newline
+$\implies (F, \circ, \text{Id}_X)$ ist eine Gruppe. 
+
+\subsection*{(ii)}
+Die Gruppe ist nicht kommutativ, da sich bereits für $X = {a, b, c}$ permutationen $f, g$ finden lassen, für die gilt: $f \circ g \neq g \circ f$. \\
+Beispiel: \\
+$f = (a \: b)$ \\
+$g = (b \: c)$
+\begin{align*}
+    f \circ g \to & \quad f(g(a)) = f(a) = b \\
+    & \quad f(g(b)) = f(c) = c \\
+    & \quad f(g(c)) = f(b) = a \\ 
+\end{align*}
+\begin{align*}
+    g \circ f \to & \quad g(f(a)) = g(a) = c \\
+    & \quad g(f(b)) = g(c) = a \\
+    & \quad g(f(c)) = g(b) = b \\ 
+\end{align*}
+$\implies f \circ g \neq g \circ f$
+
+\section*{Aufgabe 4}
+\subsection*{(i)}
+\begin{tabular}{l l}
+    $(k+l) \cdot (k + (-l))$ & \\
+    $=kk+k(-l)+lk+l(-l)$ & Multiplikation steht distributiv über der Addition \\
+    $=kk + (-(kl)) + kl + (-(ll))$ & $(-k)l = k(-l) = -(kl)$ \\
+    $=kk + (-(ll))$ & inv.
+\end{tabular}
+\subsection*{(ii)}
+Wenn $n$ nicht prim ist, dann gibt es $a, b \in \mathbb{Z}$ mit $0 < a, b < n$ mit $a \cdot b = 0 \mod n$. \\
+Da $a, b \neq 0$, aber $a \cdot b = 0$ gibt es Nullteiler und $\mathbb{Z}/n\mathbb{Z}$ ist kein Körper. \\
+Beispiel: \\
+$\mathbb{Z}/6\mathbb{Z} = \{0, 1, 2, 3, 4, 5\}$ \\
+$2 \cdot 3 = 6 \mod n = 0$ aber $a, b \neq 0 \implies$ Nullteiler
 
 \end{document}
