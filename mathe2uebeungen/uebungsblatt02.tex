@@ -52,4 +52,49 @@ Die Summe ist $(a_n) + (b_n) = (n + (-n+1)) = (1)_{n\in\mathbb{N}}$. \\
 Die konstante Folge (1) strebt nicht gegen $\pm\infty$ und ist nicht die Nullfolge. Also $(a_n)+(b_n) \notin M_{\rightarrow \infty}$. \\
 $M_{\rightarrow \infty}$ ist nicht abgeschlossen bzgl. Addition und somit kein Unterraum. 
 
+\section*{Aufgabe 3}
+\subsection*{(i)}
+zu zeigen:
+\begin{enumerate}
+    \item $0 \in M_{\text{ger}}$
+    \item[] $\lambda f + g \in M_{\text{ger}}$
+    \item $\implies f + g \in M_{\text{ger}}$
+    \item $\implies \lambda f \in M_{\text{ger}}$
+\end{enumerate}
+Beweise: 
+\begin{enumerate}
+    \item $f(t) = 0 = f(-t) \in M_{\text{ger}}$
+    \item $(f+g)(-t) = f(-t) + g(-t) = f(t) = g(t) = (f+g)(t)$
+    \item $(\lambda f)(-t) = \lambda \cdot f(-t) = \lambda \cdot f(t) = (\lambda f)(t)$
+\end{enumerate}
+\subsection*{(ii)}
+Für $M_{\mathbb{Q}}$ mit Gegenbeispiel: \\
+\newline
+Sei $f \in \mathbb{Q}$ und $f(x) = x$ für alle $x$. \\
+$\implies f(\mathbb{Q}) = \mathbb{Q} \in \mathbb{Q}$ \\
+\newline
+Sei $\lambda = \sqrt 2$. Dann gilt: $(\lambda f)(x) = \sqrt 2 x$ \\
+Für $x = 1$ gilt jedoch: $(\lambda f)(1) = \sqrt 2 \notin \mathbb{Q}$ \\
+\newline
+Somit gilt nicht: $\lambda f \in \mathbb{Q}$ \\
+\newline
+Für $M_{+1}$ mit Gegenbeispiel: \\
+\newline
+Seien $f(n) = n, g(n) = -n$. Dann gilt: \\
+$f(n+1) = n + 1 = f(n) + 1$ \\
+$g(n+1) = -(n + 1) = g(n) - 1$ \\
+Allerdings: \\
+$(f+g)(n+1) = f(n+1) + g(n+1) = (n + 1) - (n+1)$, \\
+aber: $(f+g)(n) + 1 = n - n + 1 = 1 \neq 0 = (f+g)(n+1)$ \\
+$\implies (f+g)(n+1) \neq (f+g)(n) \implies f+g \notin M_{+1} \implies$ Kriterium nicht erfüllt 
+
+\section*{Aufgabe 4}
+\begin{align*}
+    &\lambda(-v) + \lambda(-u) \\
+    =& (-\lambda)v + (-\lambda)(u) & -(\lambda v) = (-\lambda)v = \lambda(-v) \\
+    =& (-\lambda) \cdot (v+u) & \text{Ax 3} \\
+    =& (-1)\lambda \cdot (v+u) & (-1)v = -v \\
+    =& -(\lambda(v+u)) & \text{Ax 2}
+\end{align*}
+
 \end{document}
