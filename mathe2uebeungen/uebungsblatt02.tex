@@ -1,1 +1,55 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
 
+\title{Übungsblatt 2}
+\author{Pascal Diller, Timo Rieke}
+
+\begin{document}
+\maketitle
+
+\section*{Aufgabe 1}
+\subsection*{(i)}
+1. Das Nullpolynom $p(x) = 0$ hat $a_0 = 0$, also $0 \in M_0$. \\
+2. Seien $p(x) = \sum_{i=1}^n a_i x^i$ und $q(x) = \sum_{j=1}^m b_j x^j$ in $M_0$. Der konstante Term von $p(x)+q(x)$ ist $0+0=0$. Also $p(x)+q(x) \in M_0$. \\
+3. Sei $p(x) = \sum_{i=1}^n a_i x^i \in M_0$ und $\lambda \in \mathbb{R}$. Der konstante Term von $\lambda p(x) = \sum_{i=1}^n (\lambda a_i) x^i$ ist $\lambda \cdot 0 = 0$. Also $\lambda p(x) \in M_0$. \\
+Somit ist $M_0$ ein Unterraum.
+
+\subsection*{(ii)} 
+$M_1 = \{ p(x) \in \mathbb{R}[x] \mid a_0 = 1 \}$: Das Nullpolynom $p(x)=0$ hat $a_0=0$, also $0 \notin M_1$. \\ $M_1$ ist kein Unterraum. \\ 
+$M_{\ge 0} = \{ p(x) \in \mathbb{R}[x] \mid a_0 \ge 0 \}$: \\
+Sei $p(x) = 1 \in M_{\ge 0}$ (da $a_0=1 \ge 0$) und $\lambda = -1$. \\
+Dann ist $\lambda p(x) = -1$. Der konstante Term ist $-1$, was nicht $\ge 0$ ist. \\
+Also $\lambda p(x) \notin M_{\ge 0}$. $M_{\ge 0}$ ist nicht abgeschlossen bzgl. Skalarmultiplikation und somit kein Unterraum.
+
+\section*{Aufgabe 2}
+\subsection*{(i)} 
+Seien $(a_n), (b_n), (c_n) \in F$ und $\lambda, \mu \in \mathbb{R}$. \\
+Addition ist assoziativ $((a_n+b_n)+c_n = a_n+(b_n+c_n))$ und kommutativ $(a_n+b_n = b_n+a_n)$, da $+$ in $\mathbb{R}$ diese Eigenschaften hat. \\
+Das neutrale Element ist die Nullfolge $(0)_{n\in\mathbb{N}}$, da $(a_n) + (0) = (a_n+0) = (a_n)$. \\
+Das inverse Element zu $(a_n)$ ist $(-a_n)$, da $(a_n) + (-a_n) = (a_n-a_n) = (0)$. \\
+$(F,+)$ ist eine abelsche Gruppe. \\
+Für Skalarmultiplikation: \\
+Ax 1: $1 \cdot (a_n) = (1 \cdot a_n) = (a_n)$. \\
+Ax 2: $(\lambda \mu) \cdot (a_n) = ((\lambda \mu) a_n) = (\lambda (\mu a_n)) = \lambda \cdot (\mu (a_n))$ (Assoziativität von $\cdot$ in $\mathbb{R}$).\\
+Ax 3: $\lambda \cdot ((a_n)+(b_n)) = \lambda \cdot (a_n+b_n) = (\lambda(a_n+b_n)) = (\lambda a_n + \lambda b_n) = \lambda(a_n) + \lambda(b_n)$ (Distributivität in $\mathbb{R}$).\\
+Ax 4: $(\lambda + \mu) \cdot (a_n) = ((\lambda + \mu) a_n) = (\lambda a_n + \mu a_n) = \lambda (a_n) + \mu (a_n)$ (Distributivität in $\mathbb{R}$).\\
+F ist ein $\mathbb{R}$-Vektorraum.
+
+\subsection*{(ii)}
+1. Die Nullfolge $(0)$ konvergiert gegen 0, also $0_F \in M_{\rightarrow 0}$. \\
+2. Seien $(a_n), (b_n) \in M_{\rightarrow 0}$. Dann $\lim a_n = 0$ und $\lim b_n = 0$. Es gilt $\lim (a_n + b_n) = \lim a_n + \lim b_n = 0 + 0 = 0$. Also $(a_n) + (b_n) \in M_{\rightarrow 0}$. \\
+3. Sei $(a_n) \in M_{\rightarrow 0}$ und $\lambda \in \mathbb{R}$. \\
+Somit $\lim a_n = 0$. Es gilt $\lim (\lambda a_n) = \lambda \lim a_n = \lambda \cdot 0 = 0$. \\
+Also $\lambda (a_n) \in M_{\rightarrow 0}$. \\
+Somit ist $M_{\rightarrow 0}$ ein Unterraum.
+
+\subsection*{(iii)}
+Betrachte $(a_n)$ mit $a_n = n$ ($\lim a_n = \infty$, also $(a_n) \in M_{\rightarrow \infty}$) und $(b_n)$ mit $b_n = -n+1$ ($\lim b_n = -\infty$, also $(b_n) \in M_{\rightarrow \infty}$). \\
+Die Summe ist $(a_n) + (b_n) = (n + (-n+1)) = (1)_{n\in\mathbb{N}}$. \\
+Die konstante Folge (1) strebt nicht gegen $\pm\infty$ und ist nicht die Nullfolge. Also $(a_n)+(b_n) \notin M_{\rightarrow \infty}$. \\
+$M_{\rightarrow \infty}$ ist nicht abgeschlossen bzgl. Addition und somit kein Unterraum. 
+
+\end{document}
