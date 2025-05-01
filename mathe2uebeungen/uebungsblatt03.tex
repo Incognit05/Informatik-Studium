@@ -131,4 +131,28 @@ Kein eindeutige Lösung, also kein Erzeugendensystem.
 \[0 + 0 - 4 \lambda_3 = 0 \Leftrightarrow \lambda_3 = 0\]
 Es gibt eine Lösung, also ist es ein Erzeugendensystem.
 
+\section*{Aufgabe 2}
+
+\subsection*{(i)}
+\textit{Behauptung:} Sei $W \subset V$ ein Unterraum. Dann ist für jedes $n \in \mathbb{N}$ und jedes n-Tupel $(w_1, ..., w_n) \in W^n$ die Linearkombination $\sum_{i=1}^n \lambda_i w_i$ für beliebige $\lambda_i \in \mathbb{R}$ wieder in W. \\
+Beweis per Induktion nach n: 
+\subsubsection*{IA (n=1):} Sei $w_1 \in W$. Eine Linearkombination ist $\lambda_1 w_1$. Da W ein Unterraum ist, ist W abgeschlossen unter Skalarmultiplikation, also $\lambda_1 w_1 \in W$. 
+\subsubsection*{IV:} Die Behauptung gelte für ein $n \in \mathbb{N}$. 
+\subsubsection*{IS (n $\to$ n+1):} Seien $(w_1, ..., w_n, w_{n+1}) \in W^{n+1}$ und $\lambda_1, ..., \lambda_{n+1} \in \mathbb{R}$. \\ Betrachte $w = \sum_{i=1}^{n+1} \lambda_i w_i = (\sum_{i=1}^n \lambda_i w_i) + \lambda_{n+1} w_{n+1}$. \\
+Sei $w' = \sum_{i=1}^n \lambda_i w_i$. Nach IV ist $w' \in W$. \\
+Da W ein Unterraum ist, ist $\lambda_{n+1} w_{n+1} \in W$ (abgeschlossen unter Skalarmultiplikation). \\
+Da W ein Unterraum ist, ist $w = w' + \lambda_{n+1} w_{n+1} \in W$ (abgeschlossen unter Addition).
+    
+
+\subsection*{(ii)}
+Prüfen der Unterraumkriterien:
+\subsubsection*{$0_V \in Span(M)$?}
+Ja, da $M \ne \emptyset$, existiert ein $v \in M$. Dann ist $0_V = 0 \cdot v \in Span(M)$.
+\subsubsection*{Abgeschlossenheit unter Addition und Skalarmultiplikation?}
+Seien $w, w' \in Span(M)$ und $\lambda \in \mathbb{R}$.\\ 
+Dann existieren $v_1, ..., v_n \in M$ und $u_1, ..., u_m \in M$ sowie Skalare $\alpha_i, \beta_j \in \mathbb{R}$ mit $w = \sum_{i=1}^n \alpha_i v_i$ und $w' = \sum_{j=1}^m \beta_j u_j$.\\
+Es folgt $\lambda w + w' = \lambda (\sum_{i=1}^n \alpha_i v_i) + (\sum_{j=1}^m \beta_j u_j) = \sum_{i=1}^n (\lambda \alpha_i) v_i + \sum_{j=1}^m \beta_j u_j$. \\
+Dies ist wieder eine Linearkombination von Elementen aus M. Also ist $\lambda w + w' \in Span(M)$. \\
+Damit ist Span(M) ein Unterraum von V. 
+
 \end{document}
