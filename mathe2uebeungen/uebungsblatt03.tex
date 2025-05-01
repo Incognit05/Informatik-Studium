@@ -154,4 +154,33 @@ Es folgt $\lambda w + w' = \lambda (\sum_{i=1}^n \alpha_i v_i) + (\sum_{j=1}^m \
 Dies ist wieder eine Linearkombination von Elementen aus M. Also ist $\lambda w + w' \in Span(M)$. \\
 Damit ist Span(M) ein Unterraum von V. 
 
+\section*{Aufgabe 3}
+
+\subsection*{(i)}
+Da $W_1, W_2$ nichttrivial sind und $W_1 \cap W_2 = \{0_V\}$, gilt $W_1 \not\subset W_2$ und $W_2 \not\subset W_1$. Sei $w_1 \in W_1 \setminus W_2$ und $w_2 \in W_2 \setminus W_1$.  \\
+Betrachte $w = w_1 + w_2$. \\
+Angenommen $w \in W_1 \cup W_2$.
+\begin{itemize}
+    \item Fall 1: $w \in W_1$. Dann $w_2 = w - w_1$. Da $w \in W_1$ und $w_1 \in W_1$, und $W_1$ ein Unterraum ist, folgt $w_2 \in W_1$. Widerspruch zur Wahl von $w_2$.
+    \item Fall 2: $w \in W_2$. Dann $w_1 = w - w_2$. Da $w \in W_2$ und $w_2 \in W_2$, und $W_2$ ein Unterraum ist, folgt $w_1 \in W_2$. Widerspruch zur Wahl von $w_1$.
+\end{itemize}
+Also kann $w = w_1 + w_2$ nicht in $W_1 \cup W_2$ liegen. $W_1 \cup W_2$ ist nicht abgeschlossen unter Addition und somit kein Unterraum.
+
+\subsection*{(ii) Beispiel in $\mathbb{R}^2$}
+Wähle $W_1 = Span((1,0)) = \{(x,0) | x \in \mathbb{R}\}$ (x-Achse) und $W_2 = Span((0,1)) = \{(0,y) | y \in \mathbb{R}\}$ (y-Achse). \\
+Beide sind nichttriviale Unterräume von $\mathbb{R}^2$ und $W_1 \cap W_2 = \{(0,0)\}$. \\
+Sei $w_1 = (1,0) \in W_1 \subset W_1 \cup W_2$ und $w_2 = (0,1) \in W_2 \subset W_1 \cup W_2$. \\
+Die Summe ist $w = w_1 + w_2 = (1,1)$. \\
+$(1,1)$ ist nicht in $W_1$ (da $y=1 \neq 0$) und nicht in $W_2$ (da $x=1 \neq 0$). \\
+Also $w \notin W_1 \cup W_2$. Die Vereinigung ist nicht abgeschlossen unter Addition.
+
+\subsection*{(iii)}
+
+$Span(v)$ ist ein Unterraum (nach Aufgabe 2ii). Da $v \neq 0_V$, ist $v = 1 \cdot v \in Span(v)$, also ist $Span(v)$ nichttrivial. \\
+$v \in Span(v)$, da $v = 1 \cdot v$. \\
+Sei $W$ ein beliebiger nichttrivialer Unterraum von V mit $v \in W$. Wir müssen zeigen $Span(v) \subset W$. \\
+Sei $w \in Span(v)$. Dann $w = \lambda v$ für ein $\lambda \in \mathbb{R}$. Da $v \in W$ und W ein Unterraum ist, folgt $w = \lambda v \in W$. \\
+Da $w$ beliebig war, gilt $Span(v) \subset W$. \\
+Somit ist $Span(v)$ der kleinste nichttriviale Unterraum, der $v$ enthält.
+
 \end{document}
