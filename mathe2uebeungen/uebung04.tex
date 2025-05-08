@@ -3,6 +3,7 @@
 \usepackage{amssymb}
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
+\usepackage[amsfonts]
 
 \title{Übungsblatt 4}
 \author{Pascal Diller, Timo Rieke}
@@ -106,5 +107,54 @@ b = 0
 Da \( \ker(S) = \{(0, 0)\} \), folgt direkt:
 
 \( S \) ist injektiv.
+
+\section*{Aufgabe 2}
+\subsection*{$B_1 = (x^2+2x-3, 3x^2+2x-5, -3x^2+2x+1)$}
+$\lambda_1(x^2+2x-3) + \lambda_2(3x^2+2x-5) + \lambda_3(-3x^2+2x+1) = 0$. \\ 
+Koeffizientenvergleich:
+\[ \lambda_1 + 3\lambda_2 - 3\lambda_3 = 0 \]
+\[ 2\lambda_1 + 2\lambda_2 + 2\lambda_3 = 0 \implies \lambda_1 + \lambda_2 + \lambda_3 = 0 \]
+\[ -3\lambda_1 - 5\lambda_2 + \lambda_3 = 0 \]
+Aus (2) folgt $\lambda_1 = -\lambda_2 - \lambda_3$. \\
+Einsetzen in (1): $(-\lambda_2 - \lambda_3) + 3\lambda_2 - 3\lambda_3 = 0 \implies 2\lambda_2 = 4\lambda_3 \implies \lambda_2 = 2\lambda_3$. \\
+Damit $\lambda_1 = -2\lambda_3 - \lambda_3 = -3\lambda_3$. \\
+Einsetzen in (3): $-3(-3\lambda_3) - 5(2\lambda_3) + \lambda_3 = 9\lambda_3 - 10\lambda_3 + \lambda_3 = 0$. \\
+Das System hat nichttriviale Lösungen (z.B. $\lambda_3=1, \lambda_2=2, \lambda_1=-3$). \\
+Somit ist $B_1$ linear abhängig und somit keine Basis.
+
+\subsection*{$B_2 = (x^2+2x-3, 3x^2+2x-5, -3x^2+2x+4)$}
+$\lambda_1(x^2+2x-3) + \lambda_2(3x^2+2x-5) + \lambda_3(-3x^2+2x+4) = 0$. \\
+Koeffizientenvergleich:
+\[ \lambda_1 + 3\lambda_2 - 3\lambda_3 = 0 \]
+\[ 2\lambda_1 + 2\lambda_2 + 2\lambda_3 = 0 \implies \lambda_1 + \lambda_2 + \lambda_3 = 0 \]
+\[ -3\lambda_1 - 5\lambda_2 + 4\lambda_3 = 0 \]
+Wie oben folgt $\lambda_1 = -3\lambda_3$ und $\lambda_2 = 2\lambda_3$. \\
+Einsetzen in (3): $-3(-3\lambda_3) - 5(2\lambda_3) + 4\lambda_3 = 9\lambda_3 - 10\lambda_3 + 4\lambda_3 = 3\lambda_3 = 0$. \\
+Daraus folgt $\lambda_3 = 0$, und somit auch $\lambda_1 = 0$ und $\lambda_2 = 0$. \\
+Die einzige Lösung ist die triviale Lösung. \\
+Somit ist $B_2$  linear unabhängig und somit eine Basis.
+
+\section*{Aufgabe 3}
+
+\subsection*{IA (n=1):} 
+$T(\lambda_1 v_1) = \lambda_1 T(v_1)$
+
+\subsection*{IV:} 
+Es gelte $T\left(\sum_{i=1}^{n} \lambda_i v_i\right) = \sum_{i=1}^{n} \lambda_i T(v_i)$ für ein $n \in \mathbb{N}$.
+
+\subsection*{IS (n $\to$ n+1):}
+\begin{align*} T\left(\sum_{i=1}^{n+1} \lambda_i v_i\right) &= T\left(\sum_{i=1}^{n} \lambda_i v_i + \lambda_{n+1} v_{n+1}\right) \\ &\overset{(i)}{=} T\left(\sum_{i=1}^{n} \lambda_i v_i\right) + T(\lambda_{n+1} v_{n+1})  \\ &\overset{IV}{=} \left(\sum_{i=1}^{n} \lambda_i T(v_i)\right) + T(\lambda_{n+1} v_{n+1}) \\ &\overset{(ii)}{=} \left(\sum_{i=1}^{n} \lambda_i T(v_i)\right) + \lambda_{n+1} T(v_{n+1})  \\ &= \sum_{i=1}^{n+1} \lambda_i T(v_i) \end{align*}
+
+\section*{Aufgabe 4}
+Das Tupel $(w_1, w_2)$ ist linear unabhängig $\iff$ ($\lambda_1 w_1 + \lambda_2 w_2 = 0_V \implies \lambda_1 = \lambda_2 = 0$).
+\begin{align*} \lambda_1 w_1 + \lambda_2 w_2 = 0_V &\iff \lambda_1 (a v_1 + b v_2) + \lambda_2 (c v_1 + d v_2) = 0_V \\ &\iff (\lambda_1 a + \lambda_2 c) v_1 + (\lambda_1 b + \lambda_2 d) v_2 = 0_V\end{align*}
+Da $(v_1, v_2)$ linear unabhängig ist, folgt:
+\begin{align*} \lambda_1 a + \lambda_2 c &= 0 \\ \lambda_1 b + \lambda_2 d &= 0 \end{align*}
+Gleichungssystem für $(\lambda_1, \lambda_2)$:
+$$ \begin{pmatrix} a & c \\ b & d \end{pmatrix} \begin{pmatrix} \lambda_1 \\ \lambda_2 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} \quad \text{oder} \quad A^T \begin{pmatrix} \lambda_1 \\ \lambda_2 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} $$
+Das System hat genau dann nur die triviale Lösung $(\lambda_1, \lambda_2) = (0, 0)$, wenn $A^T$ invertierbar ist. \\
+$A^T$ ist invertierbar, deswegen gilt $\det(A^T) \neq 0$. \\
+Da $\det(A^T) = \det(A)$, ist $A$ invertierbar und somit $\det(A) \neq 0$. \\
+Also ist $(w_1, w_2)$ linear unabhängig und $\det A \neq 0$. 
 
 \end{document}
