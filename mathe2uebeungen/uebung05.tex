@@ -44,4 +44,29 @@ Da $T$ bijektiv ist, müssen $\dim(M_n(\mathbb{R}))$ und $\dim(\mathbb{R}^m)$ gl
 \[\dim(\mathbb{R}^m) = m = \dim(M_n(\mathbb{R})) = n^2\]
 \[m = n^2\]
 
+\section*{Aufgabe 3}
+$v_1 \neq 0$, also linear unabhängig. \\
+Prüfe $(v_1, v_2)$ auf lineare Unabhängigkeit:
+\[a v_1 + b v_2 = 0 \Rightarrow a(1,2,1) + b(-1,3,-2) = (0,0,0)\]
+\[\Rightarrow \begin{cases} a - b = 0 \\ 2a + 3b = 0 \\ a - 2b = 0 \end{cases} \Rightarrow a = b = 0\]
+$\Rightarrow$ $(v_1, v_2)$ linear unabhängig. \\
+Prüfe $(v_1, v_2, v_3)$:
+\[a v_1 + b v_2 + c v_3 = 0\]
+Beispiel: $2v_1 - 2v_2 - v_3 = 0$, also $v_3$ ist abhängig. \\
+Prüfe $(v_1, v_2, v_4)$:
+\[c_1 v_1 + c_2 v_2 = v_4 \Rightarrow c_1(1,2,1) + c_2(-1,3,-2) = (1,7,1)\]
+\[\Rightarrow \begin{cases} c_1 - c_2 = 1 \\ 2c_1 + 3c_2 = 7 \\ c_1 - 2c_2 = 1 \end{cases} \Rightarrow \text{Widerspruch (3. Gleichung nicht erfüllt)}\]
+$\Rightarrow$ $v_4$ ist nicht linear abhängig von $v_1, v_2$. \\
+$\{v_1, v_2, v_4\}$ ist eine Basis von $\mathbb{R}^3$.
+
+\section*{Aufgabe 4}
+\[a w_1 + b w_2 = 0 \Rightarrow a(r v_1 + v_2) + b(v_1 + s v_2) = 0\]
+\[\Rightarrow (a r + b) v_1 + (a + b s) v_2 = 0\]
+Da $(v_1, v_2)$ eine Basis ist, folgt:
+\[a r + b = 0\] 
+\[ a + b s = 0\]
+Das lineare Gleichungssystem hat genau dann nur die Lösung $a = b = 0$, wenn die Determinante ungleich null ist:
+\[\det \begin{pmatrix} r & 1 \\ 1 & s \end {pmatrix}= rs - 1 \neq 0\]
+$(w_1, w_2)$ ist genau dann eine Basis von $V$, wenn $rs \neq 1$.
+
 \end{document}
