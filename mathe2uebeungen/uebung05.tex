@@ -1,0 +1,47 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Übungsblatt 4}
+\author{Pascal Diller, Timo Rieke}
+
+\begin{document}
+
+\maketitle
+
+\section*{Aufgabe 1}
+\subsection*{(i)}
+Für $U_1$: \\
+\[x + z = 0 \Longleftrightarrow x = -z\]
+\[(x,y,z,w) = (-z, y, z, w) = y(0,1,0,0) + z(-1,0,1,0) + w(0,0,0,1)\]
+Basis für $U_1$: $\{(0,1,0,0), (-1,0,1,0),(0,0,0,1)\}$ \\
+Dimension von $U_1: \dim{U_1} = 3$ \\
+\newline
+Für $U_2$: \\
+\[x+y-z = 0 \Longleftrightarrow x = z - y\]
+\[y-w = 0 \Longleftrightarrow w = y\]
+\[(x,y,z,w) = (z - y, y, z , y) = y(-1,1,0,1) + z(1,0,1,0)\]
+Basis von $U_2$: $\{(-1, 1, 0, 1), (1,0,1,0)\}$ \\
+Dimension von $U_2: \dim{U_2} = 2$
+
+\subsection*{(ii)}
+\[x+z = 0 \Longleftrightarrow x = -z\]
+\[x+y-z = 0 = -z + y -z \Longleftrightarrow y = 2z\]
+\[y - w = 0 \Longleftrightarrow y = w = 2z\]
+\[(x,y,z,w) = (-z,2z,z,2z) = z(-1,2,1,2)\]
+Basis: $\{(-1,2,1,2)\}$ \\
+$\dim{U_1 \cap U_2} = 1$
+
+\subsection*{(iii)}
+\[\dim{(U_1 + U_2)} = \dim{(U_1)} + \dim{(U_2)} - \dim{(U_1 \cap U_2)} = 3 + 2 - 1 = 4\]
+
+\section*{Aufgabe 2}
+\subsection*{(ii)}
+$M_n(\mathbb{R})$ ist die Menge aller $n \times n$-Matrizen mit Einträgen in $\mathbb{R}$, also:
+\[\dim(M_n(\mathbb{R})) = n^2\]
+Da $T$ bijektiv ist, müssen $\dim(M_n(\mathbb{R}))$ und $\dim(\mathbb{R}^m)$ gleich sein.
+\[\dim(\mathbb{R}^m) = m = \dim(M_n(\mathbb{R})) = n^2\]
+\[m = n^2\]
+
+\end{document}
