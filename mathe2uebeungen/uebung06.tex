@@ -119,11 +119,7 @@ Da dies für alle \( v \) gilt, folgt:
 \]
 
 \section*{Aufgabe 3}
-
-Sei \( \varphi : V \to V \) ein Endomorphismus und \( \lambda \in \mathbb{R} \) ein Eigenwert von \( \varphi \). Zeige:
-
-\subsection*{(i) \( r\lambda \) ist Eigenwert von \( r\varphi \) für \( r \in \mathbb{R} \)}
-
+\subsection*{(i)}
 Da \( \lambda \) Eigenwert von \( \varphi \) ist, existiert \( v \neq 0 \) mit
 \[
 \varphi(v) = \lambda v.
@@ -134,7 +130,7 @@ Dann gilt:
 \]
 Somit ist \( v \) ein Eigenvektor von \( r\varphi \) zum Eigenwert \( r\lambda \).
 
-\subsection*{(ii) \(\lambda^n\) ist Eigenwert von \(\phi^n\) für \(n \in \mathbb{N}\).}
+\subsection*{(ii)}
 IA: Für \(n = 1\) gilt:
 \[
 \phi^1(v) = \phi(v) = \lambda v = \lambda^1 v.
@@ -146,7 +142,7 @@ IS:
 \]
 Damit ist die Aussage für alle \(n \in \mathbb{N}\) bewiesen.
 
-\subsection*{(iii) Falls $\phi$ bijektiv ist, zeige: $\lambda^{-1}$ ist Eigenwert von $\phi^{-1}$.}
+\subsection*{(iii)}
 Aus \(\phi(v) = \lambda v\) folgt
 \[
 v = \phi^{-1}(\phi(v)) = \phi^{-1}(\lambda v) = \lambda \cdot \phi^{-1}(v),
@@ -157,5 +153,122 @@ also:
 \]
 Damit ist \(v\) Eigenvektor von \(\phi^{-1}\) zum Eigenwert \(\lambda^{-1}\).
 
+\section*{Aufgabe 4}
+
+Gegeben sind die Basen:
+\begin{align*}
+\mathcal{B}_{\mathbb{R}_2[x]} &= (-x+1,\; x+1,\; x^2+x), \\
+\mathcal{B}_{\mathbb{R}^2} &= \big((1,1),\; (2,1)\big), \\
+\mathcal{B}_{M_2(\mathbb{R})} &=
+\left(
+\begin{pmatrix}1&1\\1&1\end{pmatrix},
+\begin{pmatrix}0&1\\1&1\end{pmatrix},
+\begin{pmatrix}0&0\\1&1\end{pmatrix},
+\begin{pmatrix}0&0\\0&1\end{pmatrix}
+\right).
+\end{align*}
+und Abbildungen:
+\[
+T(p(x)) = (a_2 + 2a_1,\; -2a_2 + a_0),\quad S(x,y) = \begin{pmatrix}x+y & x-y\\ 2x & 2y\end{pmatrix}.
+\]
+
+\subsection*{(i)}
+
+Zerlege \(x^2 - 2x + 3\) in Basis \(\mathcal{B}_{\mathbb{R}_2[x]}\):
+\begin{align*}
+x^2 - 2x + 3 &= a(-x+1) + b(x+1) + c(x^2+x) \\
+&= (-a + b + c)x + (a + b) + cx^2.
+\end{align*}
+Vergleich ergibt:
+\[
+c = 1,\; -a + b = -3,\; a + b = 3 \Rightarrow b = 0,\; a = 3.
+\]
+\[
+\Rightarrow [x^2 - 2x + 3]_{\mathcal{B}_{\mathbb{R}_2[x]}} = \begin{pmatrix} 3 \\ 0 \\ 1 \end{pmatrix}
+\]
+Berechne \(T(x^2 - 2x + 3) = (1 + 2 \cdot (-2),\; -2 \cdot 1 + 3) = (-3,\; 1)\).\\
+Koordinaten von \((-3,1)\) in \(\mathcal{B}_{\mathbb{R}^2}\):
+\[
+(-3,1) = \alpha(1,1) + \beta(2,1) \Rightarrow
+\begin{cases}
+\alpha + 2\beta = -3 \\
+\alpha + \beta = 1
+\end{cases}
+\Rightarrow \beta = -4,\; \alpha = 5.
+\]
+\[
+\Rightarrow [T(x^2 - 2x + 3)]_{\mathcal{B}_{\mathbb{R}^2}} = \begin{pmatrix} 5 \\ -4 \end{pmatrix}
+\]
+Matrixdarstellung von \(T\): Werte von \(T\) auf Basiselementen:
+\begin{align*}
+T(-x+1) &= (0 + 2(-1),\; 0 + 1) = (-2,\;1), \\
+T(x+1) &= (0 + 2(1),\; 0 + 1) = (2,\;1), \\
+T(x^2+x) &= (1 + 2(1),\; -2 + 0) = (3,\;-2).
+\end{align*}
+Darstellung in \(\mathcal{B}_{\mathbb{R}^2}\):
+\begin{align*}
+(-2,1) &= 4(1,1) -3(2,1), \Rightarrow \begin{pmatrix}4\\-3\end{pmatrix}, \\
+(2,1) &= 2(1,1) -1(2,1), \Rightarrow \begin{pmatrix}2\\-1\end{pmatrix}, \\
+(3,-2) &= 5(1,1) -4(2,1), \Rightarrow \begin{pmatrix}5\\-4\end{pmatrix}
+\end{align*}
+\[
+[T]_{\mathcal{B}_{\mathbb{R}^2}}^{\mathcal{B}_{\mathbb{R}_2[x]}} =
+\begin{pmatrix}
+4 & 2 & 5 \\
+-3 & -1 & -4
+\end{pmatrix}
+\]
+Matrixdarstellung von \(S\): Wende \(S\) auf Basis von \(\mathbb{R}^2\) an:
+\[
+S(1,1) = \begin{pmatrix}2&0\\2&2\end{pmatrix}, \quad
+S(2,1) = \begin{pmatrix}3&1\\4&2\end{pmatrix}.
+\]
+Zerlege in \(\mathcal{B}_{M_2(\mathbb{R})}\):
+\[
+\Rightarrow S(1,1) = 2 B_1,\quad S(2,1) = 3 B_1 + B_2,
+\]
+\[
+[S]_{\mathcal{B}_{M_2(\mathbb{R})}}^{\mathcal{B}_{\mathbb{R}^2}} =
+\begin{pmatrix}
+2 & 3 \\
+0 & 1 \\
+0 & 0 \\
+0 & 0
+\end{pmatrix}
++ \text{Anteile aus unteren Zeilen:}
+\Rightarrow
+\begin{pmatrix}
+2 & 3 \\
+-2 & -2 \\
+2 & 3 \\
+0 & -2
+\end{pmatrix}
+\]
+
+\subsection*{(ii)}
+
+\[
+[S \circ T]_{\mathcal{B}_{M_2(\mathbb{R})}}^{\mathcal{B}_{\mathbb{R}_2[x]}} = 
+[S]^{\mathcal{B}_{\mathbb{R}^2}}_{\mathcal{B}_{M_2(\mathbb{R})}} \cdot
+[T]_{\mathcal{B}_{\mathbb{R}^2}}^{\mathcal{B}_{\mathbb{R}_2[x]}} =
+\begin{pmatrix}
+2 & 3 \\
+-2 & -2 \\
+2 & 3 \\
+0 & -2
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+4 & 2 & 5 \\
+-3 & -1 & -4
+\end{pmatrix}
+=
+\begin{pmatrix}
+-1 & 3 & 1 \\
+-2 & -2 & 4 \\
+-1 & 3 & 1 \\
+6 & -2 & -10
+\end{pmatrix}
+\]
 
 \end{document}
