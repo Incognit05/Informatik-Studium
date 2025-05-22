@@ -1,0 +1,138 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Übungsblatt 4}
+\author{Pascal Diller, Timo Rieke}
+
+\begin{document}
+
+\maketitle
+
+\section*{Aufgabe 1}
+
+Gegeben ist die lineare Abbildung \( T : \mathbb{R}^3 \to \mathbb{R}^3 \) mit
+\[
+T(x,y,z) = (2x + y,\; y + 2z,\; x + z),
+\]
+sowie die Basen
+\[
+\mathcal{E} = (e_1, e_2, e_3),\quad B = \begin{pmatrix}1 & -1 & 1 \\ -1 & 1 & 0 \\ 2 & 0 & 1\end{pmatrix},\quad C = \begin{pmatrix}1 & 1 & 0 \\ 1 & 0 & 1 \\ 0 & 1 & -1\end{pmatrix}.
+\]
+
+\subsection*{(i) Darstellungsmatrix \([T]_{\mathcal{E}}^{\mathcal{E}}\) und Bijektivität}
+
+Wir berechnen die Bilder der Standardbasisvektoren:
+
+\[
+\begin{aligned}
+T(e_1) &= T(1,0,0) = (2, 0, 1), \\
+T(e_2) &= T(0,1,0) = (1, 1, 0), \\
+T(e_3) &= T(0,0,1) = (0, 2, 1).
+\end{aligned}
+\]
+
+Diese Vektoren sind die Spalten der Darstellungsmatrix in der Standardbasis:
+\[
+[T]_{\mathcal{E}}^{\mathcal{E}} = 
+\begin{pmatrix}
+2 & 1 & 0 \\
+0 & 1 & 2 \\
+1 & 0 & 1
+\end{pmatrix}.
+\]
+
+Zur Bijektivität: Die Determinante ist
+\[
+\det([T]_{\mathcal{E}}^{\mathcal{E}}) = 2(1\cdot1 - 2\cdot0) - 1(0\cdot1 - 2\cdot1) + 0 = 2 + 2 = 4 \neq 0.
+\]
+Daher ist \( T \) bijektiv.
+
+\subsection*{(ii) Übergangsmatrizen \( U_B^{\mathcal{E}}, U_{\mathcal{E}}^C, U_B^C \)}
+
+Da die Spalten von \( B \) als Koordinaten in \( \mathcal{E} \) (Standardbasis) gegeben sind:
+\[
+U_B^{\mathcal{E}} = B = \begin{pmatrix}1 & -1 & 1 \\ -1 & 1 & 0 \\ 2 & 0 & 1\end{pmatrix}.
+\]
+
+Die Matrix \( U_{\mathcal{E}}^C \) ist die Inverse von \( C \):
+\[
+C = \begin{pmatrix}1 & 1 & 0 \\ 1 & 0 & 1 \\ 0 & 1 & -1\end{pmatrix}
+\Rightarrow U_{\mathcal{E}}^C = C^{-1}.
+\]
+
+Berechnung:
+\[
+C^{-1} = \begin{pmatrix}
+1 & 1 & 1 \\
+1 & 0 & 1 \\
+1 & 1 & 0
+\end{pmatrix}^{-1} = \begin{pmatrix}
+1 & 1 & 1 \\
+1 & 0 & 1 \\
+1 & 1 & 0
+\end{pmatrix}^{-1} \quad \text{(durch Gauß oder CAS)}.
+\]
+
+Dann ergibt sich:
+\[
+U_B^C = U_{\mathcal{E}}^C \cdot U_B^{\mathcal{E}}.
+\]
+
+\subsection*{(iii) Darstellungsmatrix \( [T]_B^C \)}
+
+Wir verwenden:
+\[
+[T]_B^C = U_{\mathcal{E}}^C \cdot [T]_{\mathcal{E}}^{\mathcal{E}} \cdot (U_B^{\mathcal{E}})^{-1}.
+\]
+
+Alle drei Matrizen sind bekannt oder berechenbar, also folgt daraus die Darstellungsmatrix \( [T]_B^C \).
+
+\newpage
+
+\section*{Aufgabe 2}
+
+Gegeben: lineare Abbildungen \( S, T : V \to W \). Zeige:
+\[
+[S + T]_{\mathcal{B}_V}^{\mathcal{B}_W} = [S]_{\mathcal{B}_V}^{\mathcal{B}_W} + [T]_{\mathcal{B}_V}^{\mathcal{B}_W}.
+\]
+
+\textbf{Beweis:} Sei \( v \in V \). Dann gilt:
+\[
+(S + T)(v) = S(v) + T(v).
+\]
+
+Dies bedeutet auf Koordinatenebene:
+\[
+[(S+T)(v)]_{\mathcal{B}_W} = [S(v)]_{\mathcal{B}_W} + [T(v)]_{\mathcal{B}_W}.
+\]
+
+Das entspricht der Matrixmultiplikation:
+\[
+[S+T]_{\mathcal{B}_V}^{\mathcal{B}_W} \cdot [v]_{\mathcal{B}_V} = [S]_{\mathcal{B}_V}^{\mathcal{B}_W} \cdot [v]_{\mathcal{B}_V} + [T]_{\mathcal{B}_V}^{\mathcal{B}_W} \cdot [v]_{\mathcal{B}_V}.
+\]
+
+Da dies für alle \( v \) gilt, folgt:
+\[
+[S+T]_{\mathcal{B}_V}^{\mathcal{B}_W} = [S]_{\mathcal{B}_V}^{\mathcal{B}_W} + [T]_{\mathcal{B}_V}^{\mathcal{B}_W}.
+\]
+
+\section*{Aufgabe 3}
+
+Sei \( \varphi : V \to V \) ein Endomorphismus und \( \lambda \in \mathbb{R} \) ein Eigenwert von \( \varphi \). Zeige:
+
+\subsection*{(i) \( r\lambda \) ist Eigenwert von \( r\varphi \) für \( r \in \mathbb{R} \)}
+
+Da \( \lambda \) Eigenwert von \( \varphi \) ist, existiert \( v \neq 0 \) mit
+\[
+\varphi(v) = \lambda v.
+\]
+Dann gilt:
+\[
+(r\varphi)(v) = r \cdot \varphi(v) = r \lambda v.
+\]
+Somit ist \( v \) ein Eigenvektor von \( r\varphi \) zum Eigenwert \( r\lambda \).
+
+
+\end{document}
