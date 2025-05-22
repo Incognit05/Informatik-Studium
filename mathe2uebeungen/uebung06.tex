@@ -134,5 +134,28 @@ Dann gilt:
 \]
 Somit ist \( v \) ein Eigenvektor von \( r\varphi \) zum Eigenwert \( r\lambda \).
 
+\subsection*{(ii) \(\lambda^n\) ist Eigenwert von \(\phi^n\) für \(n \in \mathbb{N}\).}
+IA: Für \(n = 1\) gilt:
+\[
+\phi^1(v) = \phi(v) = \lambda v = \lambda^1 v.
+\]
+IV: Es gelte \(\phi^n(v) = \lambda^n v\).\\
+IS:
+\[
+\phi^{n+1}(v) = \phi(\phi^n(v)) = \phi(\lambda^n v) = \lambda^n \cdot \phi(v) = \lambda^n \cdot \lambda v = \lambda^{n+1} v.
+\]
+Damit ist die Aussage für alle \(n \in \mathbb{N}\) bewiesen.
+
+\subsection*{(iii) Falls $\phi$ bijektiv ist, zeige: $\lambda^{-1}$ ist Eigenwert von $\phi^{-1}$.}
+Aus \(\phi(v) = \lambda v\) folgt
+\[
+v = \phi^{-1}(\phi(v)) = \phi^{-1}(\lambda v) = \lambda \cdot \phi^{-1}(v),
+\]
+also:
+\[
+\phi^{-1}(v) = \lambda^{-1} v.
+\]
+Damit ist \(v\) Eigenvektor von \(\phi^{-1}\) zum Eigenwert \(\lambda^{-1}\).
+
 
 \end{document}
