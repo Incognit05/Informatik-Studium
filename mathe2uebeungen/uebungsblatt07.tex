@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Übungsblatt 07}
+\author{Pascal Diller, Timo Rieke}
+
+\begin{document}
+\maketitle
+\section*{Aufgabe 1}
+
+\subsection*{(i)}
+Für $v_1 = (-2, 1, 0)$:
+\[T_A(v_1) = \begin{pmatrix} -2 & 2 & 0 \\ 2 & 3 & 0 \\ 0 & 0 & -1 \end{pmatrix} \begin{pmatrix} -2 \\ 1 \\ 0 \end{pmatrix} = \begin{pmatrix} 4 + 2 + 0 \\ -4 + 3 + 0 \\ 0 + 0 + 0 \end{pmatrix} = \begin{pmatrix} 6 \\ -1 \\ 0 \end{pmatrix} = -3 \begin{pmatrix} -2 \\ 1 \\ 0 \end{pmatrix} = -3v_1\] 
+Also ist $v_1$ ein Eigenvektor zum Eigenwert $\lambda_1 = -3$. \\
+Für $v_2 = (1, 0, 1)$:
+\[T_A(v_2) = \begin{pmatrix} -2 & 2 & 0 \\ 2 & 3 & 0 \\ 0 & 0 & -1 \end{pmatrix} \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} = \begin{pmatrix} -2 + 0 + 0 \\ 2 + 0 + 0 \\ 0 + 0 - 1 \end{pmatrix} = \begin{pmatrix} -2 \\ 2 \\ -1 \end{pmatrix}\]
+Da kein $\lambda_2$ existiert, sodass $T_A(v_2) = \lambda_2 v_2$, ist $v_2$ kein Eigenvektor von $T_A$. \\
+Für $v_3 = (1, -2, 0)$:
+\[T_A(v_3) = \begin{pmatrix} -2 & 2 & 0 \\ 2 & 3 & 0 \\ 0 & 0 & -1 \end{pmatrix} \begin{pmatrix} 1 \\ -2 \\ 0 \end{pmatrix} = \begin{pmatrix} -2 - 4 + 0 \\ 2 - 6 + 0 \\ 0 + 0 + 0 \end{pmatrix} = \begin{pmatrix} -6 \\ -4 \\ 0 \end{pmatrix} = -2 \begin{pmatrix} 1 \\ -2 \\ 0 \end{pmatrix} = -2v_3\]
+Also ist $v_3$ ein Eigenvektor zum Eigenwert $\lambda_3 = -2$.
+
+\subsection*{(ii)}
+Da $T_A$ drei linear unabhängige Eigenvektoren besitzt, ist $T_A$ diagonalisierbar. \\
+Die Matrix $P$ besteht aus den Eigenvektoren als Spalten, und $P^{-1}AP$ ist eine Diagonalmatrix mit den Eigenwerten auf der Diagonalen.
+\[P = \begin{pmatrix} -2 & 1 & 1 \\ 1 & 0 & -2 \\ 0 & 1 & 0 \end{pmatrix}, \quad D = \begin{pmatrix} -3 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & -2 \end{pmatrix}\]
+Um $P^{-1}$ zu berechnen, erweitern wir $P$ mit der Einheitsmatrix und formen um:
+\[\begin{pmatrix} -2 & 1 & 1 & 1 & 0 & 0 \\ 1 & 0 & -2 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0 & 0 & 1 \end{pmatrix} \rightarrow \begin{pmatrix} 1 & 0 & 0 & 2 & 1 & 1 \\ 0 & 1 & 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & -1 & -1 & 1 \end{pmatrix}\]
+
+Also ist
+\[P^{-1} = \begin{pmatrix} 2 & 1 & 1 \\ 0 & 0 & 1 \\ -1 & -1 & 1 \end{pmatrix}\]
+\[P^{-1}AP = \begin{pmatrix} 2 & 1 & 1 \\ 0 & 0 & 1 \\ -1 & -1 & 1 \end{pmatrix} \begin{pmatrix} -2 & 2 & 0 \\ 1 & 0 & -2 \\ 0 & 0 & -1 \end{pmatrix} \begin{pmatrix} -2 & 1 & 1 \\ 1 & 0 & -2 \\ 0 & 1 & 0 \end{pmatrix} = \begin{pmatrix} -3 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & -2 \end{pmatrix}\]
+
+\subsection*{(iii)} 
+Das charakteristische Polynom von $B$ ist:
+\[\det(B - xI) = \det \begin{pmatrix} -3 - x & 0 & 0 \\ 2a & b - x & a \\ 10 & 0 & 2 - x \end{pmatrix} = (-3 - x)(b - x)(2 - x)\]
+Die Eigenwerte sind also $\lambda_1 = -3$, $\lambda_2 = b$, und $\lambda_3 = 2$. \\ \newline
+1. Fall: $b \neq -3$ und $b \neq 2$ \\
+In diesem Fall sind alle Eigenwerte unterschiedlich, und die Matrix ist diagonalisierbar. \\ \newline
+2. Fall: $b = -3$ 
+\[B - (-3)I = \begin{pmatrix} 0 & 0 & 0 \\ 2a & 0 & a \\ 10 & 0 & 5 \end{pmatrix}\]
+Der Rang dieser Matrix ist 1 (für $a \neq 0$) oder 0 (für $a = 0$). \\
+Also ist die geometrische Vielfachheit von -3 gleich 2 oder 3, während die algebraische Vielfachheit 2 ist.\\
+Die Matrix ist nicht diagonalisierbar. \\ \newline
+3. Fall: $b = 2$
+\[B - 2I = \begin{pmatrix} -5 & 0 & 0 \\ 2a & 0 & a \\ 10 & 0 & 0 \end{pmatrix}\]
+Der Rang dieser Matrix ist 1 (für $a \neq 0$) oder 0 (für $a = 0$).  \\
+Also ist die geometrische Vielfachheit von 2 gleich 2 oder 3, während die algebraische Vielfachheit 2 ist. \\
+Die Matrix ist nicht diagonalisierbar. \\ \newline
+Zusammenfassend ist die Matrix $B$ diagonalisierbar für alle $a, b \in \mathbb{R}$ außer für den Fall $b = -3$ oder $b = 2$.
+\end{document}
