@@ -1,0 +1,347 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Übungsblatt 8}
+\author{Pascal Diller, Timo Rieke}
+
+\begin{document}
+\maketitle
+
+\section*{Aufgabe 1}
+\subsection*{(i)}
+Für $\lambda_1 = 0$ ist der Eigenraum $E_0 =$ Kern$(A)$:
+\[Ax = 0\]
+\[\begin{pmatrix}
+    3 & 1 & -1 & 1 \\
+    1 & 3 & 1 & -1 \\
+    -1 & 1 & 3 & 1 \\
+    1 & -1 & 1 & 3 \\
+\end{pmatrix} \begin{pmatrix}
+    x_1 \\
+    x_2 \\
+    x_3 \\
+    x_4 \\
+\end{pmatrix} = \begin{pmatrix}
+    0 \\
+    0 \\
+    0 \\
+    0 \\
+\end{pmatrix}\]
+Umformen von A:
+\[R_1 \leftrightarrow R_2: \begin{pmatrix}
+    1 & 3 & 1 & -1 \\
+    3 & 1 & -1 & 1 \\
+    -1 & 1 & 3 & 1 \\
+    1 & -1 & 1 & 3 \\
+\end{pmatrix}\]
+\[\begin{matrix}
+    R_2 \to R_2 - 3R_1 \\
+    R_3 \to R_3 + R_1 \\
+    R_4 \to R_4 - R_1 
+\end{matrix}: \begin{pmatrix}
+    1 & 3 & 1 & -1 \\
+    0 & 1-3(3) & -1-3(1) & 1-3(-1) \\
+    0 & 1+3 & 3+1 & 1+(-1) \\
+    0 & -1-3 & 1-1 & 3-(-1)
+\end{pmatrix} = \begin{pmatrix}
+    1 & 3 & 1 & -1 \\
+    0 & -8 & -4 & 4 \\
+    0 & 4 & 4 & 0 \\
+    0 & -4 & 0 & 4 \\
+\end{pmatrix}\]
+\[\begin{matrix}
+R_2 \to R_2 / (-4) \\
+R_3 \to R_3 / 4 \\
+R_4 \to R_4 / (-4)
+\end{matrix}:
+\begin{pmatrix}
+1 & 3 & 1 & -1 \\
+0 & 2 & 1 & -1 \\
+0 & 1 & 1 & 0 \\
+0 & 1 & 0 & -1
+\end{pmatrix}\]
+\[R_2 \leftrightarrow R_3: \begin{pmatrix}
+1 & 3 & 1 & -1 \\
+0 & 1 & 1 & 0 \\
+0 & 2 & 1 & -1 \\
+0 & 1 & 0 & -1
+\end{pmatrix}\]
+\[\begin{matrix}
+R_1 \to R_1 - 3R_2 \\
+R_3 \to R_3 - 2R_2 \\
+R_4 \to R_4 - R_2
+\end{matrix}:
+\begin{pmatrix}
+1 & 0 & -2 & -1 \\
+0 & 1 & 1 & 0 \\
+0 & 0 & -1 & -1 \\
+0 & 0 & -1 & -1
+\end{pmatrix}\]
+\[R_3 \to -R_3: \begin{pmatrix}
+1 & 0 & -2 & -1 \\
+0 & 1 & 1 & 0 \\
+0 & 0 & 1 & 1 \\
+0 & 0 & -1 & -1
+\end{pmatrix}\]
+\[\begin{matrix}
+R_1 \to R_1 + 2R_3 \\
+R_2 \to R_2 - R_3 \\
+R_4 \to R_4 + R_3
+\end{matrix}:
+\begin{pmatrix}
+1 & 0 & 0 & 1 \\
+0 & 1 & 0 & -1 \\
+0 & 0 & 1 & 1 \\
+0 & 0 & 0 & 0
+\end{pmatrix}\]
+$\implies$ \begin{align*}
+    x1 &+ x_4 = 0 \implies x_1 = -x_4 \\
+    x2 &- x_4 = 0 \implies x_2 = x_4 \\
+    x3 &+ x_4 = 0 \implies x_3 = -x_4 \\
+\end{align*}
+Sei $x_4 = t$ mit $t \in \mathbb{R}$, dann sind die Eigenvektoren von der Form $t \begin{pmatrix}
+    -1 \\ 1 \\ -1 \\ 1 
+\end{pmatrix}$. \\
+\newline
+Also ist der Eigenraum $E_0 =$ span $\left\{ \begin{pmatrix}
+    -1 \\ 1 \\ -1 \\ 1
+\end{pmatrix} \right\}$ \\
+Eine Basis für $E_0$ ist $B_0 = \left\{ \begin{pmatrix}
+    -1 \\ 1 \\ -1 \\ 1
+\end{pmatrix} \right\}$ \\
+\newline
+Für $\lambda_2 = 4$ ist der Eigenraum $E_4 =$ Kern$(A-4I)$ \\
+Zu lösen: $(A-4I)x = 0$
+\[A - 4I = \begin{pmatrix}
+    3-4 & 1 & -1 & 1 \\
+    1 & 3-4 & 1 & -1 \\
+    -1 & 1 & 3-4 & 1 \\
+    1 & -1 & 1 & 3-4 \\
+\end{pmatrix} = \begin{pmatrix}
+    -1 & 1 & -1 & 1 \\ 
+    1 & -1 & 1 & -1 \\ 
+    -1 & 1 & -1 & 1 \\ 
+    1 & -1 & 1 & -1 \\ 
+\end{pmatrix}\]
+Es ergibt sich: 
+\[\begin{pmatrix}
+    1 & -1 & 1 & -1 \\
+    0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 \\
+\end{pmatrix}\]
+\[\implies x_1 - x_2 + x_3 - x_4 = 0 \implies x_1 = x_2 - x_3 + x_4\]
+Seien $x_2 = s, x_3 = t, x_4 = u$ mit $s,t,u \in \mathbb{R}$ dann ist
+\[\begin{pmatrix}
+    s-t+u \\ s \\ t \\ u
+\end{pmatrix} = s\begin{pmatrix}
+    1 \\ 1 \\ 0 \\ 0
+\end{pmatrix} + t\begin{pmatrix}
+    -1 \\ 0 \\ 1 \\ 0
+\end{pmatrix} + u\begin{pmatrix}
+    1 \\ 0 \\ 0 \\ 1
+\end{pmatrix}\]
+Also ist der Eigenraum $E_4 =$ span$\left\{ \begin{pmatrix}
+    1 \\ 1\\ 0 \\ 0
+\end{pmatrix}, \begin{pmatrix}
+    -1 \\ 0 \\ 1 \\ 0
+\end{pmatrix}, \begin{pmatrix}
+    1 \\ 0 \\ 0 \\ 1
+\end{pmatrix} \right\}$
+Eine Basis ist $\left\{ \begin{pmatrix}
+    1 \\ 1\\ 0 \\ 0
+\end{pmatrix}, \begin{pmatrix}
+    -1 \\ 0 \\ 1 \\ 0
+\end{pmatrix}, \begin{pmatrix}
+    1 \\ 0 \\ 0 \\ 1
+\end{pmatrix} \right\}$
+\subsection*{(ii)}
+
+Für $E_0$: \\
+Der Eigenvektor $(1, -1, 1, -1)^T$ hat die Norm:
+$$\|(1, -1, 1, -1)^T\| = \sqrt{1^2 + (-1)^2 + 1^2 + (-1)^2} = \sqrt{4} = 2$$
+
+Orthonormalbasis für $E_0$: 
+$$\left\{\frac{1}{2}\begin{pmatrix} 1 \\ -1 \\ 1 \\ -1 \end{pmatrix}\right\}$$
+
+Für $E_4$: \\
+
+Gram-Schmidt-Verfahren auf die Basis $\left\{\begin{pmatrix} 1 \\ 1 \\ 0 \\ 0 \end{pmatrix}, \begin{pmatrix} -1 \\ 0 \\ 1 \\ 0 \end{pmatrix}, \begin{pmatrix} 1 \\ 0 \\ 0 \\ 1 \end{pmatrix}\right\}$:
+
+\textbf{Schritt 1:}
+$$v_1 = \begin{pmatrix} 1 \\ 1 \\ 0 \\ 0 \end{pmatrix}, \quad \|v_1\| = \sqrt{2}$$
+$$u_1 = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ 1 \\ 0 \\ 0 \end{pmatrix}$$
+
+\textbf{Schritt 2:}
+$$v_2 = \begin{pmatrix} -1 \\ 0 \\ 1 \\ 0 \end{pmatrix}$$
+$$\langle v_2, u_1 \rangle = \frac{1}{\sqrt{2}}(-1 \cdot 1 + 0 \cdot 1) = -\frac{1}{\sqrt{2}}$$
+$$v_2' = v_2 - \langle v_2, u_1 \rangle u_1 = \begin{pmatrix} -1 \\ 0 \\ 1 \\ 0 \end{pmatrix} - \left(-\frac{1}{\sqrt{2}}\right) \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ 1 \\ 0 \\ 0 \end{pmatrix} = \begin{pmatrix} -1/2 \\ 1/2 \\ 1 \\ 0 \end{pmatrix}$$
+$$\|v_2'\| = \sqrt{\frac{1}{4} + \frac{1}{4} + 1} = \sqrt{\frac{3}{2}}$$
+$$u_2 = \frac{1}{\sqrt{6}}\begin{pmatrix} -1 \\ 1 \\ 2 \\ 0 \end{pmatrix}$$
+
+\textbf{Schritt 3:}
+$$v_3 = \begin{pmatrix} 1 \\ 0 \\ 0 \\ 1 \end{pmatrix}$$
+$$\langle v_3, u_1 \rangle = \frac{1}{\sqrt{2}}(1 \cdot 1) = \frac{1}{\sqrt{2}}$$
+$$\langle v_3, u_2 \rangle = \frac{1}{\sqrt{6}}(1 \cdot (-1)) = -\frac{1}{\sqrt{6}}$$
+$$v_3' = v_3 - \langle v_3, u_1 \rangle u_1 - \langle v_3, u_2 \rangle u_2 = \begin{pmatrix} 1/2 \\ -1/2 \\ 1/3 \\ 1 \end{pmatrix}$$
+Nach Normierung:
+$$u_3 = \frac{1}{\sqrt{3}}\begin{pmatrix} 1 \\ -1 \\ 0 \\ 1 \end{pmatrix}$$
+
+Orthonormalbasis für $E_4$:
+$$\left\{\frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ 1 \\ 0 \\ 0 \end{pmatrix}, \frac{1}{\sqrt{6}}\begin{pmatrix} -1 \\ 1 \\ 2 \\ 0 \end{pmatrix}, \frac{1}{\sqrt{3}}\begin{pmatrix} 1 \\ -1 \\ 0 \\ 1 \end{pmatrix}\right\}$$
+
+\subsection*{(iii)}
+
+Ja, es existiert eine Orthonormalbasis des $\mathbb{R}^4$ bestehend aus Eigenvektoren von $T_A$.
+
+\begin{itemize}
+\item $\dim(E_0) = 1$ und $\dim(E_4) = 3$
+\item Da $1 + 3 = 4 = \dim(\mathbb{R}^4)$, spannen die Eigenräume den gesamten $\mathbb{R}^4$ auf
+\item Eigenräume zu verschiedenen Eigenwerten sind orthogonal zueinander
+\item Wir können die orthonormalen Basen aus (ii) zu einer orthonormalen Basis des $\mathbb{R}^4$ vereinigen
+\end{itemize}
+
+Die gesuchte Orthonormalbasis ist:
+$$\left\{\frac{1}{2}\begin{pmatrix} 1 \\ -1 \\ 1 \\ -1 \end{pmatrix}, \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ 1 \\ 0 \\ 0 \end{pmatrix}, \frac{1}{\sqrt{6}}\begin{pmatrix} -1 \\ 1 \\ 2 \\ 0 \end{pmatrix}, \frac{1}{\sqrt{3}}\begin{pmatrix} 1 \\ -1 \\ 0 \\ 1 \end{pmatrix}\right\}$$
+
+\subsection*{(iv)}
+
+Nein, die Inverse zu $A$ existiert nicht.
+
+\begin{itemize}
+\item $A$ hat den Eigenwert $\lambda_1 = 0$
+\item Eine Matrix ist genau dann invertierbar, wenn alle ihre Eigenwerte ungleich null sind
+\item Da $0$ ein Eigenwert von $A$ ist, folgt $\det(A) = 0$
+\item Daher ist $A$ singulär und nicht invertierbar
+\end{itemize}
+
+\section*{Aufgabe 2}
+Da \(A\) symmetrisch ist, gilt \(A^T = A\). \\
+Das Skalarprodukt \(u \cdot v\) kann als \(u^T v\) geschrieben werden.
+
+Linke Seite (LS):
+\[ (Ax) \cdot y = (Ax)^T y \]
+Nach der Eigenschaft \((AB)^T = B^T A^T\) ist \((Ax)^T = x^T A^T\). \\
+Somit wird die LS zu \(x^T A^T y\). \\
+Da \(A\) symmetrisch ist (\(A^T = A\)), gilt:
+\[ \text{LS} = x^T A y \]
+
+Rechte Seite (RS):
+\[ x \cdot (Ay) = x^T (Ay) \]
+Somit ist:
+\[ \text{RS} = x^T A y \]
+Da LS = RS, ist die Aussage \((Ax) \cdot y = x \cdot (Ay)\) gezeigt.
+
+\subsection*{(ii)}
+Da \(A\) symmetrisch ist, existiert eine Orthonormalbasis \((v_1, v_2)\) von \(\mathbb{R}^2\), die aus Eigenvektoren von \(T_A\) besteht. \\
+Es seien \(Av_1 = \lambda_1 v_1\) und \(Av_2 = \lambda_2 v_2\) mit \(\lambda_1, \lambda_2 > 0\). \\
+Für die ONB gilt \(v_1 \cdot v_1 = \|v_1\|^2 = 1\), \(v_2 \cdot v_2 = \|v_2\|^2 = 1\) und \(v_1 \cdot v_2 = 0\).\\
+\newline
+Ein beliebiger Vektor \(x \in \mathbb{R}^2\) lässt sich als Linearkombination \(x = c_1 v_1 + c_2 v_2\) darstellen.
+Dabei sind \(c_1 = x \cdot v_1\) und \(c_2 = x \cdot v_2\) die Koordinaten von \(x\) bezüglich dieser Basis. 
+Die Norm von \(x\) ist:
+\[ \|x\|^2 = x \cdot x = (c_1 v_1 + c_2 v_2) \cdot (c_1 v_1 + c_2 v_2) \]
+\[ \|x\|^2 = c_1^2 (v_1 \cdot v_1) + 2 c_1 c_2 (v_1 \cdot v_2) + c_2^2 (v_2 \cdot v_2) \]
+\[ \|x\|^2 = c_1^2 (1) + 2 c_1 c_2 (0) + c_2^2 (1) = c_1^2 + c_2^2 \]
+Nun betrachten wir \((Ax) \cdot x\):
+\[ Ax = A(c_1 v_1 + c_2 v_2) = c_1 (Av_1) + c_2 (Av_2) = c_1 \lambda_1 v_1 + c_2 \lambda_2 v_2 \]
+Somit ist:
+\[ (Ax) \cdot x = (c_1 \lambda_1 v_1 + c_2 \lambda_2 v_2) \cdot (c_1 v_1 + c_2 v_2) \]
+\[ (Ax) \cdot x = \lambda_1 c_1^2 (v_1 \cdot v_1) + (\lambda_1 + \lambda_2)c_1 c_2 (v_1 \cdot v_2) + \lambda_2 c_2^2 (v_2 \cdot v_2) \]
+\[ (Ax) \cdot x = \lambda_1 c_1^2 (1) + (\lambda_1 + \lambda_2)c_1 c_2 (0) + \lambda_2 c_2^2 (1) = \lambda_1 c_1^2 + \lambda_2 c_2^2 \]
+Wir wollen zeigen: \(\lambda_1 c_1^2 + \lambda_2 c_2^2 \ge c (c_1^2 + c_2^2)\) für ein \(c > 0\). \\
+Sei \(c = \min(\lambda_1, \lambda_2)\). \\
+Da \(\lambda_1, \lambda_2 > 0\), ist auch \(c > 0\). \\
+Da \(c \le \lambda_1\) und \(c \le \lambda_2\), und \(c_1^2 \ge 0, c_2^2 \ge 0\), folgt:
+\[ \lambda_1 c_1^2 \ge c c_1^2 \]
+\[ \lambda_2 c_2^2 \ge c c_2^2 \]
+Addieren dieser Ungleichungen ergibt:
+\[ \lambda_1 c_1^2 + \lambda_2 c_2^2 \ge c c_1^2 + c c_2^2 = c (c_1^2 + c_2^2) \]
+Also gilt \((Ax) \cdot x \ge c \|x\|^2\) mit \(c = \min(\lambda_1, \lambda_2) > 0\).
+
+\section*{Aufgabe 3}
+\subsection*{(i)}
+\subsubsection*{(a)}
+\[ \lim_{x\to 0} \frac{1 - \frac{1}{x}}{1 + \frac{1}{x^2}} = 0 \]
+Sei \((x_n)_{n\in\mathbb{N}}\) eine beliebige Folge mit \(x_n \neq 0\) für alle \(n \in \mathbb{N}\) und \(\lim_{n\to\infty} x_n = 0\).
+Betrachte \(f(x_n) = \frac{1 - \frac{1}{x_n}}{1 + \frac{1}{x_n^2}}\).
+Umformen des Terms:
+\[ f(x_n) = \frac{x_n^2(1 - \frac{1}{x_n})}{x_n^2(1 + \frac{1}{x_n^2})} = \frac{x_n^2 - x_n}{x_n^2 + 1} \]
+Da \(x_n \to 0\), gilt nach den Grenzwertsätzen für Folgen (Satz 4.1.20 [cite: 133]):
+\[ \lim_{n\to\infty} (x_n^2 - x_n) = 0^2 - 0 = 0 \]
+\[ \lim_{n\to\infty} (x_n^2 + 1) = 0^2 + 1 = 1 \]
+Somit ist:
+\[ \lim_{n\to\infty} f(x_n) = \frac{0}{1} = 0 \]
+
+\subsubsection*{(b)}
+\[ \lim_{x\to 0} x \cdot \cos(x^{-2}) = 0 \]
+Sei \((x_n)_{n\in\mathbb{N}}\) eine beliebige Folge mit \(x_n \neq 0\) für alle \(n \in \mathbb{N}\) und \(\lim_{n\to\infty} x_n = 0\).
+Betrachte \(f(x_n) = x_n \cdot \cos(x_n^{-2})\).
+Wir wissen, dass die Cosinusfunktion beschränkt ist: \(-1 \le \cos(y) \le 1\) für alle \(y \in \mathbb{R}\).
+Also gilt:
+\[ -1 \le \cos(x_n^{-2}) \le 1 \]
+Multiplikation mit \(x_n\) führt zu:
+\[ -|x_n| \le x_n \cos(x_n^{-2}) \le |x_n| \]
+Da \(x_n \to 0\), gilt auch \(|x_n| \to 0\) und somit \(-|x_n| \to 0\). \\
+Nach dem Sandwichkriterium folgt:
+\[ \lim_{n\to\infty} x_n \cos(x_n^{-2}) = 0 \]
+
+\subsection*{(ii)}
+Sei \(f(x) = \frac{9x^4 - 6x^3 + 2x^2 + 11x + 17}{3x^4 + 27x^3 + 7x^2 + 2x + 42}\).
+Wir betrachten eine beliebige Folge \((x_n)_{n\in\mathbb{N}}\) mit \(x_n \to \infty\) für \(n \to \infty\).
+Wir dividieren Zähler und Nenner durch die höchste Potenz von \(x_n\) im Nenner, also \(x_n^4\):
+\[ f(x_n) = \frac{9 - \frac{6}{x_n} + \frac{2}{x_n^2} + \frac{11}{x_n^3} + \frac{17}{x_n^4}}{3 + \frac{27}{x_n} + \frac{7}{x_n^2} + \frac{2}{x_n^3} + \frac{42}{x_n^4}} \]
+Da \(x_n \to \infty\), konvergieren die Terme der Form \(\frac{c}{x_n^k}\) für \(k \ge 1\) gegen \(0\).
+Mit den Rechenregeln für konvergente Folgen gilt:
+\[ \lim_{n\to\infty} f(x_n) = \frac{9 - 0 + 0 + 0 + 0}{3 + 0 + 0 + 0 + 0} = \frac{9}{3} = 3 \]
+
+\subsection*{(iii)}
+Der Ausdruck \(x \nearrow 0\) bedeutet, dass \(x\) von links gegen \(0\) strebt, d.h. \(x < 0\) und \(x \to 0\).
+Sei \((x_n)_{n\in\mathbb{N}}\) eine beliebige Folge mit \(x_n < 0\) für alle \(n \in \mathbb{N}\) und \(\lim_{n\to\infty} x_n = 0\).
+Für \(x_n < 0\) gilt \(|x_n| = -x_n\).
+Setzen wir dies in den Funktionsterm ein:
+\[ f(x_n) = \frac{x_n + |x_n|}{|x_n|} = \frac{x_n + (-x_n)}{-x_n} = \frac{0}{-x_n} \]
+Da \(x_n \neq 0\), ist \(-x_n \neq 0\).
+Somit ist \(f(x_n) = 0\) für alle \(n \in \mathbb{N}\).
+Also gilt:
+\[ \lim_{n\to\infty} f(x_n) = \lim_{n\to\infty} 0 = 0 \]
+
+\section*{Aufgabe 4}
+\subsection*{(i)}
+Sei $(x_n)_{n \in \mathbb{N}}$ eine beliebige Folge mit $x_n \in I \backslash \{x_0\}$ für alle $n \in \mathbb{N}$ und $x_n \rightarrow x_0$.
+Da $\lim_{x \rightarrow x_0} f(x) = y$, folgt nach Definition 7.1.4:
+\[f(x_n) \rightarrow y \text{ für } n \rightarrow \infty\]
+Da $\lim_{x \rightarrow x_0} g(x) = z$, folgt nach Definition 7.1.4:
+\[g(x_n) \rightarrow z \text{ für } n \rightarrow \infty\]
+Nach dem Produktsatz für konvergente Folgen (Kapitel 4) gilt:
+\[f(x_n) \cdot g(x_n) \rightarrow y \cdot z \text{ für } n \rightarrow \infty\]
+Das bedeutet:
+\[(f \cdot g)(x_n) \rightarrow y \cdot z \text{ für } n \rightarrow \infty\]
+Da die Folge $(x_n)$ beliebig gewählt war, folgt nach Definition 7.1.4:
+\[\lim_{x \rightarrow x_0} (f \cdot g)(x) = y \cdot z\]
+
+\subsection*{(ii)}
+Sei $(x_n)_{n \in \mathbb{N}}$ eine beliebige Folge mit $x_n \in I \backslash \{x_0\}$ für alle $n \in \mathbb{N}$ und $x_n \rightarrow x_0$.
+Da $\lim_{x \rightarrow x_0} f(x) = y$, folgt nach Definition 7.1.4:
+\[f(x_n) \rightarrow y \text{ für } n \rightarrow \infty\]
+Da $\lim_{x \rightarrow x_0} g(x) = z = y$, folgt nach Definition 7.1.4:
+\[g(x_n) \rightarrow y \text{ für } n \rightarrow \infty\]
+Aus der Voraussetzung $f \leq h \leq g$ folgt für alle $n \in \mathbb{N}$:
+\[f(x_n) \leq h(x_n) \leq g(x_n)\]
+Wenn $(a_n)$ und $(c_n)$ beide gegen denselben Grenzwert $L$ konvergieren und $a_n \leq b_n \leq c_n$ für alle $n$, dann konvergiert auch $(b_n)$ gegen $L$. \\
+\begin{align*}
+a_n &= f(x_n) \rightarrow y\\
+b_n &= h(x_n)\\  
+c_n &= g(x_n) \rightarrow y\\
+\text{mit } f(x_n) &\leq h(x_n) \leq g(x_n)
+\end{align*}
+
+Daher folgt:
+\[h(x_n) \rightarrow y \text{ für } n \rightarrow \infty\]
+
+Da die Folge $(x_n)$ beliebig gewählt war, folgt nach Definition 7.1.4:
+\[\lim_{x \rightarrow x_0} h(x) = y\]
+
+\end{document}
