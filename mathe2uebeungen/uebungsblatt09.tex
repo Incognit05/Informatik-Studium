@@ -1,1 +1,65 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amssymb}
 
+\title{Übungsblatt 09}
+\author{Pascal Diller, Timo Rieke}
+
+\begin{document}
+\maketitle
+\section*{Aufgabe 1}
+\subsection*{(i)}
+\subsubsection*{(a)}
+Wir klammern die höchste Potenz (\(x^3\)) aus:
+\[\lim_{x\to\infty} \frac{x^3(6 - \frac{11}{x} - \frac{7}{x^2} - \frac{8}{x^3})}{x^3(2 + \frac{1}{x} + \frac{3}{x^2} + \frac{7}{x^3})} = \lim_{x\to\infty} \frac{6 - \frac{11}{x} - \frac{7}{x^2} - \frac{8}{x^3}}{2 + \frac{1}{x} + \frac{3}{x^2} + \frac{7}{x^3}}\]
+Mit den Rechenregeln für Grenzwerte und da \(\lim_{x\to\infty} \frac{c}{x^n} = 0\) für \(n>0\), folgt:
+\[\frac{6 - 0 - 0 - 0}{2 + 0 + 0 + 0} = \frac{6}{2} = 3\]
+
+\subsubsection*{(b)}
+Umformen der Terme, dann ausklammern mit (\(\sqrt{x} = x^{\frac{1}{2}}\)):
+\[\lim_{x\searrow0} \frac{x^{\frac{3}{2}} - 15x - 2x^{\frac{1}{2}}}{x^{\frac{1}{2}} + 7x + x^4} = \lim_{x\searrow0} \frac{x^{\frac{1}{2}}(x - 15x^{\frac{1}{2}} - 2)}{x^{\frac{1}{2}}(1 + 7x^{\frac{1}{2}} + x^{\frac{7}{2}})} = \lim_{x\searrow0} \frac{x - 15\sqrt{x} - 2}{1 + 7\sqrt{x} + x^3\sqrt{x}}\]
+Durch Einsetzen von \(x=0\) erhalten wir:
+\[\frac{0 - 15\cdot0 - 2}{1 + 7\cdot0 + 0} = -2\]
+
+\subsubsection*{(c)}
+Da die Sinusfunktion beschränkt ist, gilt:
+\[-1 \le \sin(x^2) \le 1\]
+Für \(x \ne 0\) teilen wir durch \( x^2 \):
+\[-\frac{1}{x^2} \le \frac{\sin(x^2)}{x^2} \le \frac{1}{x^2}\]
+Da \(\lim_{x\to\infty} -\frac{1}{x^2} = 0\) und \(\lim_{x\to\infty} \frac{1}{x^2} = 0\), folgt:
+\[\lim_{x\to\infty} \frac{\sin(x^2)}{x^2} = 0\]
+
+\subsubsection*{(d)}
+Wir formen den Ausdruck um:
+\[\lim_{x\to0} \left(\frac{\sin x}{x}\right)^2 = \left(\lim_{x\to0} \frac{\sin x}{x}\right) \cdot \left(\lim_{x\to0} \frac{\sin x}{x}\right)\]
+\(\lim_{x\to0} \frac{\sin x}{x} = 1\), deswegen folgt:
+\[1 \cdot 1 = 1\]
+
+\subsubsection*{(e)}
+Wir erweitern mit der konjugierten Form:
+\[\lim_{x\to\infty} \frac{(\sqrt{x} - \sqrt{x+10})(\sqrt{x} + \sqrt{x+10})}{\sqrt{x} + \sqrt{x+10}} = \lim_{x\to\infty} \frac{x - (x+10)}{\sqrt{x} + \sqrt{x+10}} = \lim_{x\to\infty} \frac{-10}{\sqrt{x} + \sqrt{x+10}}\]
+Da der Nenner gegen \(\infty\) geht, geht der gesamte Bruch gegen 0.
+\[\lim_{x\to\infty} (\sqrt{x} - \sqrt{x+10}) = 0\]
+
+\subsection*{(ii)}
+\subsubsection*{(a)}
+Wir formen den Ausdruck in der Klammer durch Erweitern mit der Konjugierten um:
+\[\sqrt{x}(\sqrt{x+1} - \sqrt{x}) = \sqrt{x} \frac{(\sqrt{x+1} - \sqrt{x})(\sqrt{x+1} + \sqrt{x})}{\sqrt{x+1} + \sqrt{x}} = \sqrt{x} \frac{x+1-x}{\sqrt{x+1} + \sqrt{x}} = \frac{\sqrt{x}}{\sqrt{x+1} + \sqrt{x}}\]
+Nun klammern wir im Nenner \(\sqrt{x}\) aus:
+\[\frac{\sqrt{x}}{\sqrt{x}(\sqrt{1+\frac{1}{x}} + 1)} = \frac{1}{\sqrt{1+\frac{1}{x}} + 1}\]
+Damit ergibt sich der Grenzwert:
+\[\lim_{x\to\infty} \frac{1}{\sqrt{1+\frac{1}{x}} + 1} = \frac{1}{\sqrt{1+0} + 1} = \frac{1}{2}\]
+
+\subsubsection*{(b)}
+Für den linksseitigen Grenzwert gilt: Wenn \(x \nearrow 0\), dann \(x<0\) und \(\frac{1}{x} \to -\infty\).
+Da \(\lim_{y\to-\infty} \exp(y) = 0\), folgt:
+\[\lim_{x\nearrow0} \exp\left(\frac{1}{x}\right) = 0\]
+
+\subsubsection*{(c)}
+Für den rechtsseitigen Grenzwert gilt: Wenn \(x \searrow 0\), dann \(x>0\) und \(\frac{1}{x} \to \infty\).
+Da \(\lim_{y\to\infty} \exp(y) = \infty\), folgt:
+\[\lim_{x\searrow0} \exp\left(\frac{1}{x}\right) = \infty\]
+
+
+\end{document}
