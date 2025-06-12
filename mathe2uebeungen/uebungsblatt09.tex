@@ -61,5 +61,38 @@ Für den rechtsseitigen Grenzwert gilt: Wenn \(x \searrow 0\), dann \(x>0\) und 
 Da \(\lim_{y\to\infty} \exp(y) = \infty\), folgt:
 \[\lim_{x\searrow0} \exp\left(\frac{1}{x}\right) = \infty\]
 
+\section*{Augabe 2}
+\subsection*{Stetigkeit für \(x \notin \{0, 1\}\)}
+Für \(x < 0\): \(f(x) = 2\sqrt{1-x} - \cos(x)\) ist als Komposition und Differenz stetiger Funktionen stetig. \\
+Für \(0 < x < 1\): \(f(x) = x \cdot \sin(\frac{\pi}{x})\) ist als Produkt und Komposition stetiger Funktionen stetig. \\
+Für \(x > 1\): \(f(x) = 1 - \frac{\sin(\pi(x-1))}{x-1}\) ist als Komposition, Quotient und Differenz stetiger Funktionen stetig.
+
+\subsection*{Untersuchung bei \(x = 0\)}
+Eine Funktion ist in \(x_0\) stetig, wenn \(\lim_{x \to x_0} f(x) = f(x_0)\) gilt, was erfordert, dass links- und rechtsseitiger Grenzwert existieren und mit \(f(x_0)\) übereinstimmen.
+Funktionswert:
+\[f(0) = 2\sqrt{1-0} - \cos(0) = 2 - 1 = 1\]
+Linksseitiger Grenzwert:
+\[\lim_{x\nearrow0} f(x) = \lim_{x\nearrow0} (2\sqrt{1-x} - \cos(x)) = 2\sqrt{1} - \cos(0) = 2 - 1 = 1\]
+Rechtsseitiger Grenzwert:
+\[\lim_{x\searrow0} f(x) = \lim_{x\searrow0} x \cdot \sin\left(\frac{\pi}{x}\right)\]
+Da \(-1 \le \sin(\frac{\pi}{x}) \le 1\), gilt für \(x > 0\):
+\[-x \le x \sin\left(\frac{\pi}{x}\right) \le x\]
+Mit \(\lim_{x\searrow0} (-x) = 0\) und \(\lim_{x\searrow0} x = 0\) folgt aus dem Sandwichsatz:
+\[\lim_{x\searrow0} x \sin\left(\frac{\pi}{x}\right) = 0\]
+Da \(\lim_{x\nearrow0} f(x) = 1 \ne 0 = \lim_{x\searrow0} f(x)\), existiert der Grenzwert \(\lim_{x\to0} f(x)\) nicht. Die Funktion \(f\) ist an der Stelle \(x=0\) nicht stetig.
+
+\subsection*{Untersuchung bei \(x = 1\)}
+Funktionswert:
+\[f(1) = 1 \cdot \sin\left(\frac{\pi}{1}\right) = \sin(\pi) = 0\]
+Linksseitiger Grenzwert:
+\[\lim_{x\nearrow1} f(x) = \lim_{x\nearrow1} x \sin\left(\frac{\pi}{x}\right) = 1 \cdot \sin(\pi) = 0\]
+Rechtsseitiger Grenzwert:
+\[\lim_{x\searrow1} f(x) = \lim_{x\searrow1} \left(1 - \frac{\sin(\pi(x-1))}{x-1}\right)\]
+Wir substituieren \(h = x-1\). Wenn \(x \searrow 1\), dann \(h \searrow 0\).
+\[\lim_{h\searrow0} \left(1 - \frac{\sin(\pi h)}{h}\right) = 1 - \lim_{h\searrow0} \frac{\pi \sin(\pi h)}{\pi h} = 1 - \pi \cdot \lim_{h\searrow0} \frac{\sin(\pi h)}{\pi h}\]
+Mit der Substitution \(y = \pi h\) und dem bekannten Grenzwert \(\lim_{y\to0} \frac{\sin y}{y} = 1\) folgt:
+\[1 - \pi \cdot 1 = 1 - \pi\]
+Da \(\lim_{x\nearrow1} f(x) = 0 \ne 1 - \pi = \lim_{x\searrow1} f(x)\), existiert der Grenzwert \(\lim_{x\to1} f(x)\) nicht. Die Funktion \(f\) ist an der Stelle \(x=1\) nicht stetig \\
+\(\longrightarrow\)Die Funktion \(f\) ist stetig für alle \(x \in \mathbb{R} \setminus \{0, 1\}\).
 
 \end{document}
