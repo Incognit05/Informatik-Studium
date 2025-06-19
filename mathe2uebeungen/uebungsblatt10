@@ -1,0 +1,79 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Übungsblatt 10}
+\author{Pascal Diller, Timo Rieke}
+
+\begin{document}
+\maketitle
+\section*{Aufgabe 1}
+\subsection*{(i)}
+Der Wurzelausdruck \(\sqrt{x}\) ist nur für \(x \ge 0\) definiert. 
+Da \(\sqrt{x} \ge 0\), ist der Nenner \(\sqrt{x}+1 \ge 1\). Er ist also niemals null.
+Daraus folgt, der größtmögliche Definitionsbereich ist \(D = [0, \infty)\).
+
+\subsection*{(ii)}
+Surjektivität: Da der Wertebereich \(J\) als Bild von \(D\) unter \(f\) definiert ist (\(J = f(D)\)), ist die 
+Abbildung \(f: D \to J\) per Definition surjektiv. \\
+Injektivität:
+\[\frac{\sqrt{x_1}-4}{\sqrt{x_1}+1} = \frac{\sqrt{x_2}-4}{\sqrt{x_2}+1} \]
+\[(\sqrt{x_1}-4)(\sqrt{x_2}+1) = (\sqrt{x_2}-4)(\sqrt{x_1}+1) \]
+\[\sqrt{x_1x_2} + \sqrt{x_1} - 4\sqrt{x_2} - 4 = \sqrt{x_2x_1} + \sqrt{x_2} - 4\sqrt{x_1} - 4 \]
+\[\sqrt{x_1} - 4\sqrt{x_2} = \sqrt{x_2} - 4\sqrt{x_1} \]
+\[5\sqrt{x_1} = 5\sqrt{x_2} \]
+\[\sqrt{x_1} = \sqrt{x_2} \]
+Da \(x_1, x_2 \ge 0\), folgt \(x_1 = x_2\). Die Funktion ist also injektiv.
+Da \(f\) injektiv und surjektiv ist, ist sie bijektiv und besitzt eine Umkehrfunktion \(f^{-1}: J \to D\). \\ 
+\newline
+Bestimmung der Funktionsvorschrift von \(f^{-1}\):
+\[y = \frac{\sqrt{x}-4}{\sqrt{x}+1}\]
+\[y(\sqrt{x}+1) = \sqrt{x}-4 \]
+\[y\sqrt{x} + y = \sqrt{x}-4 \]
+\[y+4 = \sqrt{x} - y\sqrt{x} \]
+\[y+4 = \sqrt{x}(1-y) \]
+\[\sqrt{x} = \frac{y+4}{1-y} \]
+\[x = \left(\frac{y+4}{1-y}\right)^2\]
+Die Funktionsvorschrift der Umkehrfunktion ist also:
+\[f^{-1}(x) = \left(\frac{x+4}{1-x}\right)^2\]
+Weitere Eigenschaften von \(f^{-1}\) \\
+\begin{itemize}
+    \item Die Funktion \(f(x) = 1 - \frac{5}{\sqrt{x}+1}\) ist als Komposition und Summe stetiger Funktionen stetig auf \(D = [0, \infty)\).
+    \item Die Funktion \(f\) ist streng monoton wachsend auf \(D\). Für \(0 \le x_1 < x_2\) gilt \(\sqrt{x_1} < \sqrt{x_2}\), daraus folgt \(\sqrt{x_1}+1 < \sqrt{x_2}+1\), was \(\frac{1}{\sqrt{x_1}+1} > \frac{1}{\sqrt{x_2}+1}\) und \(-\frac{5}{\sqrt{x_1}+1} < -\frac{5}{\sqrt{x_2}+1}\) impliziert. Also ist \(f(x_1) < f(x_2)\).
+    \item Da \(f\) stetig und streng monoton ist, ist ihre Umkehrfunktion \(f^{-1}\) ebenfalls stetig und streng monoton wachsend.
+\end{itemize}
+
+\section*{Aufgabe 3}
+\subsection*{(i)}
+Wir nutzen die Darstellung der allgemeinen Potenzfunktion \(a^x = e^{x \log a}\). Da \(a>1\), ist \(\log a > 0\).
+Wir substituieren \(y = x \log a\). Wenn \(x \to \infty\), dann auch \(y \to \infty\). Es gilt \(x = \frac{y}{\log a}\).
+\begin{align*}
+    \lim_{x\to\infty} \frac{a^x}{x^k} &= \lim_{x\to\infty} \frac{e^{x \log a}}{x^k} \\
+    &= \lim_{y\to\infty} \frac{e^y}{(\frac{y}{\log a})^k} \\
+    &= \lim_{y\to\infty} \frac{(\log a)^k \cdot e^y}{y^k} \\
+    &= (\log a)^k \cdot \lim_{y\to\infty} \frac{e^y}{y^k}
+\end{align*}
+Da die Exponentialfunktion stärker als jede Potenzfunktion wächst, gilt \(\lim_{y\to\infty} \frac{e^y}{y^k} = \infty\).
+Da \((\log a)^k\) positiv ist, folgt:
+\[
+\lim_{x\to\infty} \frac{a^x}{x^k} = \infty
+\]
+
+\subsection*{(ii)}
+Sei \(b = \frac{1}{a}\). Da \(0 < a < 1\), ist \(b > 1\).
+Wir formen den Ausdruck um:
+\[
+\lim_{x\to\infty} a^x \cdot x^k = \lim_{x\to\infty} \left(\frac{1}{b}\right)^x \cdot x^k = \lim_{x\to\infty} \frac{x^k}{b^x}
+\]
+Aus dem ersten Teil der Aufgabe wissen wir, dass für \(b>1\) gilt:
+\[
+\lim_{x\to\infty} \frac{b^x}{x^k} = \infty
+\]
+Da der Nenner gegen \(\infty\) strebt, strebt der Kehrwert gegen 0. Wenn \(\lim_{x\to\infty} g(x) = \infty\), dann ist \(\lim_{x\to\infty} \frac{1}{g(x)} = 0\).
+Also folgt:
+\[
+\lim_{x\to\infty} \frac{x^k}{b^x} = 0
+\]
+
+\end{document}
