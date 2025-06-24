@@ -1,0 +1,77 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Übungsblatt 11}
+\author{Pascal Diller, Timo Rieke}
+
+\begin{document}
+\maketitle
+\section*{Aufgabe 1}
+\subsection*{(i)}
+$M = \{ x \in \mathbb{R}, x^3 > 8\}$ \\
+$x^3 > 8 \Leftrightarrow x > 2 \implies M = (2, \infty)$ \\
+\newline
+$M$ ist nach oben unbeschränkt, da $M \to \infty$ geht. \\
+$M$ ist nach unten durch $x > 2$ beschränkt. Demenstprechend ist das Infimum 2, welches jedoch nicht in $M$ enthalten ist, also gibt es kein Minimum. \\
+\subsection*{(ii)}
+$M = \{1 - \frac{2}{n}: n \in \mathbb{N}\}$ \\
+Untersuchen der Werte: $M = \{-1, -\frac{1}{2}, \frac{1}{3}, \frac{1}{2}, \frac{3}{5}\}$ \\
+Daraus folgt: $\lim_{n \to \infty} \left(1 - \frac{2}{n}\right) = 1$ \\
+\newline
+$M$ ist nach oben beschränkt, da alle Werte $< 1$, Somit ist das Supremum 1, jedoch nicht in $M$ enthalten, also kein Maximum. \\
+\newline
+$M$ ist nach unten beschränkt, da bei kleinstem $n = 1: \: 1- 2 = -1$. Somit ist das Infimum $-1$, was auch das Minimum ist, da $-1 \in M$.
+\subsection*{(iii)}
+$M = \{1 + \frac{1}{n} - \frac{1}{2m}: n,m \in \mathbb{N}\}$ \\
+Größter Wert entsteht für $n = 1, m = 1\implies 1 + 1 - 0.5 = 1.5$ \\
+Kleinster Wert ensteht für $n \to \infty, m \to \infty \implies 1 + 0 - 0 = 1$ \\
+Also ist das Supremum 1.5, welches in $M$ ist und somit das Maximum. \\
+Das Infimum ist 1, welches nicht in $M$ enthalten ist, also gibt es kein Minimum
+
+\section*{Aufgabe 2}
+\subsection*{(i)}
+\[f(x) = x^3 \cos x - 3x^2 \sin x\]
+\[g(x) = x^3 \cos x \implies g'(x) = (x^3)' \cos x + x^3(-\sin x) = 3x^2 \cos x - x^3 \sin x\]
+\[h(x) = -3x^2 \sin x \implies h'(x) = -3(2x \sin x + x^2 \cos x) = -6x \sin x - 3x^2 \cos x\]
+\[f'(x) = g'(x) + h'(x) = (3x^2 \cos x - x^3 \sin x) + (-6x \sin x - 3x^2 \cos x)\]
+\[= x^3 \sin x - 6x \sin x = -\sin x (x^3 + 6x)\]
+
+
+\subsection*{(ii)}
+\[g(x) = \frac{1}{2}(x - \sin x \cos x)\]
+\[g'(x) = \frac{1}{2} \left(1 - \frac{d}{dx}(\sin x \cos x) \right)\]
+\[\frac{d}{dx}(\sin x \cos x) = (\sin x)' \cos x + \sin x (\cos x)' = \cos x \cos x - \sin x \sin x = \cos(2x)\]
+\[\Rightarrow g'(x) = \frac{1}{2}(1 - \cos(2x))\]
+
+\subsection*{(iii)}
+\[h(x) = \frac{\sqrt{x} - 1}{\sqrt{x} + 1}, \quad x \in [0,\infty)\]
+\[u(x) = \sqrt{x} - 1, \quad u'(x) = \frac{1}{2\sqrt{x}} \]
+\[v(x) = \sqrt{x} + 1, \quad v'(x) = \frac{1}{2\sqrt{x}} \]
+\[
+h'(x) = \frac{u'(x) v(x) - u(x) v'(x)}{(v(x))^2}
+= \frac{\frac{1}{2\sqrt{x}}(\sqrt{x} + 1) - \frac{1}{2\sqrt{x}}(\sqrt{x} - 1)}{(\sqrt{x} + 1)^2}
+\]
+\[
+= \frac{\frac{1}{2\sqrt{x}} \left[(\sqrt{x} + 1) - (\sqrt{x} - 1)\right]}{(\sqrt{x} + 1)^2}
+= \frac{\frac{1}{2\sqrt{x}}(2)}{(\sqrt{x} + 1)^2}
+= \frac{1}{\sqrt{x}(\sqrt{x} + 1)^2}
+\]
+
+\subsection*{(iv)}
+\[u(x) = \frac{1 - x^2}{x^2 + 1}\]
+\[u(x) = \frac{f(x)}{g(x)}, \quad f(x) = 1 - x^2, \quad f'(x) = -2x\]
+\[g(x) = x^2 + 1, \quad g'(x) = 2x\]
+\[
+u'(x) = \frac{f'(x)g(x) - f(x)g'(x)}{(g(x))^2}
+= \frac{(-2x)(x^2 + 1) - (1 - x^2)(2x)}{(x^2 + 1)^2}
+\]
+\[
+= \frac{-2x(x^2 + 1) - 2x(1 - x^2)}{(x^2 + 1)^2}
+= \frac{-2x^3 - 2x - 2x + 2x^3}{(x^2 + 1)^2}
+= \frac{-4x}{(x^2 + 1)^2}
+\]
+
+
+\end{document}
