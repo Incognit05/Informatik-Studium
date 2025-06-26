@@ -73,5 +73,73 @@ u'(x) = \frac{f'(x)g(x) - f(x)g'(x)}{(g(x))^2}
 = \frac{-4x}{(x^2 + 1)^2}
 \]
 
+\section*{Aufgabe 3}
+\subsection*{Differenzierbarkeit für \(x \ne 0\)}
+\subsubsection*{Fall 1: \(x < 0\)}
+Für \(x < 0\) ist \(f(x) = 1 + 2x + 3x^2\) ein Polynom. Polynome sind auf ganz \(\mathbb{R}\) unendlich oft differenzierbar. Also ist \(f\) für alle \(x < 0\) differenzierbar.
+\subsubsection*{Für \(x > 0\):}
+Für \(x > 0\) ist \(f(x) = 1 + 2\sin x + x^{\frac{3}{2}}\sin\frac{1}{x}\). Die Funktionen \(x \mapsto 1\), \(x \mapsto 2\sin x\), \(x \mapsto x^{\frac{3}{2}}\) und \(x \mapsto \sin\frac{1}{x}\) sind für \(x > 0\) alle differenzierbar. Somit ist auch deren Summe und Produkt differenzierbar, was bedeuted, dass \(f\) für alle \(x > 0\) differenzierbar ist.
+
+
+\subsection*{Differenzierbarkeit bei \(x = 0\)}
+\subsubsection*{Stetigkeit bei \(x=0\):}
+Funktionswert: 
+\[f(0) = 1 + 2(0) + 3(0)^2 = 1\]
+Linksseitiger Grenzwert: 
+\[\lim_{x\nearrow0} f(x) = \lim_{x\nearrow0} (1+2x+3x^2) = 1\]
+Rechtsseitiger Grenzwert: 
+\[\lim_{x\searrow0} f(x) = \lim_{x\searrow0} (1 + 2\sin x + x\sqrt{x}\sin\frac{1}{x})\]
+\[\lim_{x\searrow0} (1 + 2\sin x) = 1 + 2\sin(0) = 1\]
+Für den Term \(x\sqrt{x}\sin\frac{1}{x}\) gilt die Abschätzung 
+\[-x\sqrt{x} \le x\sqrt{x}\sin\frac{1}{x} \le x\sqrt{x}\]
+, da \(-1 \le \sin(\cdot) \le 1\). \\
+Weil \(\lim_{x\searrow0} x\sqrt{x} = 0\), folgt aus dem Sandwichsatz  
+\[\lim_{x\searrow0} x\sqrt{x}\sin\frac{1}{x} = 0\]
+Somit ist \(\lim_{x\searrow0} f(x) = 1 + 0 = 1\). \\
+Da der linksseitige und rechtsseitige Grenzwert mit dem Funktionswert übereinstimmen, ist \(f\) in \(x_0=0\) stetig.
+
+\subsubsection*{Differenzierbarkeit bei \(x=0\):} 
+
+Linksseitige Ableitung:
+\[f'_-(0) = \lim_{h\nearrow0} \frac{f(h)-f(0)}{h} = \lim_{h\nearrow0} \frac{(1+2h+3h^2)-1}{h} = \lim_{h\nearrow0} \frac{2h+3h^2}{h} = \lim_{h\nearrow0} (2+3h) = 2.\]
+Rechtsseitige Ableitung:
+
+\[f'_+(0) = \lim_{h\searrow0} \frac{f(h)-f(0)}{h} = \lim_{h\searrow0} \frac{(1+2\sin h + h\sqrt{h}\sin\frac{1}{h})-1}{h} \]
+\[= \lim_{h\searrow0} \left( \frac{2\sin h}{h} + \sqrt{h}\sin\frac{1}{h} \right)\]
+Der erste Summand konvergiert gegen \(2 \cdot 1 = 2\). \\
+Der zweite Summand konvergiert nach dem Sandwichsatz gegen 0. \\
+Somit ist \(f'_+(0) = 2 + 0 = 2\). \\
+Da \(f'_-(0) = f'_+(0) = 2\), ist die Funktion \(f\) an der Stelle \(x_0=0\) differenzierbar mit \(f'(0)=2\). \\
+Somit ist die Funktion \(f\) ist auf ganz \(\mathbb{R}\) differenzierbar.
+
+\section*{Aufgabe 4}
+\subsection*{(i)}
+\[\frac{d}{dx}\cos x = \lim_{h\to0} \frac{\cos(x+h) - \cos x}{h} \]
+\[= \lim_{h\to0} \frac{-2\sin\left(\frac{x+h+x}{2}\right)\sin\left(\frac{x+h-x}{2}\right)}{h} \]
+\[= \lim_{h\to0} \frac{-2\sin\left(x+\frac{h}{2}\right)\sin\left(\frac{h}{2}\right)}{h} \]
+\[= \lim_{h\to0} \left(-\sin\left(x+\frac{h}{2}\right) \cdot \frac{\sin(h/2)}{h/2}\right) \]
+Wir betrachten die Grenzwerte der beiden Faktoren einzeln. \\
+Da die Sinusfunktion stetig ist, gilt \(\lim_{h\to0} -\sin(x+\frac{h}{2}) = -\sin(x)\). \\
+Mit der Substitution \(u = h/2\) und dem bekannten Grenzwert \(\lim_{u\to0} \frac{\sin u}{u} = 1\) erhalten wir \(\lim_{h\to0} \frac{\sin(h/2)}{h/2} = 1\). \\
+Zusammengesetzt ergibt sich:
+\[\frac{d}{dx}\cos x = -\sin(x) \cdot 1 = -\sin x.\]
+
+\subsection*{(ii)}
+\[f'(0) = \lim_{x\to0} \frac{f(x)-f(0)}{x}.\]
+Aus der Bedingung \(|f(x)| \le \mu x^2\) folgt durch Einsetzen von \(x=0\), dass \(|f(0)| \le \mu \cdot 0^2 = 0\), also muss \(f(0)=0\) sein.
+Der Differenzenquotient ist somit \(\frac{f(x)}{x}\). Wir schätzen seinen Betrag ab:
+\[\left|\frac{f(x)}{x}\right| = \frac{|f(x)|}{|x|} \le \frac{\mu x^2}{|x|} = \mu|x|.\]
+Dies bedeutet \(-\mu|x| \le \frac{f(x)}{x} \le \mu|x|\). 
+Da \(\lim_{x\to0} (-\mu|x|) = 0\) und \(\lim_{x\to0} (\mu|x|) = 0\), folgt:
+\[\lim_{x\to0} \frac{f(x)}{x} = 0.\]
+Somit ist \(f\) in 0 differenzierbar und es gilt \(f'(0)=0\).
+
+\subsection*{(iii)}
+Da \(b\) eine beschränkte Funktion ist, existiert eine Konstante \(M \ge 0\), sodass \(|b(x)| \le M\) für alle \(x \in (-1,1)\). \\
+Wir betrachten den Betrag von \(g(x)\):
+\[|g(x)| = |b(x)x^2| = |b(x)| \cdot |x^2| \le M \cdot x^2.\]
+Die Bedingung \(|g(x)| \le M x^2\) entspricht genau der Voraussetzung aus Aufgabenteil (ii) mit \(\mu = M\).
+Daher folgt direkt aus dem Ergebnis von (ii), dass \(g\) in 0 differenzierbar ist mit \(g'(0)=0\).
+
 
 \end{document}
