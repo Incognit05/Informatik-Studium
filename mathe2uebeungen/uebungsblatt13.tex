@@ -25,4 +25,16 @@ Untersuchen des Vorzeichens von $f'$
 \[\text{ Für } x \in (0, e): \ln(x) < 1 \implies g'(x) > 0 \implies f'(x) > 0 \to \text{ streng monoton wachsend}\]
 \[\text{ Für } x \in (e, \infty): \ln(x) > 1 \implies g'(x) < 0 \implies f'(x) < 0 \to \text{ streng monoton fallend}\]
 
+\section*{Aufgabe 3}
+\subsection*{(i)}
+Wenn $x \to \pi$, geht der Term $(\pi - x)$ gegen 0. Gleichzeitig geht $\tan(\frac{\pi}{2})$ gegen $\tan(\frac{\pi}{2})$, was gegen unendlich strebt. Also: $0 \cdot \infty$ \\
+Da $\tan(\alpha) = \frac{1}{\cot{\alpha}}$:
+\[(\pi - x)\tan(\frac{x}{2} = \frac{\pi - x}{\cot(\frac{x}{2})}\]
+Bei diesem Bruch streben sowohl nenner, als auch Zaehler gegen 0.
+\[\frac{d}{dx}(\pi - x) = -1\]
+\[\frac{d}{dx}(\cot(\frac{x}{2})) = -\csc^2(\frac{x}{2}) \cdot \frac{1}{2} = -\frac{1}{2 \sin^2(\frac{x}{2})}\]
+\[\lim_{x\to\pi} \frac{-1}{-\frac{1}{2} \csc^2(\frac{x}{2})} = \lim_{x\to\pi} 2 \sin^2(\frac{x}{2})\]
+\[\pi\text{ einsetzen: } 2\sin^2(\frac{\pi}{2}) = 2(1)^2 = 2\]
+Der Grenzwert ist 2.
+
 \end{document}
