@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Übungsblatt 11}
+\author{Pascal Diller, Timo Rieke}
+
+\begin{document}
+\maketitle
+
+\section*{Aufgabe 1}
+\subsection*{(i)}
+\[f(x) = x^{\frac{1}{2}} = e^{\frac{\ln(x)}{x}}\]
+\[\text{Sei } g(x) = \frac{\ln(x)}{x}, \text{ dann ist } f(x) = e^{g(x)}\]
+\[f'(x) = e^{g(x)} \cdot g'(x)\]
+\[g'(x) = \frac{\frac{1}{x} \cdot x - \ln(x) \cdot 1}{x^2} = \frac{1 - \ln(x)}{x^2}\]
+\[\text{Da } e^{g(x)} > 0 \text{ gilt:} \]
+\[f'(x) = 0 \Leftrightarrow g'(x) = 0 \Leftrightarrow 1 - \ln(x) = 0 \Leftrightarrow \ln(x) = 1 \Leftrightarrow x = e\]
+\[\]
+Es existiert genau eine kritische Stelle an $x_0 = e$.
+
+\subsection*{(ii)}
+Untersuchen des Vorzeichens von $f'$
+\[\text{ Für } x \in (0, e): \ln(x) < 1 \implies g'(x) > 0 \implies f'(x) > 0 \to \text{ streng monoton wachsend}\]
+\[\text{ Für } x \in (e, \infty): \ln(x) > 1 \implies g'(x) < 0 \implies f'(x) < 0 \to \text{ streng monoton fallend}\]
+
+\end{document}
