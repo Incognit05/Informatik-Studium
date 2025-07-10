@@ -36,5 +36,39 @@ Bei diesem Bruch streben sowohl nenner, als auch Zaehler gegen 0.
 \[\lim_{x\to\pi} \frac{-1}{-\frac{1}{2} \csc^2(\frac{x}{2})} = \lim_{x\to\pi} 2 \sin^2(\frac{x}{2})\]
 \[\pi\text{ einsetzen: } 2\sin^2(\frac{\pi}{2}) = 2(1)^2 = 2\]
 Der Grenzwert ist 2.
+\subsection*{(ii)}
+Wenn $x \to \infty$ geht, dann geht der Term $\log(1 + \frac{1}{x})$ gegen $\log(1)=0$ \\
+Somit erhalten wir die unbestimmte Form $\infty \cdot 0$.
+\[x \log \left( 1 + \frac{1}{x} \right) = \frac{\log(1 + \frac{1}{x})}{\frac{1}{x}}, \text{ Wenn } x \to \infty \text{, dann gehen sowohl Nenner als auch Zaehler gegen 0, also } \frac{0}{0}\]
+\[\frac{d}{dx}\log(1 + \frac{1}{x}) = \frac{1}{1 + \frac{1}{x}} \cdot (-\frac{1}{x^2}) = -\frac{1}{x(x+1)}\]
+\[\frac{d}{dx}(\frac{1}{x}) = - \frac{1}{x^2}\]
+\[\lim_{x \to \infty} \frac{- \frac{1}{x(x+1)} }{ -\frac{1}{x^2} } = \lim_{x\to\infty} \frac{x^2}{x(x+1)} = \lim_{x \to \infty} \frac{x^2}{x^2 + x}\]
+\[\lim_{x\to\infty} \frac{1}{1 + \frac{1}{x}} = \frac{1}{1+0} = 1\]
+Der Grenzwert ist 1.
+\subsection*{(iii)}
+Wenn $x \to 0$ geht, gehen beide Terme gegen $\infty$, also haben wir die unbestimmte Form $\infty - \infty$.
+\[\frac{1}{x \sin x} - \frac{1}{x^2} = \frac{x - \sin x}{x^2 \sin x}\]
+Wenn hier $x \to 0$ geht, gehen sowohl Nenner als auch Zaehler gegen 0, also $\frac{0}{0}$
+\[\frac{d}{dx}(x - \sin x) = 1 - \cos x\]
+\[\frac{d}{dx}(x^2 - \sin x) = 2x \sin x + x^2 \cos x\]
+\[\lim_{x \to 0} \frac{ 1 - \cos x }{ 2x \sin x + x^2 \cos x } = \frac{1-1}{0+0} = \frac{0}{0}\]
+\[\frac{d}{dx}(1 - \cos x) = \sin x\]
+\[\frac{d}{dx}(2x \sin x + x^2 \cos x) = (2 \sin x + 2x \cos x) + (2x \cos x - x^2 \sin x) = 2 \sin x + 4x \cos x - x^2 \sin x\]
+\[\lim_{x \to 0} \frac{\sin x}{2 \sin x + 4x \cos x - x^2 \sin x} = \frac{0}{0}\]
+\[\frac{d}{dx} (\sin x) = \cos x\]
+\[\frac{d}{dx} (2 \sin x + 4x \cos x - x^2 \sin x) = 2 \cos x = (4 \cos x - 4x \sin x) - (2x\sin x + x^2 \cos x) = 6 \cos x - 6x \sin x - x^2 \cos x\]
+\[\lim_{x \to 0} \frac{ \cos x }{ 6 \cos x - 6x \sin x - x^2 \cos x } = \frac{\cos(0)}{6 \cos(0) - 0 -0} = \frac{1}{6}\]
+Der Grenzwert ist $\frac{1}{6}$
+\subsection*{(iv)}
+Wenn $x \to 0^-$ geht $x$ gegen 0. Der Term $1 - e^x$ geht gegen $1 - e^0 = 0$. Da $x < 0$, ist $e^x < 1$, also ist $1 - e^x$ eine kleine positive Zahl. Damit geht $\log(1 - e^x)$ gegen $-\infty$, also haben wir $0 \cdot \infty$
+\[x log (1 - e^x) = \frac{\log(1-e^x)}{\frac{1}{x}}\]
+Wenn $x \to 0^-$, gehen sowohl Nenner als auch Zaehler gegen $-\infty$, also haben wir $\frac{-\infty}{-\infty}$
+\[\frac{d}{dx} \log(1 - e^x) = \frac{-e^x}{1 - e^x}\]
+\[\frac{d}{dx} \frac{1}{x} = -\frac{1}{x^2}\]
+\[\lim_{x \to 0^-} \frac{\frac{-e^x}{1 - e^x}}{-\frac{1}{x^2}} = \frac{x^2 e^x}{1 - e^x} = \frac{0}{0}\]
+\[\frac{d}{dx} (x^2 e^x) = 2xe^x = x^2 e^x\]
+\[\frac{d}{dx}(1 - e^x) = -e^x\]
+\[\lim_{x \to 0^-} = \frac{2xe^x = x^2 e^x}{-e^x} = \frac{2(0)e^0 + (0)^2e^0}{-e^0} = \frac{0}{-1} = 0\]
+Der Grenzwert ist 0.
 
 \end{document}
