@@ -8,6 +8,30 @@
 
 \begin{document}
 \maketitle
+
+\section*{Aufgabe 1}
+\begin{tabular}{l l}
+    $F_1 = 0$ & $F_1' = 0' = 0 = f_1$ \\
+    $F_2 = -\cos x$ & $F_2' = (-\cos x)' = \sin x = f_2$ \\
+    $F_3 = \sinh x$ & $F_3' = (\sinh x)' = \cosh x = f_3$ \\
+    $F_4 = \ln(\cosh x)$ & $F_4' = \frac{1}{\cosh x} \cdot (\cosh x)' = \frac{\sinh x}{\cosh x} = \tanh x = f_4$ \\
+    $F_5 = \log(x+1)$ & $F_5' = \frac{1}{x + 1} = f_5$ \\
+    $F_6 = \frac{1}{2}x^{10} + \frac{1}{2}x^{6}$ & $F_6' = \frac{10}{2}x^9 + \frac{6}{2}x^5 = 5x^9 + 3x^5 = f_6$ \\
+    $F_7 = \frac{2}{3}x^{\frac{3}{2}}$ & $F_7' = \frac{2}{3} \cdot \frac{3}{2} x ^{\frac{1}{2}} = x^{\frac{1}{2}} = \sqrt x = f_7$ \\
+    $F_8 = \frac{2^x}{\ln 2}$ & $F_8' = \frac{1}{\ln 2} \cdot (2^x \cdot \ln 2) = 2^x = f_8$ \\
+\end{tabular}
+
+\section*{Aufgabe 2}
+$\Delta x_k = x_k - x_{k-1} = \frac{kb}{n} - \frac{(k-1)b}{n} = \frac{b}{n}$, da die Zerlegung Äquidistant ist. \\
+\[\sum \left(f, Z^{(n)}), \xi^{(n)}\right) = \sum^{n}_{k=1} f(\xi_k) \Delta x_k\]
+\[= \sum^{n}_{k=1} \left( k \frac{b}{n} \right)^2 \cdot \frac{b}{n} = \sum^{n}_{k=1} \frac{k^2 b^3}{n^3} = \frac{b^3}{n^3} \sum^{n}_{k=1} k^2\]
+\[= \frac{b^3}{n^3} \cdot \frac{n(n+1)(2n+1)}{6}\]
+\newline
+\[\lim_{n \to \infty} \frac{b^3 n(n+1)(2n+1)}{6n^3} = \frac{b^3}{6} \cdot \frac{n}{n}\cdot  \frac{n+1}{n} \cdot \frac{2n +1}{n}\]
+\[= \frac{b^3}{6} \cdot 1 \cdot (1 + \frac{1}{n}) \cdot (2 + \frac{1}{n}) = \frac{b^3}{6} \cdot 1 \cdot (1 + 0) \cdot (2 + 0) = \frac{2b^3}{6} = \frac{b^3}{3}\]
+\newline
+\[\int_{0}^{b} x^2 dx = \lim_{n \to \infty} \sum \left( f, Z^{(n)}, \xi^{(n)} \right) = \frac{b^3}{3}\]
+
 \section*{Aufgabe 3}
 \subsection*{(i)}
 Seien $a<b$, $J:=[a,b]$ und $f \in C^0(J)$ mit $f \geq 0$. Sei $I \subset J$ ein Intervall. Dann gilt:
