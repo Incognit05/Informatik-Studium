@@ -36,7 +36,61 @@ Da $\cosh(x) = \frac{e^x + e^{-x}}{2} \geq 1$ kann man schreiben: $\ln(\cosh(x))
 \[= \ln(\frac{5}{4}) - \ln(1) = \ln(\frac{5}{4}) - 0 = \ln(\frac{5}{4})\]
 \[\implies \int_0^{\ln 2} \tanh(x)dx = \ln(\frac{5}{4})\]
 
+\section*{Aufgabe 2}
+\subsection*{(i)}
+\[\int_0^{log2} x^2e^x \,dx\]
+\[=[x^2e^x]_0^{log2}-\int_0^{log2}e^x*2x\,dx\]
+\[=[x^2e^x]_0^{log2}-[2x*e^x]_0^{log2}- \int_0^{log2}e^x*2\,dx\]
+\[=[x^2e^x]_0^{log2}-[2x*e^x]_0^{log2}- 2\int_0^{log2}e^x\,dx\]
+\[=[x^2e^x]_0^{log2}-[2x*e^x]_0^{log2}- 2[e^x]_0^{log2}\]
+\[=log2^2e^{log2}-0^2*e^0-2(log(2))*e^{log2}- 2*0*e^0- 2(e^{log2})-2(e^0)\]
+\[=log2^2e^{log2}-2(log(2))*e^{log2}- 2(e^{log2})-2\]
+\[=log2^2*2-2(log(2))*2- 2*2-2\]
+\[=2log2*2-2log(2)*2- 6\]
+\[=-6\]
+\subsection*{(ii)}
+\[sin^2x=\frac{1-cos(2x)}{2}\]
+
+\[\int_0^\pi sin^2x \,dx\]
+\[=\int_0^\pi \frac{1-cos(2x)}{2} \,dx\]
+\[=\frac{1}{2}\int_0^\pi 1-cos(2x) \,dx\]
+\[=\frac{1}{2}([\frac{x-sin(2x)}{2}]_0^\pi)\]
+\[=\frac{1}{2}(\pi-\frac{sin(2\pi)}{2})-\frac{1}{2}(0-sin(2*0))\]
+\[=\frac{1}{2}(\pi-\frac{sin(2\pi)}{2})\]
+\[=\frac{1}{2}(\pi-0)\]
+\[=\frac{\pi}{2}\]
+
+\subsection*{(iii)}
+\[\int_1^e \sqrt{x}\,logx \,dx\]
+\[=[\frac{2}{3}x^{\frac{3}{2}} logx]_1^e - \int_1^e\frac{2}{3}x^{\frac{3}{2}}*\frac{1}x{}\,dx\]
+\[=[\frac{2}{3}x^{\frac{3}{2}} logx]_1^e - \frac{2}{3}\int_1^ex^{\frac{3}{2}}*\frac{1}x{}\,dx\]
+\[=[\frac{2}{3}x^{\frac{3}{2}} logx]_1^e - \frac{2}{3}\int_1^ex^{\frac{1}{2}}\]
+\[=[\frac{2}{3}x^{\frac{3}{2}} logx]_1^e-[\frac{2}{3}*\frac{2}{3}x^{\frac{3}{2}}]_1^e\]
+\[=\frac{2}{3}e^{\frac{3}{2}} loge-\frac{2}{3}*\frac{2}{3}e^{\frac{3}{2}}(-\frac{2}{3}*1^{\frac{3}{2}} log1-\frac{2}{3}*\frac{2}{3}*1^{\frac{3}{2}})\]
+\[=\frac{2}{3}e^{\frac{3}{2}}-\frac{4}{9}e^{\frac{3}{2}}-(0-\frac{4}{9})\]
+\[=\frac{2}{9}e^{\frac{2}{3}}-(-\frac{4}{9})\]
+\[=\frac{2}{9}e^{\frac{2}{3}}+\frac{4}{9}\]
+
 \section*{Aufgabe 3}
+\subsection*{(i)}
+Substition: $u=x^2\,\, \\u'=2x=\frac{du}{dx}$ somit $du=2xdx$ oder $xdx=\frac{1}{2}du$
+\[\int_0^2xe^{x^2} \,dx\]
+Grenzen: $2^2=4,\; 0^2=0$
+\[=\int_0^4e^u\frac{1}{2} \,du\]
+\[=\frac{1}{2}\int_0^4e^u \,du\]
+\[=\frac{1}{2}(e^4-e^0)\]
+\[=\frac{1}{2}e^4-\frac{1}{2}\]
+
+\subsection*{(ii)}
+Substitution: $u=sinx$\\
+$u'=cosx=\frac{du}{dx}$ somit $du=cosxdx$
+\[\int_0^{\frac{\pi}{2}}sin^3xcosx\,dx\]
+Grenzen: $sin(\frac{\pi}{2})=1,\,sin0=0$
+\[=\int_0^1u^3\,du\]
+\[=[\frac{1}{4}u^4]_1^0\]
+\[\frac{1}{4}*1^4-\frac{1}{4}*0^4\]
+\[=\frac{1}{4}\]
+
 \subsection*{(iii)}
 \[\int_0^{\sinh 1} \frac{1}{\sqrt{1+x^2}} dx\]
 Sei $x = \sinh(t)$, dann ist $dx = \cosh(t)dt$ und das Intervall $[0, 1]$\\
