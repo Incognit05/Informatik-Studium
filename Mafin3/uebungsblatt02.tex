@@ -36,6 +36,15 @@ Da $\cosh(x) = \frac{e^x + e^{-x}}{2} \geq 1$ kann man schreiben: $\ln(\cosh(x))
 \[= \ln(\frac{5}{4}) - \ln(1) = \ln(\frac{5}{4}) - 0 = \ln(\frac{5}{4})\]
 \[\implies \int_0^{\ln 2} \tanh(x)dx = \ln(\frac{5}{4})\]
 
+\section*{Aufgabe 3}
+\subsection*{(iii)}
+\[\int_0^{\sinh 1} \frac{1}{\sqrt{1+x^2}} dx\]
+Sei $x = \sinh(t)$, dann ist $dx = \cosh(t)dt$ und das Intervall $[0, 1]$\\
+\[\int_0^{1} \frac{1}{\sqrt{1+(\sinh(t))^2}} \cosh(t)dt\]
+Anwenden der Hyperbolischen Identitaet:
+\[\int_0^1 \frac{1}{\sqrt{\cosh^2(t)}} \cosh(t)dt \]
+\[= \int_0^1 \frac{1}{\cosh(t)} \cosh(t)dt = \int_0^1 1 dt = 1\]
+
 \section*{Aufgabe 4}
 \subsection*{(i)}
 Nach dem Mittelwertsatz gilt fuer $J = [a,b]$:
