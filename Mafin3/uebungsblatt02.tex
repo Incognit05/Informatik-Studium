@@ -26,5 +26,40 @@
 \[= \frac{3}{2} + \frac{3}{2} = 3\]
 
 \subsection*{(iv)}
+\[\int_0^{\ln 2} \tanh(x) dx = \int_0^{\ln 2} \frac{\sinh(x)}{\cosh(x)} dx\]
+Sei $u = \cosh(x)$, dann ist $\frac{du}{dx} = \sinh(x) $%\Longleftrightarrow du = \sinh(x)dx$
+\[\int_0^{\ln 2} \frac{\frac{du}{dx}}{u}dx = \int_0^{\ln 2} \frac{du}{dx} \frac{dx}{u} =  \int_0^{\ln 2} \frac{du}{u} = \int_0^{\ln 2} \frac{1}{u}du\]
+Die Stammfunktion von $\frac{1}{u}$ ist $\ln(u) \implies \ln|\cosh(x)|$ \\
+Da $\cosh(x) = \frac{e^x + e^{-x}}{2} \geq 1$ kann man schreiben: $\ln(\cosh(x))$
+\[\implies \int_0^{\ln 2} \tanh(x) dx = \bigl[ \ln(\cosh(x)) \bigr]_0^{\ln(2)} = \ln(\cosh(\ln(2))) - \ln(\cosh(0))\]
+\[= \ln(\frac{e^{\ln(2)} + e^{-\ln(2)}}{2}) - \ln (\frac{e^0 + e^0}{2}) = \ln(\frac{2 + \frac{1}{2}}{2}) - \ln(\frac{1+1}{2})\]
+\[= \ln(\frac{5}{4}) - \ln(1) = \ln(\frac{5}{4}) - 0 = \ln(\frac{5}{4})\]
+\[\implies \int_0^{\ln 2} \tanh(x)dx = \ln(\frac{5}{4})\]
+
+\section*{Aufgabe 4}
+\subsection*{(i)}
+Nach dem Mittelwertsatz gilt fuer $J = [a,b]$:
+\[\frac{1}{|J|} \cdot \int_{J} f(x)dx =  f(c) \Longleftrightarrow \int_J f(x) dx = f(c) \cdot |J| \]
+Es gilt: $\int_J f(x) dx = 0$
+\[0 = f(c) \cdot |J| = f(c) \cdot (b - a)\]
+Da $b > a$, muss $|J| > 0$, also muss $f(c) = 0$ um die Gleichung zu erfuellen.  \\
+Also gibt es eine Zahl $c \in [a, b]$ mit $f(c) = 0$
+
+\subsection*{(ii)}
+Beweis durch Widerspruch: \\ 
+Angenommen $g(x)$ hat keine Nullstelle in $[a,b]$ \\
+Da $g$ keine stetig ohne Nullstelle ist, muessen alle $g(x)$ fuer $x \in [a,b]$ entweder $> 0$ oder $< 0$ sein. \\
+\newline
+Fuer $g(x) > 0$: \\
+Da $f(x) \geq \epsilon > 0$, also $f(x) > 0$, ist $f(x) \cdot g(x) > 0$ \\
+Das Integral einer stetigen Function $h$ mit $h(x) > 0$ ueber $[a,b]$, ist ebenfalls ueber das Intervall positiv. \\
+Das ist ein Widersprucht zur Angabe, dass $\int_{a}^{b}f(x)g(x)dx = 0$ \\
+\newline
+Fuer $g(x) < 0$: \\
+Da $f(x) > 0$ ist $f(x) \cdot g(x) < 0$
+Das Integral einer stetigen Funktion, die ueberall negativ ist, ist ebenfalls negativ. \\
+Das ist auch ein Widerspruch zur Angabe. \\
+\newline
+$\implies g(x)$ muss mindestens eine Nullstelle $c \in [a,b]$ haben. 
 
 \end{document}
