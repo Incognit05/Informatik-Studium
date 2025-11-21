@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Mathe 3 Übungsblatt 5}
+\author{Pascal Diller, Timo Rieke}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Aufgabe 3}
+\subsection*{(i)}
+Solange $|-x^2| < 1$ kann man $q = -x^2$ substituieren und die Geometrische Reihe verwenden.
+\[f(x) = \frac{1}{1-(-x^2)} = \sum_{k=0}^{\infty}(-x^2)^k\]
+\[= \sum_{k=0}^{\infty}(-1)^k x^{2k} = 1 - x^2 + x^4 - x^6 + \dots\]
+Also ist diese alterniernde Reihe die Taylorreihe um $x_0 = 0$ mit $|-x^2|<1$, da sie durch Substitution aus der Geometrischen Reihe hervorgekommen ist.
+\subsection*{(ii)}
+\[g'(x) = \frac{1}{1+x^2} = f(x)\]
+\[\implies g(x) = \int f(t) dt = \int \left( \sum_{k=0}^{\infty}(-1)^k t^{2k} \right)dt\]
+\[= \sum_{k=0}^{\infty}(-1)^k\frac{x^{2k+1}}{2k+1} + C\]
+Entwicklungspunkt $x_0 = 0$ einsetzen um C zu bestimmen
+\[g(0) = \arctan(0) = 0\]
+\[0 = \sum_{k=0}^{\infty}(-1)^k\frac{0^{2k+1}}{2k+1} + C \implies C = 0\]
+Also ist die Taylorreihe:
+\[\sum_{k=0}^{\infty}(-1)^k\frac{x^{2k+1}}{2k+1} = x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \dots\]
+
+\section*{Aufgabe 4}
+Wir untersuchen die Folge $(a_n)_{n\in\mathbb{N}} = (x_n, y_n, z_n)$ komponentenweise auf Konvergenz. \\
+\newline
+\textbf{1. Komponente ($x_n$)}
+\[x_n = \frac{\sqrt[n]{n}+3^n+n^3}{10+n^9+9^n}\]
+Da der Term $9^n$ im Nenner am stärksten wächst, erweitern wir den Bruch mit $\frac{1}{9^n}$:
+\[x_n = \frac{\frac{\sqrt[n]{n}}{9^n} + (\frac{3}{9})^n + \frac{n^3}{9^n}}{\frac{10}{9^n} + \frac{n^9}{9^n} + 1}\]
+Bekanntlich gilt $\lim_{n\to\infty} \sqrt[n]{n} = 1$ und Exponentialfunktionen wachsen schneller als Polynome. Daher gehen alle Zählerterme und die ersten beiden Nennerterme gegen 0.
+\[\implies \lim_{n\to\infty} x_n = \frac{0+0+0}{0+0+1} = 0\]
+\textbf{2. Komponente ($y_n$)} \\
+\newline
+Hier liegt der Fall $\infty - \infty$ vor. Wir erweitern mit dem konjugierten Ausdruck:
+\[y_n = \sqrt{n^2+n+1}-\sqrt{n^2+1} = \frac{(\sqrt{n^2+n+1}-\sqrt{n^2+1})(\sqrt{n^2+n+1}+\sqrt{n^2+1})}{\sqrt{n^2+n+1}+\sqrt{n^2+1}}\]
+\[= \frac{(n^2+n+1) - (n^2+1)}{\sqrt{n^2+n+1}+\sqrt{n^2+1}} = \frac{n}{\sqrt{n^2(1+\frac{1}{n}+\frac{1}{n^2})} + \sqrt{n^2(1+\frac{1}{n^2})}}\]
+\[= \frac{n}{n\left(\sqrt{1+\frac{1}{n}+\frac{1}{n^2}} + \sqrt{1+\frac{1}{n^2}}\right)} = \frac{1}{\sqrt{1+\frac{1}{n}+\frac{1}{n^2}} + \sqrt{1+\frac{1}{n^2}}}\]
+Für $n \to \infty$ gehen die Terme $\frac{1}{n}, \frac{1}{n^2} \to 0$.
+\[\implies \lim_{n\to\infty} y_n = \frac{1}{\sqrt{1}+\sqrt{1}} = \frac{1}{2}\]
+\textbf{3. Komponente ($z_n$)} \\
+\newline
+\[z_n = \frac{1}{3}\log(n^3)-\log(n+2) = \log((n^3)^{1/3}) - \log(n+2)\]
+\[= \log(n) - \log(n+2) = \log\left(\frac{n}{n+2}\right)\]
+\[= \log\left(\frac{n}{n(1+\frac{2}{n})}\right) = \log\left(\frac{1}{1+\frac{2}{n}}\right)\]
+Da der Logarithmus stetig ist und $\frac{2}{n} \to 0$:
+\[\lim_{n\to\infty} z_n = \log(1) = 0\]
+\newline
+$\implies$ Die Folge konvergiert gegen den Vektor:
+\[\lim_{n\to\infty} (x_n, y_n, z_n) = \left(0, \frac{1}{2}, 0\right)\]
+
+\end{document}
