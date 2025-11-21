@@ -100,4 +100,47 @@ Wir benötigen $\limsup_{x\to 0} \left| \frac{f_2(x)}{|x|^s} \right| < \infty$. 
     \item (ii) $f_2(x) = O(|x|^s)$ gilt für alle $s \in \mathbb{R}$.
 \end{itemize}
 
+\section*{Aufgabe 3}
+Sei $f:(-1,\infty)\to \mathbb{R}$ mit $f:x \rightarrow \sqrt{1+x} =(1+x)^\frac{1}{2}$ 
+\subsection*{(i)}
+$f^{(1)}(x)=\frac{1}{2}(1+x)^{-\frac{1}{2}}$ \\ 
+$f^{(2)}(x)=\frac{1}{2}*(-\frac{1}{2})(1+x)^{-\frac{3}{2}}=-\frac{1}{4}(1+x)^{-\frac{3}{2}}$ \\ 
+$f^{(3)}(x)=-\frac{1}{4}(-\frac{3}{2})(1+x)^{-\frac{5}{2}}=\frac{3}{8}(1+x)^{-\frac{5}{2}}$
+\[T_3^0f(x):=\sum_{k=0}^3\frac{f^{(k)}(0)}{k!}(x-0)^k\]
+\[=(\frac{1+0}{0!}*x^0)+(\frac{\frac{1}{2}(1+0)^{-\frac{1}{2}}}{1!}x^1)+(\frac{-\frac{1}{4}(1+0)^{-\frac{3}{2}}}{2!}x^2)+(\frac{\frac{3}{8}(1+0)^{-\frac{5}{2}}}{3!}x^3)\]
+\[=1+\frac{1}{2}x-\frac{1}{8}x^2+\frac{1}{16}x^3\]
+
+\subsection*{(ii)}
+$f(x)=T_m^{x_0}(x)+R_{m+1}^{x_0}(x)$\\
+$f(x)-T_3^0f(x)=R_4^0f(x)$
+\[f(\frac{1}{2})=\sqrt{1+\frac{1}{2}}=\sqrt{\frac{3}{2}}\]
+\[T_3^0f(\frac{1}{2})=1+\frac{1}{4}-\frac{1}{32}+\frac{1}{128}
+=\frac{128}{128}+\frac{32}{128}-\frac{4}{128}+\frac{1}{128}=\frac{157}{128}\]
+$f^{(4)}(x)=\frac{3}{8}*(-\frac{5}{2})*(1+x)^{-\frac{7}{2}}=-\frac{15}{16}(1+x)^{-\frac{7}{2}}$
+\\
+\[R_{4}^{0}f(\frac{1}{2})=\int_0^\frac{1}{2}f^{(4)}(t)\frac{(\frac{1}{2}-t)^3}{3!}\,dt\]
+\[=\int_0^\frac{1}{2}-\frac{15}{16}(1+x)^{-\frac{7}{2}}\frac{(\frac{1}{2}-t)^3}{3!}\,dt\]
+\[=-\frac{15}{16*3*2}\int_0^\frac{1}{2}\frac{(\frac{1}{2}-t)^3}{(1+t)^{\frac{7}{2}}}\]
+\[=-\frac{5}{32}\int_0^\frac{1}{2}\frac{(\frac{1}{2}-t)^3}{(1+t)^{\frac{7}{2}}}\]
+Da $t\in [0,\frac{1}{2}]$ und somit minimal $t=0$:
+\[(1+0)^\frac{7}{2}=1\]
+\[(1+t)^\frac{7}{2}\geq 1 \Rightarrow \frac{1}{(1+t)^\frac{7}{2}}\leq 1\]
+Somit ist
+\[-\frac{5}{32}\int_0^\frac{1}{2}\frac{(\frac{1}{2}-t)^3}{(1+t)^{\frac{7}{2}}}\leq-\frac{5}{32}\int_0^\frac{1}{2}(\frac{1}{2}-t)^3\]
+\[\rightarrow R_4^{0}\leq-\frac{5}{32}\int_0^\frac{1}{2}(\frac{1}{2}-t)^3=-\frac{5}{32}([\frac{1}{4}(\frac{1}{2}-t)^4]_0^\frac{1}{2})
+=-\frac{5}{32}(\frac{1}{4}*0^4-\frac{1}{4}*\frac{1}{16})
+=\frac{5}{32*64}=\frac{5}{2048}\]
+Somit:
+\[R_4^0\leq \frac{5}{2048}\leq \frac{1}{400}\]
+
+\section*{Aufgabe 4}
+Sei $I\subseteq\mathbb{R}$ und $f\in C^m(I)$ mit $f^{(m)}(x)=0$ für alle $x \in I$
+
+\[f(x)=T_{m-1}^{x_0}+R_{m}^{x_0}\]
+\[=\sum_{k=0}^{m-1}\frac{f^{(k)}(x_o)}{k!}(x-x_o)^k
++f^{(m)}(\xi)\frac{(x-\xi)^{m-1}}{m!}(x-x_0)\]
+Da $f^{(m)}=0$ ist:
+\[f(x)=\sum_{k=0}^{m-1}\frac{f^{(k)}(x_o)}{k!}(x-x_o)^k+0\]
+Somit ist das höchste Polynom von f $(x-x_0)^k$ mit $k=m-1$
+
 \end{document}
