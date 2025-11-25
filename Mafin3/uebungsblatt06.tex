@@ -49,4 +49,38 @@ $\implies$ Grenzwert hier ist 1. \\
 \newline
 Da die Grenzwerte auf den verschiedenen Pfaden unterschiedlich sind, existiert der Grenzwert nicht.
 
+\section*{Aufgabe 2}
+
+\subsection*{(i)}
+Fuer $(x,y) \neq (0,0)$ ist $f$ stetig, da es sich um Polynome handelt und der Nenner $\neq 0$ ist. \\
+\newline
+Fuer $(x,y) = (0,0)$: Untersuchung mit Pfaden \\
+\newline
+1. Pfad: $y = 0$
+\[ \lim_{x \to 0} \frac{0 - x^2}{x^2 + 0} = \lim_{x \to 0} (-1) = -1 \] 
+2. Pfad: $x = 0$
+\[ \lim_{y \to 0} \frac{y^2 - 0}{0 + y^2} = \lim_{y \to 0} (1) = 1 \] 
+Da $1 != -1$ existiert der Grenzwert nicht. \\
+\newline
+$\implies f$ ist in $(0,0)$ nicht stetig. \\
+$\implies f$ ist in $\mathbb{R}^2 \backslash (0,0)$ stetig. \\
+
+\subsection*{(ii)}
+Fuer $(x,y) \in \mathbb{R}^2 \backslash (0,0)$: $g$ ist stetig, da der Sinus stetig ist und $f$ dort ebenfalls stetig ist. \\
+\newline
+Fuer $(x,y)= (0,0)$: zu zeigen: $\lim_{(x,y) \to (0,0)} g(x,y) = 0$ \\
+Untersuchen den Betrag von $g(x,y)$
+\[ |g(x,y)| = |\sin(x+y)| \cdot \left| \frac{y^2 - x^2}{x^2 + y^2} \right| \]
+Nach der Dreiecksungleichung gilt: $|y^2 - x^2| \leq x^2 + y^2$. Daraus folgt:
+\[ \left| \frac{y^2 - x^2}{x^2 + y^2} \right| \leq \frac{x^2 + y^2}{x^2 + y^2} = 1 \]
+$\implies $ der Term aus $f(x,y)$ ist also beschraenkt. \\
+\newline
+Da der Sinus stetig ist, gilt:
+\[ \lim_{(x,y) \to (0,0)} \sin(x+y) = \sin(0) = 0\]
+Aus dem Produkt der Nullfolge $(\sin)$ und der beschraenkten Function $(f)$ folgt:
+\[\lim_{(x,y) \to (0,0)} g(x,y) = 0 \]
+Da der Grenzwert $0 = g(0,0)$ ist, ist $g$ im Ursprung stetig. \\
+\newline
+$\implies$ $g$ ist in $\mathbb{R}^2$ stetig.
+
 \end{document}
