@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Mathe 3 Übungsblatt 6}
+\author{Pascal Diller, Timo Rieke}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Aufgabe 1}
+\subsection*{(i)}
+Sei $(x_k)_{k \in \mathbb{N}}$ eine beliebige Folge in $D \backslash \{x_0\}$ mit $\lim_{k \to \infty} x_k = x_0$. \\
+Laut Vorraussetzung gilt fuer alle Folgeglieder: $g(x_k) \leq f(x_k) \leq h(x_k)$. \\
+Da $\lim_{x \to x_0} g(x) = c$ und $\lim_{x \to x_0} h(x) = c$ folgt nach 11.2.1:
+\[\lim_{k \to \infty} g(x_k) = c \text{ und } \lim_{k\to\infty}h(x_k) = c\]
+Da die Folge $f(x_k)$ zwischen den beiden nach $c$ konvergierenden Folgen $f,h$ liegt, muss auch gelten:
+\[\lim_{k \to \infty} f(x_k) = c\]
+Da die Folge $(x_k)$ beliebig gewaehlt war, gilt dies auch fuer alle solche Folgen, was nach 11.2.1 bedeuted:
+\[\lim_{x\to x_0}f(x) = c\]
+
+\subsection*{(ii)}
+
+\subsubsection*{(a)}
+Fuer den Nenner gilt: $|x| + |y| \geq \sqrt{x^2 + y^2}$, da $(|x| + |y|)^2 = x^2 + 2|xy| + y^2 \geq x^2 + y^2$ \\
+Fuer $(x,y) \neq (0,0)$ folgt: 
+\[0 \leq \frac{x^2 + y^2}{|x| + |y|} \leq \frac{x^2 + y^2}{\sqrt{x^2 + y^2}} = \sqrt{x^2 + y^2}\]
+Grenzuebergang von $(x,y) \to (0,0)$: \\
+linke Seite konstant 0. \\
+rechte Seite $\sqrt{x^2 + y^2}$ strebt gegen 0. \\
+Dann gilt nach dem Sandwichkriterium: 
+\[\lim_{(x,y) \to (0,0)} \frac{x^2 + y^2}{|x| + |y|} = 0\]
+
+\subsubsection*{(b)}
+Untersuchen von verschiedenen Pfaden um zu ueberpruefen, ob ein Grenzwert existiert: \\
+\newline
+1. Pfad: Entlang der Geraden $y = -x$ (fuer $x \neq 0$)
+\[f(x, -x) = \frac{e^{x-x} - x - (-x) - 1}{ x^2 + (-x)^2 } = \frac{e^0 - 0 - 1}{2x^2} = 0\]
+$\implies$ Grenzwert hier ist 0 \\
+\newline
+2. Pfad: Entlang der Geraden $y = x$ (fuer $x > 0$)
+\[f(x,x) = \frac{e^{2x} - 2x - 1}{2x^2}\]
+Die Taylor-Entwicklung fuer $e^t$ um $t = 0$ mit $t = 2x$.
+\[e^{2x} \approx 1 + 2x + \frac{1}{2}(2x)^2 = 1 + 2x + 2x^2\]
+einsetzen:
+\[\lim_{x \to 0} \frac{(1 + 2x + 2x^2) - 2x - 1}{2x^2} = \lim_{x \to 0} \frac{2x^2}{2x^2} = 1\]
+$\implies$ Grenzwert hier ist 1. \\
+\newline
+Da die Grenzwerte auf den verschiedenen Pfaden unterschiedlich sind, existiert der Grenzwert nicht.
+
+\end{document}
