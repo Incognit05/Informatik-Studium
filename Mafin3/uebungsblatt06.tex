@@ -83,4 +83,49 @@ Da der Grenzwert $0 = g(0,0)$ ist, ist $g$ im Ursprung stetig. \\
 \newline
 $\implies$ $g$ ist in $\mathbb{R}^2$ stetig.
 
+\section*{Aufgabe 3}
+\[f(x, y) := \frac{e^{x+y} - x - y - 1}{x^2 + y^2}\]
+\[\frac{\partial f}{\partial x}(0,0) = \lim_{h \to 0} \frac{f(0+h, 0) - f(0,0)}{h}\]
+\[f(h, 0) = \frac{e^{h+0} - h - 0 - 1}{h^2 + 0^2} = \frac{e^h - h - 1}{h^2}\]
+sei $c:=f(0,0)$
+\[\frac{\partial f}{\partial x}(0,0) = \lim_{h \to 0} \frac{\frac{e^h - h - 1}{h^2} - c}{h} = \lim_{h \to 0} \frac{e^h - h - 1 - c \cdot h^2}{h^3}\]
+Taylorentwicklung der Expontentialfunktion um $x_0=0$
+\[e^h = 1 + h + \frac{h^2}{2} + \frac{h^3}{6}\]
+Somit ist der Zähler:
+\[(1 + h + \frac{h^2}{2} + \frac{h^3}{6} ) - h - 1 - c h^2\]
+\[= (\frac{1}{2} - c)h^2 + \frac{h^3}{6}\]
+\[\frac{1}{2} - c = 0 \implies c = \frac{1}{2}\]
+Somit ist:
+\[f(0,0) := \frac{1}{2}\]
+und:
+\[\frac{\partial f}{\partial x}(0,0) = \lim_{h \to 0} \frac{\frac{1}{6}h^3}{h^3} = \lim_{h \to 0} (\frac{1}{6}) = \frac{1}{6}\]
+
+\section*{Aufgabe 4}
+\subsection*{(i)}
+\[f(x):=(3x+5y)^4\]
+\[\frac{\partial f}{\partial x}(x,y)= 4*(3x+5y)^3*3=12(3x+5y)^3\]
+\[\frac{\partial f}{\partial y}(x,y)= 4*(3x+5y)^3*5=20(3x+5y)^3\]
+\newline
+\[\frac{\partial'' f}{\partial x}(x,y)=12*3(3x+5y)^3*3=108(3x+5y)^3\]
+\[\frac{\partial'' f}{\partial y}(x,y)=20*3(3x+5y)^3*5=300(3x+5y)^3\]
+\[\frac{\partial'' f}{\partial x\partial y}(x,y)=\frac{\partial}{\partial y} (12(3x+5y)^2)=12*3(3x+5y)^2*5=180(3x+5y)^2\]
+
+\subsection*{(ii)}
+\[g(x,y,z):=3xe^{xyz}\]
+\[\frac{\partial g}{\partial x}(x,y,z) = 3 \cdot e^{xyz} + 3x \cdot (yz \cdot e^{xyz}) = 3e^{xyz}(1 + xyz)\]
+\[\frac{\partial g}{\partial y}(x,y,z) = 3x \cdot (xz \cdot e^{xyz}) = 3x^2z e^{xyz}\]
+\[\frac{\partial g}{\partial z}(x,y,z) = 3x \cdot (xy \cdot e^{xyz}) = 3x^2y e^{xyz}\]
+\newline
+
+\[\frac{\partial^2 g}{\partial x^2} = 3(yz)e^{xyz} + [3yz \cdot e^{xyz} + 3xyz(yz)e^{xyz}] = 3yze^{xyz}(2 + xyz)\]
+\[\frac{\partial^2 g}{\partial y \partial x} = \frac{\partial}{\partial y}(3x^2z e^{xyz}) = 3x^2z(xz)e^{xyz} = 3x^3z^2 e^{xyz}\]
+
+\[ \frac{\partial^2 g}{\partial x \partial y} = 6xz e^{xyz} + 3x^2z(yz)e^{xyz} = 3xz e^{xyz}(2 + xyz)\]
+\[ \frac{\partial^2 g}{\partial y^2} = 3x^2z \cdot (xz)e^{xyz} = 3x^3z^2 e^{xyz}\]
+\[ \frac{\partial^2 g}{\partial z \partial y} = 3x^2 e^{xyz} + 3x^2z(xy)e^{xyz} = 3x^2 e^{xyz}(1 + xyz)\]
+
+\[ \frac{\partial^2 g}{\partial x \partial z} = 6xy e^{xyz} + 3x^2y(yz)e^{xyz} = 3xy e^{xyz}(2 + xyz)\]
+\[\frac{\partial^2 g}{\partial y \partial z} = 3x^2 e^{xyz} + 3x^2y(xz)e^{xyz} = 3x^2 e^{xyz}(1 + xyz)\]
+\[ \frac{\partial^2 g}{\partial z^2} = 3x^2y \cdot (xy)e^{xyz} = 3x^3y^2 e^{xyz}\]
+
 \end{document}
