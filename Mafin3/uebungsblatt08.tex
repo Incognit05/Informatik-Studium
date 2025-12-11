@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Mathe 3 Übungsblatt 8}
+\author{Pascal Diller, Timo Rieke}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Aufgabe 1}
+Nach mehrdimensionaler Kettenregel:
+\[\frac{d}{dt}(f \circ \gamma)(t) = \Delta f(\gamma (t)) \cdot \gamma ' (t)\]
+\[\text{Gradient }\Delta f(x,y) = \begin{pmatrix} \partial_xf(x,y) \\ \partial_yf(x,y) \end{pmatrix} = \begin{pmatrix} -2x \\ -2y \end{pmatrix} \]
+Einsetzen $t = 0$, $\gamma(0) = (1,1)$
+\[\Delta f(1,1) = \begin{pmatrix} -2 \\ -2 \end{pmatrix}\]
+Mit $\gamma '(0) = (-1, -1)$ ergibt sich:
+\[\frac{d}{dt} (f \circ \gamma) (0) = \begin{pmatrix}
+    -2 \\ -2
+\end{pmatrix} \cdot \begin{pmatrix}
+    -1 \\ -1
+\end{pmatrix} = (-2)(-1) + (-2)(-1) = 2 + 2 = 4\]
+Gesucht ist die Richtungsableitung im Punkt $x_0 = \gamma(0)$ in Richtung des Tangentenvektors $v = \gamma'(0)$. \\
+Die Definition der Richtungsableitung $\partial_v f(x_0)$ ist das Skalarprodukt aus dem Gradienten an der Stelle $x_0$ und dem Richtungsvektor $v$. Das ist das Produkt $\Delta f (\gamma(0)) \cdot \gamma'(0)$ mit dem Ergebnis 4, wie eben gezeigt.
+
+\section*{Aufgabe 2}
+\subsection*{(i)}
+\[\partial_x f(x,y) = 1 \cdot \sin (y - z) + x \cdot \cos(y-x) \cdot (-1) \] 
+\[= \sin(y-x) - x \cos (y-x)\]
+\[\partial_y f(x,y) = x \cdot \cos(y-x) \cdot 1 \] 
+\[= x \cos (y-x)\]
+\[\partial_x f(1,1) = 0 -1 \cdot 1 = -1\]
+\[\partial_y f(1,1) = 1 \cdot 1 = 1\]
+\[\Delta f (1,1) = \begin{pmatrix}
+    -1 \\ 1
+\end{pmatrix}\]
+\[\partial_v f(1,1) = \begin{pmatrix}
+    -1 \\ 1
+\end{pmatrix} \cdot \begin{pmatrix}
+    \cos t \\ \sin t
+\end{pmatrix} = - \cos t + \sin t = \sin t - \cos t \]
+\subsection*{(ii)}
+Die Richtungsableitung ist maximal, wenn $v$ in Richtung des Gradienten $\Delta f(1,1) = (-1, 1)$ zeigt. Der Vektor $(-1, 1)$ liegt im 2. Quadranten und halbiert diesen, was einem Winkel von $135^{\circ} = \frac{3 \pi}{4}$ entspricht. Der maximale Wert ist die Laenge des Gradienten $||\Delta f|| = \sqrt{(-1)^2 + 1^2} = \sqrt{2}$ \\
+\newline
+$\implies$ Der Wert ist maximal fuer $t = \frac{3\pi}{4}$ mit dem Wert $\sqrt{2}$
+
+\subsection*{(iii)}
+\[D^2 f = \begin{pmatrix}
+    f_{xx} & f_{xy} \\ f_{yx} & f_{yy}
+\end{pmatrix}\]
+\[f_x(x,y) = \sin(y-x) - x\cos(y-x)\]
+\[f_y(x,y) = x\cos(y-x)\]
+\newline
+\[f_{xx} = \frac{\partial}{\partial x}(\sin(y-x) - x\cos(y-x))\]
+\[= \cos(y-x)\cdot(-1) - \left[ 1 \cdot \cos(y-x) + x \cdot (-\sin(y-x)) \cdot (-1) \right]\]
+\[= -\cos(y-x) - \cos(y-x) - x\sin(y-x)\]
+\[= -2\cos(y-x) - x\sin(y-x)\]
+\newline
+\[f_{yy} = \frac{\partial}{\partial y}(x\cos(y-x)) = x \cdot (-\sin(y-x)) \cdot 1 = -x\sin(y-x)\]
+\newline
+\[f_{xy} = \frac{\partial}{\partial x}(x\cos(y-x))\]
+\[= 1 \cdot \cos(y-x) + x \cdot (-\sin(y-x)) \cdot (-1)\]
+\[= \cos(y-x) + x\sin(y-x)\]
+\newline
+\[D^2f(x,y) = \begin{pmatrix}
+-2\cos(y-x) - x\sin(y-x) & \cos(y-x) + x\sin(y-x) \\
+\cos(y-x) + x\sin(y-x) & -x\sin(y-x)
+\end{pmatrix}\]
+
+\end{document}
