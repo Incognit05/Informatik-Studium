@@ -68,4 +68,82 @@ $\implies$ Der Wert ist maximal fuer $t = \frac{3\pi}{4}$ mit dem Wert $\sqrt{2}
 \cos(y-x) + x\sin(y-x) & -x\sin(y-x)
 \end{pmatrix}\]
 
+\section*{Aufgabe 3}
+
+
+\subsection*{(i)}
+$f(x,y) = 2x^3 - 3x^2 + 2y^3 + 3y^2$
+
+\[\partial_x f(x,y) = 6x^2 - 6x = 6x(x-1) \]
+\[\partial_y f(x,y) = 6y^2 + 6y = 6y(y+1) \]
+Nullsetzen:
+\[6x(x-1)=0\]
+\[\rightarrow 6x=0 \text{ v }x-1=0\]
+\[\rightarrow x=0 \text{ v } x=1\]
+\newline 
+\[6y(y+1)=0\]
+\[\rightarrow 6y=0 \text{ v } y+1=0\]
+\[\rightarrow y=0 \text{ v }y=-1\]
+Die kritischen Punkte sind:
+\[(0, 0), (0, -1),(1, 0),(1, -1)\]
+
+\subsection*{(ii)}
+$f(x,y) = (4x^2 + y^2) \exp(-x^2 - 4y^2)$
+Sei $E(x,y) = \exp(-x^2 - 4y^2)$.
+\[\partial_x f = 8x \cdot E + (4x^2 + y^2) \cdot E \cdot (-2x) \]
+\[= 2x E \cdot [4 - (4x^2 + y^2)] \]
+\[\partial_y f = 2y \cdot E + (4x^2 + y^2) \cdot E \cdot (-8y) \]
+\[= 2y E \cdot [1 - 4(4x^2 + y^2)] \]
+Nullsetzen:
+\[2x [4 - (4x^2 + y^2)] = 0 \]
+\[2y [1 - (16x^2 + 4y^2)] = 0 \]
+Fallunterscheidung: \\
+Für $x = 0$: \\
+Aus $2x E \cdot [4 - (4x^2 + y^2)]$ folgt $0=0$. \\
+Setzen wir $x=0$ in $2y [1 - (16x^2 + 4y^2)]$ ein:
+\[2y (1 - 4y^2) = 0 \implies y = 0 \quad \text{oder} \quad 1 - 4y^2 = 0 \Rightarrow y = \pm \frac{1}{2}.\]
+Kritische Punkte: $(0,0), (0, \frac{1}{2}), (0, -\frac{1}{2})$.\\
+\newline
+Für $y = 0$: \\
+Aus $2y [1 - (16x^2 + 4y^2)]$ folgt $0=0$. \\ 
+Setzen wir $y=0$ in $2x E \cdot [4 - (4x^2 + y^2)]$ ein:
+\[2x (4 - 4x^2) = 0 \implies x = 0 \quad \text{oder} \quad 4 - 4x^2 = 0 \Rightarrow x = \pm 1.\]
+Kritische Punkte: $(0,0)$ (bereits bekannt), $(1, 0), (-1, 0)$. \\
+\newline
+Für $x \neq 0$ und $y \neq 0$: 
+\[4x^2 + y^2 = 4 \quad \quad |\cdot 4 \]
+\[16x^2 + 4y^2 = 1 \]
+Subtrahiert man die erste (multipliziert mit 4: $16x^2 + 4y^2 = 16$) von der zweiten, erhält man $0 = 1 - 16 = -15$, ein Widerspruch. Es gibt keine Lösungen in diesem Fall. \\
+\newline
+Somit sind die kritischen Punkte:
+\[(0,0), \quad \left(0, \frac{1}{2}\right), \quad \left(0, -\frac{1}{2}\right), \quad (1, 0), \quad (-1, 0).\]
+
+\section*{Aufgabe 4}
+
+\subsection*{(i) }
+Sei $A \in M_n(\mathbb{R})$ symmetrisch. \\
+Zu zeigen: $A$ negativ definit $\Longleftrightarrow -A$ positiv definit.
+$Q_A(x)=x^TAx$
+\[ \text{ negativ definit} \iff \forall x \in \mathbb{R}^n \setminus \{0\}: x^T A x < 0 \]
+\[\iff \forall x \in \mathbb{R}^n \setminus \{0\}: -(x^T A x) > 0 \quad | *(-1) \]
+\[\iff \forall x \in \mathbb{R}^n \setminus \{0\}: x^T (-A) x > 0 \quad | \text{Linearität} \]
+\[\iff -A \text{ positiv definit.}\]
+
+\subsection*{(ii)}
+Matrix 1:
+\[M_1 = \begin{pmatrix} 2 & 1 & 0 \\ 1 & 0 & 1 \\ 0 & 1 & -3 \end{pmatrix}\]
+\[D_1 = \det(2) = 2 > 0\]
+\[D_2 = \det \begin{pmatrix} 2 & 1 \\ 1 & 0 \end{pmatrix} = 2\cdot 0 - 1\cdot 1 = -1 < 0\]
+Da $D_2 < 0$ ist $M_1$ indefinit \\
+\newline \\
+Matrix 2:
+\[M_2 = \begin{pmatrix} -3 & 1 & -3 \\ 1 & -2 & 0 \\ -3 & 0 & -4 \end{pmatrix}\]
+\[D_1 = -3 < 0\]
+\[D_2 = \det \begin{pmatrix} -3 & 1 \\ 1 & -2 \end{pmatrix} = (-3)(-2) - 1\cdot 1 = 6 - 1 = 5 > 0\]
+\[D_3 = \det(M_2)\]
+\[= (-3)(-2)(-4) + 1\cdot 0 \cdot (-3) + (-3)\cdot 1 \cdot 0 \quad - [(-3)(-2)(-3) + 0\cdot 0 \cdot (-3) + (-4)\cdot 1 \cdot 1] \]
+\[= -24 + 0 + 0 - [-18 + 0 - 4] \]
+\[= -24 - (-22) = -2 < 0\]
+Da die Vorzeichenfolge $-, +, -$ ist und somit alternierend, ist $M_2$ negativ definit
+
 \end{document}
